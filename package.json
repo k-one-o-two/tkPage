@@ -4,10 +4,13 @@
   "description": "personal page",
   "main": "index.html",
   "scripts": {
-    "minify:js":"minify bundle.js > bundle.min.js",
-    "minify:css":"minify style.css > style.min.css",
-    "bundle": "browserify flickr.js -o bundle.js",
-    "build": "npm run bundle && npm run minify:js && npm run minify:css",
+    "minify:js":"minify dist/bundle.js > dist/bundle.min.js && rm dist/bundle.js",
+    "minify:css":"minify style.css > dist/style.min.css",
+    "copy:index":"cp index.html dist/index.html && sed -i 's/bundle.js/bundle.min.js/' dist/index.html && sed -i 's/style.css/style.min.css/' dist/index.html",
+    "copy:images": "cp -r img dist/img",
+    "bundle:js": "browserify flickr.js -o dist/bundle.js",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && npm run bundle:js && npm run minify:js && npm run minify:css && npm run copy:index && npm run copy:images",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
