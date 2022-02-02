@@ -1,0 +1,28 @@
+{
+  "name": "tkpage",
+  "version": "0.0.1",
+  "description": "personal page",
+  "main": "index.html",
+  "scripts": {
+    "minify:js":"minify bundle.js > bundle.min.js",
+    "minify:css":"minify style.css > style.min.css",
+    "bundle": "browserify flickr.js -o bundle.js",
+    "build": "npm run bundle && npm run minify:js && npm run minify:css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k-one-o-two/tkPage.git"
+  },
+  "author": "k102",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k-one-o-two/tkPage/issues"
+  },
+  "homepage": "https://github.com/k-one-o-two/tkPage#readme",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "flickr-sdk": "^4.0.0",
+    "minify": "^8.0.3"
+  }
+}
