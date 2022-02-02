@@ -9,6 +9,10 @@ body {
   padding-bottom: 50px;
   font-family: "Syne Mono", monospace;
 }
+main {
+  min-height: 1500px;
+}
+
 .logo {
   width: 100%;
   text-align: center;
@@ -23,6 +27,7 @@ body {
 .item {
   text-align: center;
   background: #eee;
+  position: relative;
 }
 .item:hover {
   opacity: 1 !important;
@@ -44,9 +49,9 @@ body {
   background: linear-gradient(0.25turn, transparent, #fff, transparent),
     linear-gradient(#eee, #eee);
   background-repeat: no-repeat;
-  background-size: 250px;
+  background-size: 1500px;
   animation: loading 1.5s infinite;
-  height: 250px;
+  height: 1500px;
 }
 .flexbox {
   display: flex;
@@ -59,17 +64,11 @@ body {
 .column img {
   vertical-align: middle;
 }
-.item {
-  position: relative;
-}
 .title {
   position: absolute;
   top: 5px;
   left: 5px;
   background-color: #eee;
-}
-.imgFull {
-  display: none;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */

@@ -29,45 +29,108 @@ const getLastPhotos = async () => {
   return res.body.photos.photo;
 };
 
+const placeImage = (container, image, isVertical, photoTitle, photoId) => {
+  const img = document.createElement("img");
+  img.src = image.source;
+
+  img.height = isVertical ? 500 : 250;
+
+  const item = document.createElement("div");
+  item.classList.add("item");
+  item.appendChild(img);
+
+  const title = document.createElement("a");
+  title.classList.add("title");
+  title.href = `https://www.flickr.com/photos/k102/${photoId}`;
+  title.innerHTML = photoTitle;
+
+  item.appendChild(title);
+
+  container.appendChild(item);
+};
+
 const run = async () => {
   const urls = await getLastPhotos();
 
-  urls.forEach(async (photo, index) => {
-    const sizes = await flickr.photos.getSizes({ photo_id: photo.id });
+  const verticalPhotos = [];
+  const horizontalPhotos = [];
 
-    const mediumSizedPhoto = sizes.body.sizes.size.find(
+  const columns = [
+    {
+      weight: 0,
+      el: document.querySelectorAll(".column")[0],
+    },
+    {
+      weight: 0,
+      el: document.querySelectorAll(".column")[1],
+    },
+    {
+      weight: 0,
+      el: document.querySelectorAll(".column")[2],
+    },
+    {
+      weight: 0,
+      el: document.querySelectorAll(".column")[3],
+    },
+  ];
+
+  const sizes = await Promise.all([
+    ...urls.map((photo) => flickr.photos.getSizes({ photo_id: photo.id })),
+  ]);
+
+  sizes.forEach((size) => {
+    const mediumSizedPhoto = size.body.sizes.size.find(
       (size) => size.label === "Medium"
     );
 
+    const photoId = size.req.params.photo_id;
+
+    let title = urls.find((photo) => photo.id === photoId)?.title;
+
     const isVertical = mediumSizedPhoto.height > mediumSizedPhoto.width;
-
-    const container = document.getElementById(`p${index}`);
-    container.innerHTML = "";
-
-    const img = document.createElement("img");
-    img.src = mediumSizedPhoto.source;
-
-    img.height = isVertical ? 500 : 250;
-
-    container.appendChild(img);
-
-    container.classList.remove("skeleton");
-
-    const title = document.createElement("a");
-    title.classList.add("title");
-    title.href = `https://www.flickr.com/photos/k102/${photo.id}`;
-    title.target = "_blank";
-    title.innerHTML = photo.title;
-
-    container.appendChild(title);
+    if (isVertical) {
+      verticalPhotos.push({ mediumSizedPhoto, title, photoId });
+    } else {
+      horizontalPhotos.push({ mediumSizedPhoto, title, photoId });
+    }
   });
+
+  while (verticalPhotos.length) {
+    const photo = verticalPhotos.pop();
+
+    const minWeightColumn = columns.sort((a, b) => a.weight - b.weight)[0];
+    placeImage(
+      minWeightColumn.el,
+      photo.mediumSizedPhoto,
+      true,
+      photo.title,
+      photo.photoId
+    );
+    minWeightColumn.weight += 2;
+  }
+
+  while (horizontalPhotos.length) {
+    const photo = horizontalPhotos.pop();
+
+    const minWeightColumn = columns.sort((a, b) => a.weight - b.weight)[0];
+    placeImage(
+      minWeightColumn.el,
+      photo.mediumSizedPhoto,
+      false,
+      photo.title,
+      photo.photoId
+    );
+    minWeightColumn.weight += 1;
+  }
+
+  document.getElementsByClassName("flexbox")[0].classList.remove("skeleton");
 };
 
 const setLoading = () => {
-  Array.from(document.getElementsByClassName("item")).forEach((element) => {
+  Array.from(document.getElementsByClassName("column")).forEach((element) => {
     element.innerHTML = "";
-    element.classList.add("skeleton");
   });
+  document.getElementsByClassName("flexbox")[0].classList.add("skeleton");
 };
 
 const flickrPrev = () => {
