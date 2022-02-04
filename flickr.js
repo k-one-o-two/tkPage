@@ -96,7 +96,7 @@ const run = async () => {
   });
 
   while (verticalPhotos.length) {
-    const photo = verticalPhotos.pop();
+    const photo = verticalPhotos.shift();
 
     const minWeightColumn = columns.sort((a, b) => a.weight - b.weight)[0];
     placeImage(
@@ -110,7 +110,7 @@ const run = async () => {
   }
 
   while (horizontalPhotos.length) {
-    const photo = horizontalPhotos.pop();
+    const photo = horizontalPhotos.shift();
 
     const minWeightColumn = columns.sort((a, b) => a.weight - b.weight)[0];
     placeImage(
