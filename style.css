@@ -8,9 +8,10 @@ body {
   background-image: url(bg.png);
   padding-bottom: 50px;
   font-family: "Syne Mono", monospace;
+  padding-top: 70px;
 }
 main {
-  min-height: 1500px;
+  /* min-height: 1500px; */
 }
 
 .logo {
