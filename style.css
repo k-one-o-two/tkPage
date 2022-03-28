@@ -14,6 +14,12 @@ main {
   /* min-height: 1500px; */
 }
 
+.contact-logo {
+  width: 36px;
+  filter: grayscale(1);
+  margin-right: 10px;
+}
+
 .logo {
   width: 100%;
   text-align: center;
