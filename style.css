@@ -1,3 +1,5 @@
+
+
 @keyframes loading {
   to {
     background-position: 315px 0, 0 0, 0 190px, 50px 195px;
@@ -8,10 +10,6 @@ body {
   background-image: url(bg.png);
   padding-bottom: 50px;
   font-family: "Syne Mono", monospace;
-  padding-top: 70px;
-}
-main {
-  /* min-height: 1500px; */
 }
 
 .contact-logo {
@@ -20,12 +18,11 @@ main {
   margin-right: 10px;
 }
 
-.logo {
-  width: 100%;
-  text-align: center;
-}
 .logoImg {
   display: inline-block;
+}
+.logoElement {
+  height: 128px;
 }
 .stackWrapper {
   width: 100px;
