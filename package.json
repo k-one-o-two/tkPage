@@ -7,10 +7,11 @@
     "minify:js": "minify docs/bundle.js > docs/bundle.min.js && rm docs/bundle.js",
     "minify:css": "minify style.css > docs/style.min.css",
     "copy:index": "cp index.html docs/index.html && sed -i 's/bundle.js/bundle.min.js/' docs/index.html && sed -i 's/style.css/style.min.css/' docs/index.html",
+    "copy:cv": "cp cv.html docs/cv.html && sed -i 's/bundle.js/bundle.min.js/' docs/cv.html && sed -i 's/style.css/style.min.css/' docs/cv.html",
     "copy:images": "cp -r img docs/img",
     "bundle:js": "browserify flickr.js -o docs/bundle.js",
     "clean": "rm -rf docs",
-    "build": "npm run clean && npm run bundle:js && npm run minify:js && npm run minify:css && npm run copy:index && npm run copy:images",
+    "build": "npm run clean && npm run bundle:js && npm run minify:js && npm run minify:css && npm run copy:index && npm run copy:cv && npm run copy:images",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
