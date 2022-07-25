@@ -16,7 +16,7 @@
     "bundle:js": "browserify flickr.js -o docs/bundle.js",
     "bundle:local": "browserify flickr.js -o bundle.js",
     "clean": "rm -rf docs",
-    "build": "npm run clean && npm run bundle:js && npm run minify:js && npm run minify:css && npm run copy:html && npm run copy:images",
+    "build": "npm run clean && npm run bundle:js && npm run minify:js && npm run minify:css && npm run copy:html && npm run copy:images && npm run copy:cname",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
