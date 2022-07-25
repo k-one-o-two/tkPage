@@ -11,8 +11,10 @@
     "copy:flickr": "cp flickr.html docs/flickr.html && sed -i 's/bundle.js/bundle.min.js/' docs/flickr.html && sed -i 's/style.css/style.min.css/' docs/flickr.html",
     "copy:contact": "cp contact.html docs/contact.html && sed -i 's/bundle.js/bundle.min.js/' docs/contact.html && sed -i 's/style.css/style.min.css/' docs/contact.html",
     "copy:html": "npm run copy:index && npm run copy:cv && npm run copy:flickr && npm run copy:contact",
+    "copy:cname": "cp CNAME docs/CNAME",
     "copy:images": "cp -r img docs/img",
     "bundle:js": "browserify flickr.js -o docs/bundle.js",
+    "bundle:local": "browserify flickr.js -o bundle.js",
     "clean": "rm -rf docs",
     "build": "npm run clean && npm run bundle:js && npm run minify:js && npm run minify:css && npm run copy:html && npm run copy:images",
     "test": "echo \"Error: no test specified\" && exit 1"

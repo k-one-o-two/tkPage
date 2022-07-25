@@ -64,13 +64,19 @@ h2 {
   background: #eee;
   position: relative;
 }
-.item:hover {
+
+.item img {
+  max-width: 100%;
+}
+
+/* .item:hover {
   opacity: 1 !important;
   transform: scale(1.5, 1.5);
   transition: 0.8s ease-in-out;
   z-index: 10000;
-}
-.flexbox .item img {
+} */
+
+/* .flexbox .item img {
   transition: all 0.8s;
 }
 .flexbox:hover img {
@@ -79,7 +85,7 @@ h2 {
 .flexbox .item:hover img {
   opacity: 1;
   filter: grayscale(0);
-}
+} */
 .skeleton {
   background: linear-gradient(0.25turn, transparent, #fff, transparent),
     linear-gradient(#eee, #eee);

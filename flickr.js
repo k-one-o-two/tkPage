@@ -1,15 +1,15 @@
-const Key = "378c2fa49da047fd5a130b41b8ac1705";
-const Secret = "689f715552152481";
+const Key = '378c2fa49da047fd5a130b41b8ac1705';
+const Secret = '689f715552152481';
 
-const Flickr = require("flickr-sdk");
+const Flickr = require('flickr-sdk');
 
 const flickr = new Flickr(Key);
 
 let currentPage = 1;
 
-const flickrPrevBtn = document.getElementById("flickrPrev");
-const flickrNextBtn = document.getElementById("flickrNext");
-const flickrCurrentPage = document.getElementById("currentPage");
+const flickrPrevBtn = document.getElementById('flickrPrev');
+const flickrNextBtn = document.getElementById('flickrNext');
+const flickrCurrentPage = document.getElementById('currentPage');
 
 const getLastPhotos = async () => {
   flickrPrevBtn.disabled = true;
@@ -18,7 +18,7 @@ const getLastPhotos = async () => {
   flickrCurrentPage.innerHTML = currentPage;
 
   const res = await flickr.photos.search({
-    user_id: "131481972@N07",
+    user_id: '131481972@N07',
     per_page: 12,
     page: currentPage,
   });
@@ -30,17 +30,18 @@ const getLastPhotos = async () => {
 };
 
 const placeImage = (container, image, isVertical, photoTitle, photoId) => {
-  const img = document.createElement("img");
+  const img = document.createElement('img');
   img.src = image.source;
 
   img.height = isVertical ? 500 : 250;
+  // img.width = '80%';
 
-  const item = document.createElement("div");
-  item.classList.add("item");
+  const item = document.createElement('div');
+  item.classList.add('item');
   item.appendChild(img);
 
-  const title = document.createElement("a");
-  title.classList.add("title");
+  const title = document.createElement('a');
+  title.classList.add('title');
   title.href = `https://www.flickr.com/photos/k102/${photoId}`;
   title.innerHTML = photoTitle;
 
@@ -58,19 +59,19 @@ const run = async () => {
   const columns = [
     {
       weight: 0,
-      el: document.querySelectorAll(".column")[0],
+      el: document.querySelectorAll('.column')[0],
     },
     {
       weight: 0,
-      el: document.querySelectorAll(".column")[1],
+      el: document.querySelectorAll('.column')[1],
     },
     {
       weight: 0,
-      el: document.querySelectorAll(".column")[2],
+      el: document.querySelectorAll('.column')[2],
     },
     {
       weight: 0,
-      el: document.querySelectorAll(".column")[3],
+      el: document.querySelectorAll('.column')[3],
     },
   ];
 
@@ -80,7 +81,7 @@ const run = async () => {
 
   sizes.forEach((size) => {
     const mediumSizedPhoto = size.body.sizes.size.find(
-      (size) => size.label === "Medium"
+      (size) => size.label === 'Medium'
     );
 
     const photoId = size.req.params.photo_id;
@@ -123,14 +124,14 @@ const run = async () => {
     minWeightColumn.weight += 1;
   }
 
-  document.getElementsByClassName("flexbox")[0].classList.remove("skeleton");
+  document.getElementsByClassName('flexbox')[0].classList.remove('skeleton');
 };
 
 const setLoading = () => {
-  Array.from(document.getElementsByClassName("column")).forEach((element) => {
-    element.innerHTML = "";
+  Array.from(document.getElementsByClassName('column')).forEach((element) => {
+    element.innerHTML = '';
   });
-  document.getElementsByClassName("flexbox")[0].classList.add("skeleton");
+  document.getElementsByClassName('flexbox')[0].classList.add('skeleton');
 };
 
 const flickrPrev = () => {
@@ -147,7 +148,7 @@ const flickrNext = () => {
   run();
 };
 
-flickrPrevBtn.addEventListener("click", flickrPrev);
-flickrNextBtn.addEventListener("click", flickrNext);
+flickrPrevBtn.addEventListener('click', flickrPrev);
+flickrNextBtn.addEventListener('click', flickrNext);
 
 run();
