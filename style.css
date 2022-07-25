@@ -8,18 +8,18 @@
 
 .imgHeader {
   margin-top: 3rem;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 40%, #000 100%),
-  url("img/bg.jpg");
-  min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 20%, #000 100%), url("img/bg.jpg");
+  /* url("img/bg.jpg"); */
+  min-height: calc(100vh - 3rem);
   width: 100vw;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-size: cover;
   position: absolute;
 }
 
-h1 {
+.h1 {
   font-family: 'Nunito',
   sans-serif;
   /* letter-spacing: 0.8rem; */
@@ -28,7 +28,6 @@ h1 {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  margin-top: 50%;
 }
 
 h2 {
