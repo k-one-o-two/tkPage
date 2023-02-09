@@ -1,6 +1,6 @@
 {
   "name": "tkpage",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "personal page",
   "main": "index.html",
   "scripts": {
@@ -16,8 +16,12 @@
     "bundle:js": "browserify flickr.js -o docs/bundle.js",
     "bundle:local": "browserify flickr.js -o bundle.js",
     "clean": "rm -rf docs",
-    "build": "npm run clean && npm run bundle:js && npm run minify:js && npm run minify:css && npm run copy:html && npm run copy:images && npm run copy:cname",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:old": "npm run clean && npm run bundle:js && npm run minify:js && npm run minify:css && npm run copy:html && npm run copy:images && npm run copy:cname",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint"
   },
   "repository": {
     "type": "git",
@@ -32,6 +36,17 @@
   "dependencies": {
     "browserify": "^17.0.0",
     "flickr-sdk": "^4.0.0",
-    "minify": "^8.0.3"
+    "lodash.debounce": "^4.0.8",
+    "minify": "^8.0.3",
+    "next": "^13.1.6",
+    "primeflex": "^3.3.0",
+    "primeicons": "^6.0.1",
+    "primereact": "^9.0.0-beta.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.58.0"
+  },
+  "directories": {
+    "doc": "docs"
   }
 }
