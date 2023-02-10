@@ -11,6 +11,10 @@ function HomePage() {
             Mongo, MySQL and Postgres for databses.
           </p>
           <p>Interested in coding, taking pictures, cycling and drawing maps</p>
+          <p>
+            <a href="/mapping">Here</a> I have written some notes regarding QGIS
+            usage for creting maps
+          </p>
         </Card>
         <Card title="Contacts">
           <div>
