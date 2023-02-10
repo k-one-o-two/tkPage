@@ -19,7 +19,7 @@
     "build:old": "npm run clean && npm run bundle:js && npm run minify:js && npm run minify:css && npm run copy:html && npm run copy:images && npm run copy:cname",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next dev",
-    "build": "next build && next export -o docs",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
