@@ -1,5 +1,8 @@
+// next.config.js
+const isProd = process.env.NODE_ENV === 'production';
+
 module.exports = {
-  distDir: 'build',
+  assetPrefix: isProd ? '/tkPage/' : '',
   images: {
     unoptimized: true,
   },
