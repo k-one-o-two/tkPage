@@ -21,6 +21,8 @@ jobs:
           cache: 'npm'
 
       - name: Build
+        env:
+          NEXT_PUBLIC_BASE_PATH: '/tkPage'
         run: |
           npm i
           npm run build
