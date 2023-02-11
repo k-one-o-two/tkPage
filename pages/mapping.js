@@ -12,12 +12,12 @@ function Notes() {
         <p>
           So, I have realized that I <i>need</i> to draw a map of my rides, and
           do it myself. Yeah, I know that there are a lot of tools out there,
-          but this is not fun. I mean, doing what others have already done while
-          suffering in the process is fun, right?
+          but this is not fun. I mean, doing what others have already done way
+          better, suffering meanwhile is fun, right?
         </p>
         <h3>How</h3>
         <p>
-          I use Strava, so I have decided to check how can it hemp me. You can
+          I use Strava, so I have decided to check how can it help me. You can
           actually export all your data from it. To do so, go to your account
           settings, you are looking for "Delete" section.
           <NoteImage src="/1/delete.png"></NoteImage>
