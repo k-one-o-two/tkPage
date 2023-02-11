@@ -63,7 +63,8 @@ const save = async (activity) => {
 const myHeaders = new Headers();
 myHeaders.append(
     'Cookie',
-    'Cookie: sp=8e_strava_cbv2=true;..ff',
+    'Cookie:
+    sp=8e_strava_cbv2=true;..ff',
 );
 
 const res = await fetch(
