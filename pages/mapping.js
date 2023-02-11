@@ -17,9 +17,9 @@ function Notes() {
         </p>
         <h3>How</h3>
         <p>
-          I use Strava, so I have decided to use it. You can actually export all
-          your data from it. To do so, go to your account settings, you are
-          looking for "Delete" section.
+          I use Strava, so I have decided to check how can it hemp me. You can
+          actually export all your data from it. To do so, go to your account
+          settings, you are looking for "Delete" section.
           <NoteImage src="/1/delete.png"></NoteImage>
           After pressing the "Get started" button, you will be able to "Request
           Your Archive" on the next page. You will get a zip archive soon after
@@ -57,20 +57,23 @@ function Notes() {
         </p>
         <pre>
           <code>{`
-            fs = require('fs');
-            
-            const save = async (activity) => {
-            const myHeaders = new Headers();
-            myHeaders.append(
-                'Cookie',
-                'Cookie: sp=8e7aa357-8....69a7947844d; _strava_cbv2=true;....-dbde3340ccff',
-            );
+fs = require('fs');
 
-            const res = await fetch(
-                \`https://www.strava.com/activities/\${activity}/export_gpx\`,
-                { headers: myHeaders },
-            );
-            `}</code>
+const save = async (activity) => {
+const myHeaders = new Headers();
+myHeaders.append(
+    'Cookie',
+    'Cookie: sp=8e_strava_cbv2=true;..ff',
+);
+
+const res = await fetch(
+    \`https://www.strava.com/
+    activities/
+    \${activity}/
+    export_gpx\`,
+    { headers: myHeaders },
+);
+`}</code>
         </pre>
         <p>
           The only thing - where do I get those ids? Luckily, there is an
@@ -80,7 +83,7 @@ function Notes() {
         <p>So just put them into an array and call like that</p>
         <pre>
           <code>{`
-            names.forEach((name) => save(name));
+names.forEach((name) => save(name));
             `}</code>
         </pre>
         <p>

@@ -1,6 +1,14 @@
 import { Image } from 'primereact/image';
-
+import { useState, useEffect } from 'react';
+// const maxWidth = ;
 export function NoteImage({ src, height }) {
+  const [width, setWidth] = useState();
+
+  useEffect(() => {
+    console.info(window.innerWidth);
+    setWidth(window.screen.availWidth * 0.7);
+  }, []);
+
   return (
     <Image
       style={{
@@ -11,7 +19,7 @@ export function NoteImage({ src, height }) {
         textAlign: 'center',
       }}
       src={src}
-      height={height}
+      width={width}
     ></Image>
   );
 }
