@@ -5,21 +5,26 @@ export function NoteImage({ src, height }) {
   const [width, setWidth] = useState();
 
   useEffect(() => {
-    console.info(window.innerWidth);
     setWidth(window.screen.availWidth * 0.7);
   }, []);
 
   return (
-    <Image
+    <div
       style={{
-        margin: 20,
-        padding: 10,
+        width,
+        position: 'relative',
         display: 'block',
         boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
         textAlign: 'center',
+        overflow: 'hidden',
       }}
-      src={src}
-      width={width}
-    ></Image>
+    >
+      <Image
+        imageStyle={{
+          maxWidth: width,
+        }}
+        src={src}
+      ></Image>
+    </div>
   );
 }

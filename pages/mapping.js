@@ -20,13 +20,15 @@ function Notes() {
           I use Strava, so I have decided to check how can it help me. You can
           actually export all your data from it. To do so, go to your account
           settings, you are looking for "Delete" section.
-          <NoteImage src="/1/delete.png"></NoteImage>
+        </p>
+        <NoteImage src="/1/delete.png"></NoteImage>
+        <p>
           After pressing the "Get started" button, you will be able to "Request
           Your Archive" on the next page. You will get a zip archive soon after
           requesting it.
-          <NoteImage src="/1/gpxs.png"></NoteImage>
-          Great, right?
         </p>
+        <NoteImage src="/1/gpxs.png"></NoteImage>
+        <p>Great, right?</p>
         <h4>No.</h4>
         <p>
           The thing is, I use Suunto 5 watches to record my activities. It's
@@ -43,7 +45,9 @@ function Notes() {
         <h4>Let's get them from Strava then!</h4>
         <p>
           For every Strava activity you may get a gpx file, that's pretty simple
-          <NoteImage src="/1/export.png"></NoteImage>
+        </p>
+        <NoteImage src="/1/export.png"></NoteImage>
+        <p>
           Shortly, I've realized that I have to press this damn button quite a
           lot (yeah, I didn't bother to count) of times. So, let's automate! It
           was supposed to be fun, right?
@@ -101,15 +105,17 @@ names.forEach((name) => save(name));
         <p>
           Gpx can be imported by using "Layer &gt; Add Layer &gt; Add vector
           layer" menu.
-          <NoteImage src="/1/qgis1.png"></NoteImage>
+        </p>
+        <NoteImage src="/1/qgis1.png"></NoteImage>
+        <p>
           The only thing I actually needed was a line. After adding them all,
           don't repeat my mistake and group them together, otherwise you'll keep
           copying a style from one line to the whole group, QGIS will consume
           all the RAM it could find.
         </p>
         <h4>Adding tiles</h4>
+        <NoteImage src="/1/qgis2.png"></NoteImage>I had to add some XYZ tiles.
         <p>
-          <NoteImage src="/1/qgis2.png"></NoteImage>I had to add some XYZ tiles.
           XYZ means that those tiles are obtained from a tile server by X and Y
           coordinates and a zoom level. You can add some manually, but it will
           require some manual work, which is no fun (which is still a goal of
@@ -141,7 +147,9 @@ names.forEach((name) => save(name));
           <br />
           It allows to download quite a lot of stuff, the needed hillshade among
           them:
-          <NoteImage src="/1/hillshade.png"></NoteImage>
+        </p>
+        <NoteImage src="/1/hillshade.png"></NoteImage>
+        <p>
           After "ordering" it, I have received a message from
           "no-reply@maanmittauslaitos.fi" with a download link. I've got some
           .tif files. Not knowing what am I supposed to do with them, I;ve just
@@ -155,13 +163,10 @@ names.forEach((name) => save(name));
         <p>
           Now, combining all that I've done before, I have managed to display a
           non-flat map with my track on it, this is how it looks like
-          <NoteImage src="/1/hill.png"></NoteImage>
         </p>
-
-        <p>
-          Well, in reality this hill looks a bit more impressive:
-          <NoteImage height={400} src="/1/view.jpg"></NoteImage>
-        </p>
+        <NoteImage src="/1/hill.png"></NoteImage>
+        <p>Well, in reality this hill looks a bit more impressive:</p>
+        <NoteImage height={400} src="/1/view.jpg"></NoteImage>
         <h3>Done</h3>
         <p>
           So, that's it. I had some specific fun doing this and learned
