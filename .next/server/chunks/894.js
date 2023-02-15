@@ -54,20 +54,24 @@ function Layout({ children , active  }) {
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                className: "surface-50 p-3 flex justify-content-center flex-wrap",
+                className: "flex justify-content-start flex-wrap",
                 children: model.map((item)=>{
-                    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(primereact_button__WEBPACK_IMPORTED_MODULE_5__.Button, {
-                        label: item.label,
+                    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: "top-button",
+                        // label={}
                         icon: `pi ${item.icon}`,
-                        className: "mx-2 p-button-outlined",
+                        // className="mx-2 p-button-outlined"
+                        rounded: true,
+                        severity: "secondary",
                         onClick: ()=>{
                             router.push(item.url);
-                        }
+                        },
+                        children: item.label
                     }, item.label);
                 })
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                className: "pt-2 surface-200",
+                className: "pt-2",
                 children: children
             })
         ]

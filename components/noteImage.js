@@ -5,7 +5,7 @@ export function NoteImage({ src, height }) {
   const [width, setWidth] = useState();
 
   useEffect(() => {
-    setWidth(window.screen.availWidth * 0.7);
+    setWidth(window.innerWidth * 0.7);
   }, []);
 
   return (

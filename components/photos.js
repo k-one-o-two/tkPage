@@ -5,8 +5,6 @@ import { Button } from 'primereact/button';
 import { ProgressSpinner } from 'primereact/progressspinner';
 import debounce from 'lodash.debounce';
 
-console.info(debounce);
-
 import { ImageTile } from './image';
 
 export function FlickrFeed() {
@@ -26,7 +24,6 @@ export function FlickrFeed() {
   const [isLoading, setIsLoading] = useState(true);
 
   const placeImages = () => {
-    console.info('placeImages');
     setImages(null);
     const images = sizes
       .map((image) => image.filter((img) => img.label === 'Medium'))
@@ -91,7 +88,8 @@ export function FlickrFeed() {
     <Card title="Photos">
       <div className="card flex justify-content-between">
         <Button
-          icon="pi pi-arrow-left"
+          className="p-button-outlined"
+          icon="pi pi-arrow-left "
           disabled={isLoading || currentPage === 1}
           onClick={() => {
             setCurrentPage((cp) => {
@@ -100,8 +98,9 @@ export function FlickrFeed() {
             });
           }}
         ></Button>
-        <h3>page: {currentPage}</h3>
+        <h3>page : {currentPage}</h3>
         <Button
+          className="p-button-outlined"
           icon="pi pi-arrow-right"
           disabled={isLoading}
           onClick={() => {

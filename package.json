@@ -34,6 +34,7 @@
   },
   "homepage": "https://github.com/k-one-o-two/tkPage#readme",
   "dependencies": {
+    "@next/font": "^13.1.6",
     "browserify": "^17.0.0",
     "flickr-sdk": "^4.0.0",
     "lodash.debounce": "^4.0.8",

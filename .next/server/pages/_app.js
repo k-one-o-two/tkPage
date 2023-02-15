@@ -40,8 +40,10 @@ function App({ Component , pageProps  }) {
                     type: "image/svg+xml"
                 })
             }),
-            /*#__PURE__*/ jsx_runtime_.jsx(Component, {
-                ...pageProps
+            /*#__PURE__*/ jsx_runtime_.jsx("main", {
+                children: /*#__PURE__*/ jsx_runtime_.jsx(Component, {
+                    ...pageProps
+                })
             })
         ]
     });

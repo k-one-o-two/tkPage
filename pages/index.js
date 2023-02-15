@@ -3,7 +3,7 @@ import { Card } from 'primereact/card';
 function HomePage() {
   return (
     <>
-      <div className="flex flex-column gap-4">
+      <div className="flex flex-column">
         <Card title="About me">
           <p>
             I'm a full-stack developer with experience in React, Angular and a
@@ -18,61 +18,45 @@ function HomePage() {
         </Card>
         <Card title="Contacts">
           <div>
-            <span className="text-muted">
-              Telegram:{' '}
-              <a className="text-color" href="https://t.me/k_one_o_two">
-                @k_one_o_two
-              </a>
+            <span>
+              Telegram: <a href="https://t.me/k_one_o_two">@k_one_o_two</a>
             </span>
           </div>
 
           <div>
-            <span className="text-muted">
+            <span>
               Matrix:{' '}
-              <a
-                className="text-color"
-                href="https://matrix.to/#/@k.one.o.two:matrix.org"
-              >
+              <a href="https://matrix.to/#/@k.one.o.two:matrix.org">
                 @k.one.o.two
               </a>
             </span>
           </div>
 
           <div>
-            <span className="text-muted">
-              Mail:{' '}
-              <a className="text-color" href="mailto:mail@k102.tk">
-                mail@k102.tk
-              </a>
+            <span>
+              Mail: <a href="mailto:mail@k102.tk">mail@k102.tk</a>
             </span>
           </div>
         </Card>
         <Card title="Social links">
           <div>
-            <a
-              className="text-color"
-              href="https://stackoverflow.com/users/709711/k102"
-            >
+            <a href="https://stackoverflow.com/users/709711/k102">
               StackOverflow
             </a>
           </div>
           <div>
-            <a
-              className="text-color"
-              href="https://www.linkedin.com/in/kirill-sergeev-914a02a5/"
-            >
+            <a href="https://www.linkedin.com/in/kirill-sergeev-914a02a5/">
               LinkedIn
             </a>
           </div>
           <div>
-            <a className="text-color" href="https://github.com/k-one-o-two">
-              Github
-            </a>
+            <a href="https://github.com/k-one-o-two">Github</a>
           </div>
           <div>
-            <a className="text-color" href="https://www.deviantart.com/k102">
-              Devianart
-            </a>
+            <a href="https://www.flickr.com/photos/k102">Flickr</a>
+          </div>
+          <div>
+            <a href="https://www.deviantart.com/k102">Devianart</a>
           </div>
         </Card>
       </div>

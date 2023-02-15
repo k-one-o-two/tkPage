@@ -27,22 +27,27 @@ export function Layout({ children, active }) {
 
   return (
     <>
-      <div className="surface-50 p-3 flex justify-content-center flex-wrap">
+      <div className="flex justify-content-start flex-wrap">
         {model.map((item) => {
           return (
-            <Button
+            <div
+              className="top-button"
               key={item.label}
-              label={item.label}
+              // label={}
               icon={`pi ${item.icon}`}
-              className="mx-2 p-button-outlined"
+              // className="mx-2 p-button-outlined"
+              rounded
+              severity="secondary"
               onClick={() => {
                 router.push(item.url);
               }}
-            />
+            >
+              {item.label}
+            </div>
           );
         })}
       </div>
-      <div className="pt-2 surface-200">{children}</div>
+      <div className="pt-2">{children}</div>
     </>
   );
 }

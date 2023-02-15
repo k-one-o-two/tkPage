@@ -8,7 +8,9 @@ export default function App({ Component, pageProps }) {
       <Head>
         <link rel="icon" href="/k102.svg" type="image/svg+xml"></link>
       </Head>
-      <Component {...pageProps} />
+      <main>
+        <Component {...pageProps} />
+      </main>
     </Layout>
   );
 }
