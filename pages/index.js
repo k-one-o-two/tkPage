@@ -8,7 +8,8 @@ function HomePage() {
         <div className="text-center">
           <Image src="k102.svg" height="200"></Image>
         </div>
-        <Card title="About me">
+        <div className="card" title="About me">
+          <h3>About me</h3>
           <p>
             I'm a full-stack developer with experience in React, Angular and a
             bit of Blazor on the front-end, Express and Koa on the back and
@@ -19,30 +20,32 @@ function HomePage() {
             <a href="/mapping">Here</a> I have written some notes regarding QGIS
             usage for creting maps
           </p>
-        </Card>
-        <Card title="Contacts">
+        </div>
+        <div className="card">
+          <h3>Contacts</h3>
           <div>
-            <span>
+            <p>
               Telegram: <a href="https://t.me/k_one_o_two">@k_one_o_two</a>
-            </span>
+            </p>
           </div>
 
           <div>
-            <span>
+            <p>
               Matrix:{' '}
               <a href="https://matrix.to/#/@k.one.o.two:matrix.org">
                 @k.one.o.two
               </a>
-            </span>
+            </p>
           </div>
 
           <div>
-            <span>
+            <p>
               Mail: <a href="mailto:mail@k102.tk">mail@k102.tk</a>
-            </span>
+            </p>
           </div>
-        </Card>
-        <Card title="Social links">
+        </div>
+        <div className="card">
+          <h3>Social links</h3>
           <div>
             <a href="https://stackoverflow.com/users/709711/k102">
               StackOverflow
@@ -62,7 +65,7 @@ function HomePage() {
           <div>
             <a href="https://www.deviantart.com/k102">Devianart</a>
           </div>
-        </Card>
+        </div>
       </div>
     </>
   );

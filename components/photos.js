@@ -86,8 +86,9 @@ export function FlickrFeed() {
   }, []);
 
   return (
-    <Card title="Photos">
-      <div className="card flex justify-content-between">
+    <div className="card" title="Photos">
+      <h3>Photos</h3>
+      <div className="flex justify-content-between">
         <Button
           className="p-button-outlined"
           icon="pi pi-arrow-left "
@@ -113,7 +114,7 @@ export function FlickrFeed() {
         ></Button>
       </div>
       {isLoading ? (
-        <div className="card flex justify-content-center">
+        <div className="flex justify-content-center">
           <ProgressSpinner />
         </div>
       ) : (
@@ -150,6 +151,6 @@ export function FlickrFeed() {
             })}
         </div>
       )}
-    </Card>
+    </div>
   );
 }

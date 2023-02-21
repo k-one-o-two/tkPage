@@ -9,6 +9,11 @@ body {
 
 .paper {
     background-color: $nord5;
+    // margin: '1rem';
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
 
 .p-card-title {
@@ -32,14 +37,15 @@ a:hover {
     color: $nord6;
 }
 
-.p-card {
-    margin: 10px;
+.card {
+    margin-top: 10px;
     border: 1px solid $nord6;
     background: $nord6 !important;
     border-radius: 0 !important;
     color: $nord3 !important;
     box-shadow: none !important;
     clip-path: polygon(0 0,calc(100% - 40.00px) 0,100% 40.00px,100% 100%,0 100%);
+    width: unset !important;
 }
 
 .top-button {

@@ -71,7 +71,7 @@ function Layout({ children , active  }) {
                 })
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                className: "paper m-4 p-4",
+                className: "paper",
                 children: children
             })
         ]

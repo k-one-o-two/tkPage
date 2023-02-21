@@ -209,9 +209,10 @@ names.forEach((name) => save(name));
   });
 
   return notes.map((note, i) => (
-    <Card key={i} title={note.title}>
+    <div className="card" key={i}>
+      <h3>{note.title}</h3>
       {note.html}
-    </Card>
+    </div>
   ));
 }
 

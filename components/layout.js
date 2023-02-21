@@ -47,7 +47,7 @@ export function Layout({ children, active }) {
           );
         })}
       </div>
-      <div className="paper m-4 p-4">{children}</div>
+      <div className="paper">{children}</div>
     </div>
   );
 }
