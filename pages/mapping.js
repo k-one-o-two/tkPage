@@ -167,6 +167,38 @@ names.forEach((name) => save(name));
         <NoteImage src="/1/hill.png"></NoteImage>
         <p>Well, in reality this hill looks a bit more impressive:</p>
         <NoteImage height={400} src="/1/view.jpg"></NoteImage>
+        <h3>Adding speed</h3>
+        <p>
+          After performing all of this, I have decided to try and show my speed.
+          Unfortunately, gpx track point does not contain speed, it looks like
+          this:
+        </p>
+        <pre>
+          <code>
+            {`
+<trkpt lat="60.1824680" lon="24.7411490">
+  <ele>35.3</ele>
+  <time>2023-02-14T12:15:00Z</time>
+  <extensions>
+    <gpxtpx:TrackPointExtension>
+    <gpxtpx:hr>76</gpxtpx:hr>
+    </gpxtpx:TrackPointExtension>
+  </extensions>
+</trkpt>
+`}
+          </code>
+        </pre>
+        <p>
+          There is a useful QGIS plugin, called{' '}
+          <a href="https://anitagraser.com/2019/02/02/movement-data-in-gis-20-trajectools-v1-released/">
+            Trajectools
+          </a>
+          , which can be used for exactly this task.
+        </p>
+        <NoteImage src="/1/trajectools.png"></NoteImage>
+        <p>
+          When installed It will add itself to the "Processing toolbox" panel.
+        </p>
         <h3>Done</h3>
         <p>
           So, that's it. I had some specific fun doing this and learned

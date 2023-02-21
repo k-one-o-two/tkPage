@@ -26,7 +26,7 @@ export function Layout({ children, active }) {
   ];
 
   return (
-    <>
+    <div>
       <div className="flex justify-content-start flex-wrap">
         {model.map((item) => {
           return (
@@ -47,7 +47,7 @@ export function Layout({ children, active }) {
           );
         })}
       </div>
-      <div className="pt-2">{children}</div>
-    </>
+      <div className="paper m-4 p-4">{children}</div>
+    </div>
   );
 }
