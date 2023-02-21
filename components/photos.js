@@ -24,6 +24,7 @@ export function FlickrFeed() {
   const [isLoading, setIsLoading] = useState(true);
 
   const placeImages = () => {
+    setIsLoading(true);
     setImages(null);
     const images = sizes
       .map((image) => image.filter((img) => img.label === 'Medium'))
@@ -52,7 +53,7 @@ export function FlickrFeed() {
       i++;
     });
 
-    setImages(imagesGrid);
+    setImages([...imagesGrid]);
     setExcess(excessByRow);
     setIsLoading(false);
     return;
@@ -125,7 +126,12 @@ export function FlickrFeed() {
           {images &&
             images.map((row, i) => {
               return (
-                <div key={i} className="flex">
+                <div
+                  key={i}
+                  className={`flex ${
+                    window.innerWidth <= 650 ? 'flex-column' : ''
+                  }`}
+                >
                   {row.map((image, j) => (
                     <div key={`${i}.${j}`}>
                       <ImageTile

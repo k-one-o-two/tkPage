@@ -1,9 +1,13 @@
 import { Card } from 'primereact/card';
+import { Image } from 'primereact/image';
 
 function HomePage() {
   return (
     <>
       <div className="flex flex-column">
+        <div className="text-center">
+          <Image src="k102.svg" height="200"></Image>
+        </div>
         <Card title="About me">
           <p>
             I'm a full-stack developer with experience in React, Angular and a

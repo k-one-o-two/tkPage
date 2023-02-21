@@ -5,8 +5,9 @@ export function ImageTile({
   excess,
   numberOfHorizontalImages,
 }) {
+  const oneColumn = availableWidth <= 650;
+
   const { source, width, height, url } = image;
-  console.info('ImageTile', image);
   const desiredHeight = 300;
   const difference = availableWidth / 1500;
 
@@ -23,7 +24,7 @@ export function ImageTile({
           className="cursor-pointer bg-cover hover:shadow-8"
           style={{
             backgroundImage: `url(${source})`,
-            width: totalWidth * difference,
+            width: oneColumn ? '' : totalWidth * difference,
             height: desiredHeight,
           }}
         ></div>
@@ -36,7 +37,9 @@ export function ImageTile({
           className="cursor-pointer bg-cover hover:shadow-8"
           style={{
             backgroundImage: `url(${source})`,
-            width: width * (desiredHeight / height) * difference,
+            width: oneColumn
+              ? ''
+              : width * (desiredHeight / height) * difference,
             height: desiredHeight,
           }}
         ></div>
