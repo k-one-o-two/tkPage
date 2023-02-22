@@ -23,6 +23,8 @@ export function FlickrFeed() {
 
   const [isLoading, setIsLoading] = useState(true);
 
+  const [innerWidth, setInnerWidth] = useState(0);
+
   const placeImages = () => {
     setIsLoading(true);
     setImages(null);
@@ -82,7 +84,12 @@ export function FlickrFeed() {
   useEffect(() => {
     getLastPhotos(1).then(placeImages);
 
-    window.addEventListener('resize', debounce(placeImages, 300));
+    window.addEventListener(
+      'resize',
+      debounce(() => {
+        setInnerWidth(window.innerWidth);
+      }, 300),
+    );
   }, []);
 
   return (
@@ -137,7 +144,7 @@ export function FlickrFeed() {
                     <div key={`${i}.${j}`}>
                       <ImageTile
                         image={image}
-                        availableWidth={window.innerWidth * 0.9}
+                        availableWidth={innerWidth}
                         rowNumber={i}
                         excess={excess}
                         numberOfHorizontalImages={
