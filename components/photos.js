@@ -83,6 +83,7 @@ export function FlickrFeed() {
 
   useEffect(() => {
     getLastPhotos(1).then(placeImages);
+    setInnerWidth(window.innerWidth);
 
     window.addEventListener(
       'resize',
