@@ -1,5 +1,4 @@
-import 'primereact/resources/themes/mdc-light-deeppurple/theme.css';
-import 'primereact/resources/primereact.css'; // core css
+// import 'primereact/resources/primereact.css'; // core css
 import 'primeicons/primeicons.css'; // icons
 import 'primeflex/primeflex.css';
 

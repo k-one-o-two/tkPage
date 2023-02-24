@@ -1,4 +1,3 @@
-import { Card } from 'primereact/card';
 import { Image } from 'primereact/image';
 
 function HomePage() {

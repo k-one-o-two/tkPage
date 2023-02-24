@@ -1,4 +1,3 @@
-import { Card } from 'primereact/card';
 import { NoteImage } from '../components/noteImage';
 
 function Notes() {
@@ -114,13 +113,13 @@ names.forEach((name) => save(name));
           all the RAM it could find.
         </p>
         <h4>Adding tiles</h4>
-        <NoteImage src="/1/qgis2.png"></NoteImage>I had to add some XYZ tiles.
+        <NoteImage src="/1/qgis2.png"></NoteImage>
         <p>
-          XYZ means that those tiles are obtained from a tile server by X and Y
-          coordinates and a zoom level. You can add some manually, but it will
-          require some manual work, which is no fun (which is still a goal of
-          the whole thing). I have managed to find a script that will add some
-          well-known tiles to QGIS:
+          I had to add some XYZ tiles. XYZ means that those tiles are obtained
+          from a tile server by X and Y coordinates and a zoom level. You can
+          add some manually, but it will require some manual work, which is no
+          fun (which is still a goal of the whole thing). I have managed to find
+          a script that will add some well-known tiles to QGIS:
           <br />
           <a href="https://raw.githubusercontent.com/klakar/QGIS_resources/master/collections/Geosupportsystem/python/qgis_basemaps.py">
             qgis_basemaps.py
@@ -198,6 +197,45 @@ names.forEach((name) => save(name));
         <NoteImage src="/1/trajectools.png"></NoteImage>
         <p>
           When installed It will add itself to the "Processing toolbox" panel.
+          What I've used was "Basic &gt; Add speed (m/s) to points" This will
+          create a new set of points, each of them contains a new value - speed.
+        </p>
+        <p>
+          Now, let's colorize them. Unfortunately, I don't know how to colorize
+          a line, so here's how to make it as line-like as possible.
+        </p>
+        <p>First, we need to color each point according to the speed.</p>
+        <NoteImage src="/1/speed1.png"></NoteImage>
+        <p>
+          Here we may create an expression which will be used to calculate the
+          color. It can look like this:
+        </p>
+        <pre>
+          <code>
+            {`ramp_color('blue2red', scale_linear(meters_per_sec * 3600 / 1000, 0, 30, 0, 1) )`}
+          </code>
+        </pre>
+        <p>
+          The hell does this mean? Yeah, this language is confusing at best.
+          Anyway, here's what is happening here.
+        </p>
+        <p>
+          "ramp_color" - is a function to calculate the color code (hex). It
+          takes two arguments - name of the gradient (here I've created my own
+          just <i>for fun</i>, but you mau use an existing one) and a value,
+          which should be a number from 0 to 1.
+        </p>
+        <p>
+          "scale_linear" - since we are required to give [0, 1] value to the
+          "ramp_color" function, we have to normalize our "meters_per_sec"
+          value. So it takes 5 arguments: the value to normalize, its minimum,
+          its maximum, normalized minimum and normalized maximum. So, 0 will
+          become 0, 30 km/h will become 1.
+        </p>
+        <NoteImage src="/1/speed2.png"></NoteImage>
+        <p>
+          The result is not great, but for now this is my best. On this map a
+          hillshade and a Stamen Toner layers were used
         </p>
         <h3>Done</h3>
         <p>
