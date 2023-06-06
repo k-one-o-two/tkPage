@@ -11,7 +11,7 @@ function Notes() {
         <p>
           Imagine, you went for a ride and recorded a video of it. You have
           tried so hard, but in the end it doesn't even look fast. They call it
-          a GoPro effect, and there are not much ne can do about it. The obvious
+          a GoPro effect, and there is not much we can do about it. The obvious
           way to overcome it is to ride even faster or on more harsh terrain.
         </p>
         <p>
