@@ -19,6 +19,10 @@ function HomePage() {
             <a href="/mapping">Here</a> I have written some notes regarding QGIS
             usage for creting maps
           </p>
+          <p>
+            <a href="/dashware">And here</a> some other notes on using DashWare
+            tool
+          </p>
         </div>
         <div className="card">
           <h3>Contacts</h3>
