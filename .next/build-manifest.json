@@ -1,39 +1,55 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills.js"
+    "static/chunks/polyfills-c67a75d1b6f99dc8.js"
   ],
-  "devFiles": [
-    "static/chunks/react-refresh.js"
-  ],
-  "ampDevFiles": [
-    "static/chunks/webpack.js",
-    "static/chunks/amp.js"
-  ],
+  "devFiles": [],
+  "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/development/_buildManifest.js",
-    "static/development/_ssgManifest.js"
+    "static/kcHg4CAW2qnXhM_bIxc8F/_buildManifest.js",
+    "static/kcHg4CAW2qnXhM_bIxc8F/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
     "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
+      "static/chunks/webpack-59c5c889f52620d6.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-ac344eb87244516d.js",
+      "static/chunks/17-7428dbf45f73ddb4.js",
+      "static/chunks/pages/index-62cbee51badc5eb7.js"
     ],
     "/_app": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_app.js"
+      "static/chunks/webpack-59c5c889f52620d6.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-ac344eb87244516d.js",
+      "static/css/e9443b287d7ed819.css",
+      "static/chunks/pages/_app-5bd1143b4e804db1.js"
     ],
     "/_error": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_error.js"
+      "static/chunks/webpack-59c5c889f52620d6.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-ac344eb87244516d.js",
+      "static/chunks/pages/_error-8353112a01355ec2.js"
     ],
     "/dashware": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/dashware.js"
+      "static/chunks/webpack-59c5c889f52620d6.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-ac344eb87244516d.js",
+      "static/chunks/17-7428dbf45f73ddb4.js",
+      "static/chunks/pages/dashware-a88729135d1f4e4e.js"
+    ],
+    "/mapping": [
+      "static/chunks/webpack-59c5c889f52620d6.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-ac344eb87244516d.js",
+      "static/chunks/17-7428dbf45f73ddb4.js",
+      "static/chunks/pages/mapping-5db1e1b90fe754c8.js"
+    ],
+    "/photo": [
+      "static/chunks/webpack-59c5c889f52620d6.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-ac344eb87244516d.js",
+      "static/chunks/58-edd9169ff885c439.js",
+      "static/chunks/pages/photo-3d52b14b743775b9.js"
     ]
   },
   "ampFirstPages": []
