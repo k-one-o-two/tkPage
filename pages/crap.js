@@ -19,7 +19,7 @@ function Notes() {
           Take a look at this image (taken by me, not on flickr for obvious
           reasons):
         </p>
-        <NoteImage src="/3/cr1.jpg"></NoteImage>
+        <NoteImage src="/3/cr1.JPG"></NoteImage>
         <p>
           What is depicted here? Quite a lot of things actually and in order to
           check an image if it is a crappy one we have to name them all. So,
@@ -75,7 +75,7 @@ function Notes() {
           Sometimes it's not objects that I want to depict. Take a look at this
           (unedited) image:
         </p>
-        <NoteImage src="/3/cr3.jpg"></NoteImage>
+        <NoteImage src="/3/cr3.JPG"></NoteImage>
         <p>
           What do we see here: a van and some pieces of machinery that I can't
           even name. But the reason I've decided to take this picture is the
