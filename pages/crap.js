@@ -34,6 +34,44 @@ function Notes() {
           be as clear for everyone else.
         </p>
         <p>
+          This picture lacks an object, the reason why it was taken in the 1st
+          place. There are several possibilities of what the object could have
+          been:
+        </p>
+        <ul>
+          <li>
+            <p>
+              the terminal: it occupies even less space on the image than parts
+              of the ferry from which the picture is taken, and one corner is
+              even behind the fence. Therefore it can't be the object of this
+              picture.
+            </p>
+          </li>
+          <li>
+            <p>
+              the fence and the blue floor: is is not even clear if this is just
+              a part of some bridge or a ship, the background makes this fence
+              have too low contrast. The verdict is the same.
+            </p>
+          </li>
+          <li>
+            <p>
+              the seagull: apart from it being out of focus (I've failed, yeah)
+              it is barely visible due to the terminal on the background
+            </p>
+          </li>
+          <li>
+            <p>
+              the weird thing on the right: well, I hope the explanation is not
+              needed here
+            </p>
+          </li>
+        </ul>
+        <p>
+          As you can see, this image lacks an object, it's pointless and there
+          was no good reason to even take this picture.
+        </p>
+        <p>
           Consider{' '}
           <a href="https://www.flickr.com/photos/k102/53719245076">
             this picture
