@@ -212,7 +212,15 @@ names.forEach((name) => save(name));
         </p>
         <pre>
           <code>
-            {`ramp_color('blue2red', scale_linear(meters_per_sec * 3600 / 1000, 0, 30, 0, 1) )`}
+            {`ramp_color(
+ 'blue2red',
+ scale_linear(
+  meters_per_sec * 3600 / 1000,
+  0,
+  30,
+  0,
+  1)
+)`}
           </code>
         </pre>
         <p>

@@ -12,16 +12,20 @@ function HomePage() {
           <p>
             I'm a full-stack developer with experience in React, Angular and a
             bit of Blazor on the front-end, Express and Koa on the back and
-            Mongo, MySQL and Postgres for databses.
+            Mongo, MySQL and Postgres for databases.
           </p>
           <p>Interested in coding, taking pictures, cycling and drawing maps</p>
           <p>
             <a href="/mapping">Here</a> I have written some notes regarding QGIS
-            usage for creting maps
+            usage for creating maps
           </p>
           <p>
             <a href="/dashware">And here</a> some other notes on using DashWare
             tool
+          </p>
+          <p>
+            <a href="/crap">This is</a> my attempt to explain how to not shoot
+            crappy photos
           </p>
         </div>
         <div className="card">
@@ -43,7 +47,8 @@ function HomePage() {
 
           <div>
             <p>
-              Mail: <a href="mailto:mail@k102.tk">mail@k102.tk</a>
+              Mail:{' '}
+              <a href="mailto:k.one.o.two@gmail.com">k.one.o.two@gmail.com</a>
             </p>
           </div>
         </div>
