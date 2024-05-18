@@ -139,15 +139,15 @@ function Notes() {
         <h3>More examples</h3>
         <NoteImage src="/3/cr4.JPG"></NoteImage>
         <p>
-          I was trying to make a picture of that bird (ad you may have already
+          I was trying to take a picture of that bird (as you may have already
           noticed, I often shoot birds) and I have not even failed with
-          focusing, but the image is still bad. If this sparrow was sitting a
-          bit to the left, so that it would not blend into the background, it'd
-          be way more clear what is the main object of the picture, which is
-          sadly not. And no matter how you crop this one, it won't be much
+          focusing, but the image is still bad. If only this sparrow was sitting
+          a bit to the left, so that it would not blend into the background,
+          it'd be way more clear what is the main object of the picture, which
+          is sadly not. And no matter how you crop this one, it won't be much
           better for this very reason.
         </p>
-        <NoteImage src="/3/nc4.JPG"></NoteImage>
+        <NoteImage src="/3/nc4.jpg"></NoteImage>
         <p>
           And this bird is much better. It has a nice contrast with the
           background sky and the branches behind this crow are far enough to be
