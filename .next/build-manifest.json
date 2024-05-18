@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/crap": [
+    "/dashware": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/crap.js"
+      "static/chunks/pages/dashware.js"
     ]
   },
   "ampFirstPages": []

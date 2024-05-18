@@ -9,12 +9,7 @@ function HomePage() {
         </div>
         <div className="card" title="About me">
           <h3>About me</h3>
-          <p>
-            I'm a full-stack developer with experience in React, Angular and a
-            bit of Blazor on the front-end, Express and Koa on the back and
-            Mongo, MySQL and Postgres for databases.
-          </p>
-          <p>Interested in coding, taking pictures, cycling and drawing maps</p>
+          <p>I'm a software dev from Saint-Petersburg, living in Espoo.</p>
           <p>
             <a href="/mapping">Here</a> I have written some notes regarding QGIS
             usage for creating maps
@@ -72,6 +67,9 @@ function HomePage() {
           </div>
           <div>
             <a href="https://www.deviantart.com/k102">Devianart</a>
+          </div>
+          <div>
+            <a href="https://www.youtube.com/@user-hp7df1xu2m">YouTube</a>
           </div>
         </div>
       </div>

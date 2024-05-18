@@ -22,7 +22,7 @@ function Notes() {
         <NoteImage src="/3/cr1.JPG"></NoteImage>
         <p>
           What is depicted here? Quite a lot of things actually and in order to
-          check an image if it is a crappy one we have to name them all. So,
+          check if the image is a crappy one we have to name them all. So,
           there's a seagull sitting on some fence with a ferry terminal in the
           background. And there is a line of trucks there. And some out-of-focus
           thing in the bottom-right corner.
@@ -125,7 +125,9 @@ function Notes() {
           <a href="https://www.flickr.com/photos/k102/53719582599/">
             made the picture
           </a>{' '}
-          b&w while increasing it's contrast.
+          b&w while increasing it's contrast. So, while this picture is not
+          minimalistic, now it has more accent on why it has been taken - the
+          geometry of those lines.
         </p>
         <NoteImage src="/3/nc3.jpg"></NoteImage>
         <p>
@@ -133,6 +135,39 @@ function Notes() {
           fence next to the van is now more visible). Now, my intentions are
           more aligned with the end result, making a picture (I hope) less
           crappy.
+        </p>
+        <h3>More examples</h3>
+        <NoteImage src="/3/cr4.JPG"></NoteImage>
+        <p>
+          I was trying to make a picture of that bird (ad you may have already
+          noticed, I often shoot birds) and I have not even failed with
+          focusing, but the image is still bad. If this sparrow was sitting a
+          bit to the left, so that it would not blend into the background, it'd
+          be way more clear what is the main object of the picture, which is
+          sadly not. And no matter how you crop this one, it won't be much
+          better for this very reason.
+        </p>
+        <NoteImage src="/3/nc4.JPG"></NoteImage>
+        <p>
+          And this bird is much better. It has a nice contrast with the
+          background sky and the branches behind this crow are far enough to be
+          out of focus. The subject is clear - a crow on a tree branch.
+        </p>
+        <NoteImage src="/3/cr5.JPG"></NoteImage>
+        <p>
+          There is a lot of things that are bad in this photo, let's try to
+          describe it honestly. We see a tram and this is the only thing that is
+          kinda fine. The reflection of it's lights is obscured by the pile of
+          show, the building behind it is not fully in the frame, there's some
+          radom white car, some part of another building hovering in the left
+          part of the frame... We can continue.
+        </p>
+        <NoteImage src="/3/nc5.JPG"></NoteImage>
+        <p>
+          While this one is not ideal either, it is way less crappy - it has a
+          rather clear main object (the tram), it clearly stands out from the
+          background, there are less unrelated objects that may steal the
+          attention.
         </p>
         <h3>Conclusion</h3>
         <p>

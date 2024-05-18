@@ -67,8 +67,6 @@ function Notes() {
         </p>
         <p>Here's how the end result looks like:</p>
         <iframe
-          width="560"
-          height="315"
           src="https://www.youtube.com/embed/DvfDAEua6VI"
           title="the end result"
           frameborder="0"
