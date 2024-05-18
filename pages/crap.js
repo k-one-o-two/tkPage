@@ -162,7 +162,7 @@ function Notes() {
           radom white car, some part of another building hovering in the left
           part of the frame... We can continue.
         </p>
-        <NoteImage src="/3/nc5.JPG"></NoteImage>
+        <NoteImage src="/3/nc5.jpg"></NoteImage>
         <p>
           While this one is not ideal either, it is way less crappy - it has a
           rather clear main object (the tram), it clearly stands out from the
