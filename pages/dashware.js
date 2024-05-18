@@ -21,11 +21,17 @@ function Notes() {
         <h3>How</h3>
         <p>We will need 3 things:</p>
         <ul>
-          <li>the video - any kind will do</li>
           <li>
-            the data source - I've used gpx, but others might be used as well
+            <p>the video - any kind will do</p>
           </li>
-          <li>DashWare</li>
+          <li>
+            <p>
+              the data source - I've used gpx, but others might be used as well
+            </p>
+          </li>
+          <li>
+            <p>DashWare</p>
+          </li>
         </ul>
         <p>
           So, we're gonna be using{' '}
