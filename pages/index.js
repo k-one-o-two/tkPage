@@ -19,8 +19,13 @@ function HomePage() {
             tool
           </p>
           <p>
-            <a href="/crap">This is</a> my attempt to explain how to not shoot
+            <a href="/crap">This is</a> my attempt to explain how to{' '}
+            <b>not shoot</b>
             crappy photos
+          </p>
+          <p>
+            <a href="/uncrap">And that is</a> my attempt to explain how to{' '}
+            <b>shoot not</b> so crappy photos - highly opinionated
           </p>
         </div>
         <div className="card">
