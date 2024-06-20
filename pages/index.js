@@ -20,8 +20,7 @@ function HomePage() {
           </p>
           <p>
             <a href="/crap">This is</a> my attempt to explain how to{' '}
-            <b>not shoot</b>
-            crappy photos
+            <b>not shoot</b> crappy photos
           </p>
           <p>
             <a href="/uncrap">And that is</a> my attempt to explain how to{' '}

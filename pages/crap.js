@@ -10,9 +10,10 @@ function Notes() {
         <h3>Why</h3>
         <p>
           There are plenty of online resources that teach how to make good
-          photos, and this is not a one of them. The thing is - I have no idea
-          what it takes for a photo to be good. But I think I know what makes it
-          a crappy one, and here I'll try to explain it.
+          photos, and this is not a one of them. The thing is - I have no idea (
+          <b>update:</b> well, <a href="/uncrap">I have some now</a>) what it
+          takes for a photo to be good. But I think I know what makes it a
+          crappy one, and here I'll try to explain it.
         </p>
         <h3>The definition of crap</h3>
         <p>

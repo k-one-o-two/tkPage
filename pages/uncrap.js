@@ -10,10 +10,10 @@ function Notes() {
         <h3>Why</h3>
         <p>
           Ok, so I've <a href="/carp">tried my best</a> do discuss how to not
-          make a crappy image. But then has been pointed out that these advices
-          only work if you know what is that ye're going to shoot. Which is not
-          always the case. So now I'll try to share some ideas on how I pick the
-          subject to take picture of.
+          make a crappy image. But then it has been pointed out that these
+          advices only work if you know what is that you're going to shoot.
+          Which is not always the case. So now I'll try to share some ideas on
+          how I pick the subject to take picture of.
         </p>
         <p>
           Disclaimer: the whole contents of this page is my personal opinion.
