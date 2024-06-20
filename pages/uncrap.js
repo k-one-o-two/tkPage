@@ -169,7 +169,7 @@ function Notes() {
         <h3>People & streetphoto</h3>
         <p>
           This is a way trickier one. There are pretty much 2 ways of
-          photographing people - either staged or not. And I don't ven know
+          photographing people - either staged or not. And I don't even know
           what's harder. For the 1st one you might need special equipment:
           either lights or flashes, or lots of luck.
         </p>
