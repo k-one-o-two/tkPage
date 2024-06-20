@@ -168,7 +168,7 @@ function Notes() {
         </p>
         <h3>People & streetphoto</h3>
         <p>
-          This is way trickier one. There are pretty much 2 ways of
+          This is a way trickier one. There are pretty much 2 ways of
           photographing people - either staged or not. And I don't ven know
           what's harder. For the 1st one you might need special equipment:
           either lights or flashes, or lots of luck.
@@ -183,8 +183,8 @@ function Notes() {
           You don't want to shoot portraits with too wide lens to avoid
           distortions, so unless you have a studio (and if you do, why the hell
           are you even reading this?) or a huge room, you're bound to only
-          portraits. Which is really limiting and you may run out of ideas (or
-          models, or both) pretty soon.
+          portraits. Which is really limiting and you may run out of ideas
+          pretty soon.
         </p>
         <p>
           So, you might switch to shooting people in their somewhat natural
