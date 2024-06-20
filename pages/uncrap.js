@@ -166,6 +166,45 @@ function Notes() {
           in the fog. I think this picture gets pretty low aesthetic score, but
           should be considered somewhat interesting.
         </p>
+        <h3>People & streetphoto</h3>
+        <p>
+          This is way trickier one. There are pretty much 2 ways of
+          photographing people - either staged or not. And I don't ven know
+          what's harder. For the 1st one you might need special equipment:
+          either lights or flashes, or lots of luck.
+        </p>
+        <NoteImage src="/4/11.jpg"></NoteImage>
+        <p>
+          This picture was taken without any special light sources, but
+          conditions were really good otherwise - a lot of sunlight and a white
+          wall without anything reflecting on it.
+        </p>
+        <p>
+          You don't want to shoot portraits with too wide lens to avoid
+          distortions, so unless you have a studio (and if you do, why the hell
+          are you even reading this?) or a huge room, you're bound to only
+          portraits. Which is really limiting and you may run out of ideas (or
+          models, or both) pretty soon.
+        </p>
+        <p>
+          So, you might switch to shooting people in their somewhat natural
+          habitat, cities. I truly admire those who can just go out and point
+          their camera on some random folks, and I'm not one of them.
+        </p>
+        <NoteImage src="/4/12.jpg"></NoteImage>
+        <p>This is my best attempt at streetphoto so far.</p>
+        <p>
+          <b>Please remember</b> to check your local regulations regarding
+          photographing random people (especially minors) and then uploading
+          those pictures!
+        </p>
+        <NoteImage src="/4/13.jpg"></NoteImage>
+        <p>
+          If you're uncomfortable with the sreetphoto like me, you may try to
+          shoot silhouettes of people. It doesn't tell a story (which a
+          streetphoto is supposed to do), but it depicts people without showing
+          their faces.
+        </p>
         <h3>Conclusion</h3>
         <p>
           So, the picture should score some points of being interesting and
