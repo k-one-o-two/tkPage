@@ -31,8 +31,8 @@ function Notes() {
           </a>{' '}
           and this TG channel:{' '}
           <a href="https://t.me/aurora_hunter">Aurora Hunters</a>. The amount of
-          the info they give might be overwhelming, but it's safe to ignore it
-          and just react to red marks (on the web site).
+          info they give might be overwhelming, but it's safe to ignore it and
+          just react to the red marks (on the web site).
         </p>
         <h4>Place</h4>
         <p>
@@ -70,8 +70,8 @@ function Notes() {
         <NoteImage src="/5/1.jpg"></NoteImage>
         <p>because this image is shot nearly directly eastward.</p>
         <p>
-          But if there's a whole city to the north of some nice place you've
-          found, the place might be useless.
+          If there's a whole city to the north of some nice place you've found,
+          the place might be useless.
         </p>
         <p>
           There's a bird-watching tower, that is really high and has a great
@@ -167,7 +167,7 @@ function Notes() {
           clouds, they disappear in one place and appear in some another) and
           they do it fast enough to appear too blurry. Therefore, I've realized
           that 5s time is good enough. Make it longer and you'll get blurry
-          colorful mess, make is shorter and you'll miss some starts in the
+          colorful mess, make is shorter and you'll miss some stars in the
           background.
         </p>
         <p>
