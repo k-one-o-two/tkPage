@@ -77,7 +77,7 @@ function HomePage() {
             <a href="https://www.deviantart.com/k102">Devianart</a>
           </div>
           <div>
-            <a href="https://www.youtube.com/@user-hp7df1xu2m">YouTube</a>
+            <a href="https://www.youtube.com/@k-one-o-two">YouTube</a>
           </div>
         </div>
       </div>
