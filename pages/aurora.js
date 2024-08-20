@@ -59,7 +59,7 @@ function Notes() {
           Auroras, despite being "northern" lights, are not guaranteed to be
           directly on the north - actually, the more intense they are, the more
           random their position is. It may vary both in direction and distance
-          from the horizon - there were several times I've seen it tight above
+          from the horizon - there were several times I've seen it right above
           my head, like that one:
         </p>
         <NoteImage src="/5/2.jpg"></NoteImage>
