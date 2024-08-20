@@ -10,19 +10,27 @@ body {
 .paper {
     background-color: $nord5;
     // margin: '1rem';
-    padding-top: 10px;
-    padding-right: 10px;
     padding-bottom: 10px;
-    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 100px;
+    padding-left: 100px;
 }
+
+@media only screen and (max-width: 600px) {
+    .paper {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+  }
 
 .p-card-title {
     font-family: 'Coda', sans-serif;
 }
 
-h3 {
+h3, h4 {
     font-family: 'Coda', sans-serif;
 }
+
 
 p, a, .p-button-label {
     font-family: 'Coda', cursive;
@@ -47,6 +55,13 @@ a:hover {
     clip-path: polygon(0 0,calc(100% - 40.00px) 0,100% 40.00px,100% 100%,0 100%);
     width: unset !important;
 }
+
+@media only screen and (min-width: 600px) {
+    .card {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+  }
 
 .top-button {
     border: 1px solid $nord6;

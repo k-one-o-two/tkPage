@@ -26,6 +26,10 @@ function HomePage() {
             <a href="/uncrap">And that is</a> my attempt to explain how to{' '}
             <b>shoot not</b> so crappy photos - highly opinionated
           </p>
+          <p>
+            <a href="/aurora">Here</a> is yet another guide on how to take
+            pictures of auroras
+          </p>
         </div>
         <div className="card">
           <h3>Contacts</h3>
