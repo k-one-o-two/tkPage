@@ -1,35 +1,48 @@
 import { Image } from 'primereact/image';
+import { Card } from '../components/card';
 
 function HomePage() {
   return (
     <>
       <div className="flex flex-column">
         <div className="text-center">
-          <Image src="k102.svg" height="200"></Image>
+          {/* <Image src="k102.svg" height="200"></Image> */}
         </div>
         <div className="card" title="About me">
           <h3>About me</h3>
           <p>I'm a software dev from Saint-Petersburg, living in Espoo.</p>
-          <p>
-            <a href="/mapping">Here</a> I have written some notes regarding QGIS
-            usage for creating maps
-          </p>
-          <p>
-            <a href="/dashware">And here</a> some other notes on using DashWare
-            tool
-          </p>
-          <p>
-            <a href="/crap">This is</a> my attempt to explain how to{' '}
-            <b>not shoot</b> crappy photos
-          </p>
-          <p>
-            <a href="/uncrap">And that is</a> my attempt to explain how to{' '}
-            <b>shoot not</b> so crappy photos - highly opinionated
-          </p>
-          <p>
-            <a href="/aurora">Here</a> is yet another guide on how to take
-            pictures of auroras
-          </p>
+          <div
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: 30,
+              marginBottom: 40,
+            }}
+          >
+            <Card title="QGIS" link="/mapping">
+              <p className="m-0">
+                Notes regarding QGIS usage for creating maps
+              </p>
+            </Card>
+            <Card title="Dashware" link="/dashware">
+              <p>Notes on using DashWare tool</p>
+            </Card>
+            <Card title="On crappy photo" link="/crap">
+              <p>
+                This is my attempt to explain how to <b>not shoot</b> crappy
+                photos
+              </p>
+            </Card>
+            <Card title="On not-so-crappy photo" link="/uncrap">
+              <p>
+                That is my attempt to explain how to <b>shoot not</b> so crappy
+                photos - highly opinionated
+              </p>
+            </Card>
+            <Card title="Auroras" link="/aurora">
+              <p>Yet another guide on how to take pictures of auroras</p>
+            </Card>
+          </div>
         </div>
         <div className="card">
           <h3>Contacts</h3>

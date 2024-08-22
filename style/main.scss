@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Coda&family=Orbitron&display=swap');
-
-@import "node_modules/nord/src/sass/nord.scss";
+@import "../node_modules/nord/src/sass/nord.scss";
 
 body {
   background-color: $nord4;
@@ -56,6 +55,15 @@ a:hover {
     width: unset !important;
 }
 
+.card-l2 {
+    background: $nord4 !important;
+    min-height: 200px;
+    max-width: 300px;
+    min-width: 300px;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+}
+
 @media only screen and (min-width: 600px) {
     .card {
         padding-right: 50px;
@@ -78,3 +86,7 @@ a:hover {
 .top-button:hover {
     background: rgba(0, 0, 0, 0.7);
 }
+
+// .card {
+    
+// }

@@ -2,8 +2,8 @@
 import 'primeicons/primeicons.css'; // icons
 import 'primeflex/primeflex.css';
 
-import { Button } from 'primereact/button';
-import Image from 'next/image';
+import { Image } from 'primereact/image';
+
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -26,16 +26,17 @@ export function Layout({ children, active }) {
 
   return (
     <div>
-      <div className="flex justify-content-start flex-wrap">
+      <div
+        className="flex justify-content-center flex-wrap"
+        style={{ marginBottom: '10px' }}
+      >
+        <Image src="k102.svg" height="40"></Image>
         {model.map((item) => {
           return (
             <div
               className="top-button"
               key={item.label}
-              // label={}
               icon={`pi ${item.icon}`}
-              // className="mx-2 p-button-outlined"
-              rounded
               severity="secondary"
               onClick={() => {
                 router.push(item.url);
