@@ -42,9 +42,12 @@ export function NoteImage({ src, height }) {
       >
         {' '}
         <Image
+          // height="80vh"
+          // width="80vw"
           src={src}
           alt="Image"
           fill
+          // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           style={{
             objectFit: 'contain',
           }}
