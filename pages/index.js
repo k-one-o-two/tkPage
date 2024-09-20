@@ -42,6 +42,9 @@ function HomePage() {
             <Card title="Auroras" link="/aurora">
               <p>Yet another guide on how to take pictures of auroras</p>
             </Card>
+            <Card title="TG bot" link="/bot">
+              <p>Notes on using node.js for telegram bot backend</p>
+            </Card>
           </div>
         </div>
         <div className="card">

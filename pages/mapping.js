@@ -59,7 +59,7 @@ function Notes() {
           minutes I came up with the following:
         </p>
         <pre>
-          <code>{`
+          <code className="language-javascript">{`
 fs = require('fs');
 
 const save = async (activity) => {
@@ -86,7 +86,7 @@ const res = await fetch(
         </p>
         <p>So just put them into an array and call like that</p>
         <pre>
-          <code>{`
+          <code className="language-javascript">{`
 names.forEach((name) => save(name));
             `}</code>
         </pre>
@@ -173,7 +173,7 @@ names.forEach((name) => save(name));
           this:
         </p>
         <pre>
-          <code>
+          <code className="language-xml">
             {`
 <trkpt lat="60.1824680" lon="24.7411490">
   <ele>35.3</ele>
@@ -211,7 +211,7 @@ names.forEach((name) => save(name));
           color. It can look like this:
         </p>
         <pre>
-          <code>
+          <code className="language-javascript">
             {`ramp_color(
  'blue2red',
  scale_linear(
