@@ -2,5 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/photo": "pages/photo.js",
+  "/": "pages/index.js",
   "/bot": "pages/bot.js"
 }

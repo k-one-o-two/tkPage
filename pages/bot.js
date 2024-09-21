@@ -1,4 +1,4 @@
-import { NoteImage } from '../components/noteImage';
+import Head from 'next/head';
 
 function Notes() {
   const notes = [];
@@ -171,6 +171,9 @@ const getUserByFile = (fileId) => {
 
   return notes.map((note, i) => (
     <div className="card" key={i}>
+      <Head>
+        <title>Bot coding</title>
+      </Head>
       <h3>{note.title}</h3>
       {note.html}
     </div>

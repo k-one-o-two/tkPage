@@ -1,9 +1,12 @@
-import { Image } from 'primereact/image';
+import Head from 'next/head';
 import { Card } from '../components/card';
 
 function HomePage() {
   return (
     <>
+      <Head>
+        <title>k102 home page</title>
+      </Head>
       <div className="flex flex-column">
         <div className="text-center">
           {/* <Image src="k102.svg" height="200"></Image> */}
