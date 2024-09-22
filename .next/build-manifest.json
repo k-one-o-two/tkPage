@@ -30,15 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/bot": [
+    "/dashware": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/bot.js"
-    ],
-    "/photo": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/photo.js"
+      "static/chunks/pages/dashware.js"
     ]
   },
   "ampFirstPages": []

@@ -74,6 +74,10 @@ function Notes() {
         </p>
         <p>Here's how the end result looks like:</p>
         <iframe
+          style={{
+            width: '100%',
+            aspectRatio: '16 / 9',
+          }}
           src="https://www.youtube.com/embed/DvfDAEua6VI"
           title="the end result"
           frameborder="0"
