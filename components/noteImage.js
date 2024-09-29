@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export function NoteImage({ src, height }) {
+export function NoteImage({ src }) {
   return (
     <>
       <div style={{ position: 'relative', height: '400px', cursor: 'pointer' }}>
@@ -17,16 +17,7 @@ export function NoteImage({ src, height }) {
       </div>
 
       <div id={`pop_${src}`} className="img-dialog" popover="auto">
-        <div
-          style={{
-            zIndex: 1000,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            height: 30,
-            marginBottom: '3rem',
-          }}
-        >
+        <div className="dlg-header">
           <p style={{ color: 'white' }}>{src}</p>
           <button
             className="close-btn"
