@@ -132,15 +132,29 @@ a:hover {
       background-color: rgb(0 0 0 / 0%);
     }
   }
+
+  @media only screen and (min-width: 600px) {
+    .card {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .img-dialog {
+        height: 90vh;
+        min-width: 80vw;
+      }
+  }
+
   .img-dialog {
     position: fixed;
     left: 0;
     right: 0;
     height: 90vh;
-    min-width: 80vw;
+    min-width: 90vw;
     background: #4C566A;
     padding: 10px;
   }
+
 
   .img-container {
     text-align: center;
