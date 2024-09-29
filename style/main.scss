@@ -4,6 +4,7 @@
 body {
   background-color: $nord4;
   color: $nord5;
+  display: grid;
 }
 
 .paper {
@@ -87,6 +88,72 @@ a:hover {
     background: rgba(0, 0, 0, 0.7);
 }
 
-// .card {
-    
-// }
+[popover]:popover-open {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  
+  [popover] {
+    /* Финальное состояние анимации исчезновения */
+    opacity: 0;
+    transform: scaleX(0);
+  
+    transition:
+      opacity 0.3s,
+      transform 0.3s,
+      overlay 0.3s allow-discrete,
+      display 0.3s allow-discrete;
+  }
+  
+  @starting-style {
+    [popover]:popover-open {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+  }
+  
+  /* Анимация для фона поповера */
+  [popover]::backdrop {
+    background-color: rgb(0 0 0 / 0%);
+    transition:
+      display 0.3s allow-discrete,
+      overlay 0.3s allow-discrete,
+      background-color 0.3s;
+    /* Equivalent to
+    transition: all 0.7s allow-discrete; */
+  }
+  
+  [popover]:popover-open::backdrop {
+    background-color: rgb(0 0 0 / 25%);
+  }
+  
+  @starting-style {
+    [popover]:popover-open::backdrop {
+      background-color: rgb(0 0 0 / 0%);
+    }
+  }
+  .img-dialog {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 90vh;
+    min-width: 80vw;
+    background: #4C566A;
+    padding: 10px;
+  }
+
+  .img-container {
+    text-align: center;
+    width: 100%;
+    height: 80%;
+  }
+
+
+  .close-btn {
+    border: none;
+    background-color: $nord5;
+    right: 0.25rem;
+    top: 0.5rem;
+    font-family: 'Coda', monospace;
+    cursor: pointer;
+  }
