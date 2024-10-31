@@ -83,12 +83,12 @@ export function FlickrFeed() {
 
   useEffect(() => {
     getLastPhotos(1).then(placeImages);
-    setInnerWidth(window.innerWidth);
+    setInnerWidth(window.innerWidth - 200);
 
     window.addEventListener(
       'resize',
       debounce(() => {
-        setInnerWidth(window.innerWidth);
+        setInnerWidth(window.innerWidth - 200);
       }, 300),
     );
   }, []);
@@ -128,7 +128,7 @@ export function FlickrFeed() {
       ) : (
         <div
           style={{
-            paddingLeft: '2.5vw',
+            paddingLeft: '1.5vw',
             paddingTop: '2rem',
           }}
         >
@@ -159,6 +159,31 @@ export function FlickrFeed() {
             })}
         </div>
       )}
+      <div className="flex justify-content-between">
+        <Button
+          className="p-button-outlined"
+          icon="pi pi-arrow-left "
+          disabled={isLoading || currentPage === 1}
+          onClick={() => {
+            setCurrentPage((cp) => {
+              getLastPhotos(cp - 1).then(placeImages);
+              return cp - 1;
+            });
+          }}
+        ></Button>
+        <h3>page : {currentPage}</h3>
+        <Button
+          className="p-button-outlined"
+          icon="pi pi-arrow-right"
+          disabled={isLoading}
+          onClick={() => {
+            setCurrentPage((cp) => {
+              getLastPhotos(cp + 1).then(placeImages);
+              return cp + 1;
+            });
+          }}
+        ></Button>
+      </div>
     </div>
   );
 }

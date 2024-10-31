@@ -8,8 +8,8 @@ export function ImageTile({
   const oneColumn = availableWidth <= 650;
 
   const { source, width, height, url } = image;
-  const desiredHeight = 300;
-  const difference = availableWidth / 1500;
+  const desiredHeight = 400;
+  const difference = availableWidth / 1700;
 
   const isVertical = height > width;
 
@@ -21,8 +21,12 @@ export function ImageTile({
     return (
       <a href={`${url.replace('/sizes/m/', '')}`}>
         <div
-          className="cursor-pointer bg-cover hover:shadow-8"
+          className="cursor-pointer hover:shadow-8"
           style={{
+            backgroundSize: 'cover',
+            backgroundPositionY: 'center',
+            backgroundPositionX: 'center',
+            backgroundRepeat: 'no-repeat',
             backgroundImage: `url(${source})`,
             width: oneColumn ? '' : totalWidth * difference,
             height: desiredHeight,
@@ -34,8 +38,12 @@ export function ImageTile({
     return (
       <a href={`${url.replace('/sizes/m/', '')}`}>
         <div
-          className="cursor-pointer bg-cover hover:shadow-8"
+          className="cursor-pointer hover:shadow-8"
           style={{
+            backgroundSize: 'cover',
+            backgroundPositionY: 'center',
+            backgroundPositionX: 'center',
+            backgroundRepeat: 'no-repeat',
             backgroundImage: `url(${source})`,
             width: oneColumn
               ? ''
