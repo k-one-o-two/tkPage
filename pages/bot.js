@@ -95,8 +95,8 @@ chatsArray.insert({
           that their picture has been approved (or not).
         </p>
         <p>
-          This is why we have saved the user id into the array - in sone cases,
-          a user can hide their username on forwarded messages - the only way t
+          This is why we have saved the user id into the array - in some cases,
+          a user can hide their username on forwarded messages - the only way to
           trace the user back is by the file uniq id .
         </p>
         <pre>
@@ -130,7 +130,7 @@ const getUserByFile = (fileId) => {
         </p>
         <p>
           Additionally, you may want to check that this reply is indeed in the
-          group or have some approved users list.
+          group or it has some approved users in it.
         </p>
         <h3>That's it</h3>
         <p>
