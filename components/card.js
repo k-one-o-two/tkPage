@@ -1,14 +1,34 @@
 import { useState, useEffect } from 'react';
 
+const strToCryptic = (str, lastGen) => {
+  const randomIntFromInterval = (min, max) =>
+    Math.floor(Math.random() * (max - min + 1) + min);
+
+  const doneArr = [];
+  let crypted = Array.from({ length: str.length }, (v, i) => {
+    const isDone = doneArr[i] || Math.random() > 0.5;
+    if (isDone) {
+      doneArr[i] = true;
+      return str[i];
+    }
+    return String.fromCodePoint(randomIntFromInterval(0, 8000));
+  }).join('');
+
+  return crypted;
+};
+
 export function Card({ title, children, link }) {
   const [clip, setClip] = useState('');
+  const [cryptedTitle, setCryptedTitle] = useState('');
+
+  useEffect(() => {
+    setCryptedTitle(strToCryptic(title));
+  }, [title]);
 
   useEffect(() => {
     const path = generateRandomPoints(170, 200);
     let downFacingPoints = `M-4,-4 L1004,-4 L1004,100 L${path.a} L${path.b} L${path.c} L${path.d} L${path.e} L-4,200 L-4,-4 Z`;
     setClip(downFacingPoints);
-
-    console.info(path);
 
     const interval = setInterval(() => {
       const path = generateRandomPoints(170, 200);

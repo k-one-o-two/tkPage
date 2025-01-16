@@ -48,6 +48,9 @@ function HomePage() {
             <Card title="TG bot" link="/bot">
               <p>Notes on using node.js for telegram bot backend</p>
             </Card>
+            <Card title="Jimp image editor" link="/img">
+              <p>In case you want to edit images in your node.js app</p>
+            </Card>
           </div>
         </div>
         <div className="card">
