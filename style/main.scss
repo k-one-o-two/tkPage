@@ -2,14 +2,17 @@
 @import "../node_modules/nord/src/sass/nord.scss";
 
 body {
-  background-color: $nord4;
+  // background-color: $nord4;
   color: $nord5;
   display: grid;
+  background:  url('./noize.svg');
+  // background-blend-mode: darken;
 }
-
+.header {
+  background: color-mix(in srgb, $nord5 70%, transparent);
+}
 .paper {
-    background-color: $nord5;
-    // margin: '1rem';
+    background: color-mix(in srgb, $nord5 70%, transparent);
     padding-bottom: 10px;
     padding-top: 10px;
     padding-right: 100px;
@@ -48,7 +51,7 @@ a:hover {
 .card {
     margin-top: 10px;
     border: 1px solid $nord6;
-    background: $nord6 !important;
+    background-color: color-mix(in srgb, $nord6 70%, transparent);
     border-radius: 0 !important;
     color: $nord3 !important;
     box-shadow: none !important;
@@ -57,7 +60,8 @@ a:hover {
 }
 
 .card-l2 {
-    background: $nord4 !important;
+    background: linear-gradient(180deg, $nord6, $nord4);
+    // $nord4 !important;
     min-height: 200px;
     max-width: 300px;
     min-width: 300px;
@@ -178,4 +182,27 @@ a:hover {
 
   code {
     white-space: pre-wrap !important;
+  }
+
+  .button {
+    border-left: 1px solid $nord5;
+    border-right: 1px solid $nord0;
+    border-bottom: 1px solid $nord0;
+    background: $nord6;
+    color: $nord0;
+    font-family: 'Coda', sans-serif;
+    box-shadow: 3px 3px 5px 0px $nord3, -3px -1px 7px 0px $nord6;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    outline-offset:-3px;   
+    outline: 1px solid $nord4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 0.5s ease-in-out;
+  }
+  .button:hover {
+    cursor: pointer;
+    background: $nord12;
   }

@@ -13,12 +13,12 @@ export function Layout({ children, active }) {
 
   const model = [
     {
-      label: 'About',
+      label: '_about',
       icon: 'pi-user',
       url: '/',
     },
     {
-      label: 'Photos',
+      label: '_photos',
       icon: 'pi-camera',
       url: '/photo',
     },
@@ -27,14 +27,14 @@ export function Layout({ children, active }) {
   return (
     <div>
       <div
-        className="flex justify-content-center flex-wrap"
-        style={{ marginBottom: '10px' }}
+        className="flex justify-content-center flex-wrap header"
+        style={{ display: 'flex', gap: '10px' }}
       >
         <Image src="k102.svg" height="40"></Image>
         {model.map((item) => {
           return (
             <div
-              className="top-button"
+              className="button"
               key={item.label}
               icon={`pi ${item.icon}`}
               severity="secondary"
