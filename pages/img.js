@@ -1,10 +1,8 @@
-import Head from 'next/head';
 import { NoteImage } from '../components/noteImage';
+import { Article } from '../components/article';
 
 function Notes() {
-  const notes = [];
-
-  notes.push({
+  const note = {
     title: 'Image editing in node.js',
     html: (
       <div>
@@ -191,17 +189,9 @@ const font = await loadFont('.my_font.fnt');
         </p>
       </div>
     ),
-  });
+  };
 
-  return notes.map((note, i) => (
-    <div className="card" key={i}>
-      <Head>
-        <title>Node.js image editing</title>
-      </Head>
-      <h3>{note.title}</h3>
-      {note.html}
-    </div>
-  ));
+  return <Article title={note.title} html={note.html}></Article>;
 }
 
 export default Notes;

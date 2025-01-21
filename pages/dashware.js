@@ -1,10 +1,9 @@
 import { NoteImage } from '../components/noteImage';
-import Head from 'next/head';
+// import Head from 'next/head';
+import { Article } from '../components/article';
 
 function Notes() {
-  const notes = [];
-
-  notes.push({
+  const note = {
     title: 'Video with telemetry',
     html: (
       <div>
@@ -86,17 +85,9 @@ function Notes() {
         ></iframe>
       </div>
     ),
-  });
+  };
 
-  return notes.map((note, i) => (
-    <div className="card" key={i}>
-      <Head>
-        <title>Dashware</title>
-      </Head>
-      <h3>{note.title}</h3>
-      {note.html}
-    </div>
-  ));
+  return <Article title={note.title} html={note.html}></Article>;
 }
 
 export default Notes;

@@ -1,10 +1,8 @@
 import { NoteImage } from '../components/noteImage';
-import Head from 'next/head';
+import { Article } from '../components/article';
 
 function Notes() {
-  const notes = [];
-
-  notes.push({
+  const note = {
     title: 'How to shoot not crap',
     html: (
       <div>
@@ -214,17 +212,9 @@ function Notes() {
         </p>
       </div>
     ),
-  });
+  };
 
-  return notes.map((note, i) => (
-    <div className="card" key={i}>
-      <Head>
-        <title>No crap photos</title>
-      </Head>
-      <h3>{note.title}</h3>
-      {note.html}
-    </div>
-  ));
+  return <Article title={note.title} html={note.html}></Article>;
 }
 
 export default Notes;

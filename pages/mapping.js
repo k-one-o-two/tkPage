@@ -1,10 +1,8 @@
 import { NoteImage } from '../components/noteImage';
-import Head from 'next/head';
+import { Article } from '../components/article';
 
 function Notes() {
-  const notes = [];
-
-  notes.push({
+  const note = {
     title: 'Own rides map',
     html: (
       <div>
@@ -253,17 +251,9 @@ names.forEach((name) => save(name));
         </p>
       </div>
     ),
-  });
+  };
 
-  return notes.map((note, i) => (
-    <div className="card" key={i}>
-      <Head>
-        <title>Making maps</title>
-      </Head>
-      <h3>{note.title}</h3>
-      {note.html}
-    </div>
-  ));
+  return <Article title={note.title} html={note.html}></Article>;
 }
 
 export default Notes;
