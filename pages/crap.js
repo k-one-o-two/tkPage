@@ -182,16 +182,6 @@ function Notes() {
   };
 
   return <Article title={note.title} html={note.html}></Article>;
-
-  // return notes.map((note, i) => (
-  //   <div className="card" key={i}>
-  //     <Head>
-  //       <title>Crap photos</title>
-  //     </Head>
-  //     <h1>{note.title}</h1>
-  //     {note.html}
-  //   </div>
-  // ));
 }
 
 export default Notes;
