@@ -17,6 +17,7 @@ body {
     padding-top: 10px;
     padding-right: 100px;
     padding-left: 100px;
+    min-height: calc(100vh - 80px);
 }
 
 @media only screen and (max-width: 600px) {

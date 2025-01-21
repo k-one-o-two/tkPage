@@ -17,7 +17,6 @@ function Notes() {
         <p>
           Disclaimer: the whole contents of this page is my personal opinion.
         </p>
-        <h3></h3>
         <p>
           Well, you have to take good pictures and avoid taking bad ones. But
           what makes a picture a good one?

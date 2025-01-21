@@ -2,9 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/aurora": "pages/aurora.js",
   "/": "pages/index.js",
-  "/bot": "pages/bot.js",
-  "/crap": "pages/crap.js",
-  "/img": "pages/img.js"
+  "/uncrap": "pages/uncrap.js"
 }

@@ -30,25 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/aurora": [
+    "/uncrap": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/aurora.js"
-    ],
-    "/bot": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/bot.js"
-    ],
-    "/crap": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/crap.js"
-    ],
-    "/img": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/img.js"
+      "static/chunks/pages/uncrap.js"
     ]
   },
   "ampFirstPages": []
