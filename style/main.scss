@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Coda&family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coda&family=Orbitron&family=Pixelify+Sans&display=swap');
 @import "../node_modules/nord/src/sass/nord.scss";
 
 body {
@@ -34,6 +34,16 @@ h3, h4 {
     font-family: 'Coda', sans-serif;
 }
 
+h3 {
+  border: 1px solid $nord0;
+  border-radius: 6px;
+  text-align: center;
+  padding: 3px;;
+  background-color: color-mix(in srgb, $nord9 10%, transparent);
+  text-transform: lowercase;
+  // font-family: "Pixelify Sans", serif;
+}
+
 
 p, a, .p-button-label {
     font-family: 'Coda', cursive;
@@ -60,7 +70,7 @@ a:hover {
 }
 
 .card-l2 {
-    background: linear-gradient(180deg, $nord6, $nord4);
+    background: linear-gradient(180deg, color-mix(in srgb, $nord6 70%, transparent), $nord4);
     // $nord4 !important;
     min-height: 200px;
     max-width: 300px;

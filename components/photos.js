@@ -97,9 +97,8 @@ export function FlickrFeed() {
     <div className="card" title="Photos">
       <h3>Photos</h3>
       <div className="flex justify-content-between">
-        <Button
-          className="p-button-outlined"
-          icon="pi pi-arrow-left "
+        <div
+          className="button"
           disabled={isLoading || currentPage === 1}
           onClick={() => {
             setCurrentPage((cp) => {
@@ -107,11 +106,12 @@ export function FlickrFeed() {
               return cp - 1;
             });
           }}
-        ></Button>
-        <h3>page : {currentPage}</h3>
-        <Button
-          className="p-button-outlined"
-          icon="pi pi-arrow-right"
+        >
+          &nbsp;&nbsp;&lt;&lt;&lt;&nbsp;&nbsp;
+        </div>
+        <h3>page = {currentPage}</h3>
+        <div
+          className="button"
           disabled={isLoading}
           onClick={() => {
             setCurrentPage((cp) => {
@@ -119,7 +119,9 @@ export function FlickrFeed() {
               return cp + 1;
             });
           }}
-        ></Button>
+        >
+          &nbsp;&nbsp;&gt;&gt;&gt;&nbsp;&nbsp;
+        </div>
       </div>
       {isLoading ? (
         <div className="flex justify-content-center">
@@ -159,10 +161,12 @@ export function FlickrFeed() {
             })}
         </div>
       )}
-      <div className="flex justify-content-between">
-        <Button
-          className="p-button-outlined"
-          icon="pi pi-arrow-left "
+      <div
+        style={{ paddingTop: '20px' }}
+        className="flex justify-content-between"
+      >
+        <div
+          className="button"
           disabled={isLoading || currentPage === 1}
           onClick={() => {
             setCurrentPage((cp) => {
@@ -170,11 +174,12 @@ export function FlickrFeed() {
               return cp - 1;
             });
           }}
-        ></Button>
-        <h3>page : {currentPage}</h3>
-        <Button
-          className="p-button-outlined"
-          icon="pi pi-arrow-right"
+        >
+          &nbsp;&nbsp;&lt;&lt;&lt;&nbsp;&nbsp;
+        </div>
+        <h3>page = {currentPage}</h3>
+        <div
+          className="button"
           disabled={isLoading}
           onClick={() => {
             setCurrentPage((cp) => {
@@ -182,7 +187,9 @@ export function FlickrFeed() {
               return cp + 1;
             });
           }}
-        ></Button>
+        >
+          &nbsp;&nbsp;&gt;&gt;&gt;&nbsp;&nbsp;
+        </div>
       </div>
     </div>
   );

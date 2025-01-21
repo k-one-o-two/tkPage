@@ -14,6 +14,7 @@ function HomePage() {
         <div className="card" title="About me">
           <h3>About me</h3>
           <p>I'm a software dev from Saint-Petersburg, living in Espoo.</p>
+          <p>Here are some texts regarding my interests^</p>
           <div
             style={{
               display: 'flex',

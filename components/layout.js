@@ -36,7 +36,6 @@ export function Layout({ children, active }) {
             <div
               className="button"
               key={item.label}
-              icon={`pi ${item.icon}`}
               severity="secondary"
               onClick={() => {
                 router.push(item.url);
