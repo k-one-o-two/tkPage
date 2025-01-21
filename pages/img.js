@@ -196,7 +196,7 @@ const font = await loadFont('.my_font.fnt');
   return notes.map((note, i) => (
     <div className="card" key={i}>
       <Head>
-        <title>Nide.js image editing</title>
+        <title>Node.js image editing</title>
       </Head>
       <h3>{note.title}</h3>
       {note.html}
