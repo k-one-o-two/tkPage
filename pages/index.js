@@ -47,10 +47,16 @@ function HomePage() {
               <p>Yet another guide on how to take pictures of auroras</p>
             </Card>
             <Card title="TG bot" link="/bot">
-              <p>Notes on using node.js for telegram bot backend</p>
+              <p>Notes on using Node.js for Telegram bot backend</p>
             </Card>
             <Card title="Jimp image editor" link="/img">
-              <p>In case you want to edit images in your node.js app</p>
+              <p>In case you want to edit images in your Node.js app</p>
+            </Card>
+            <Card title="Paginated queries speedup" link="/speed">
+              <p>
+                Notes on improving speed of paginated database queries in
+                Postgresql and Node.js
+              </p>
             </Card>
           </div>
         </div>
