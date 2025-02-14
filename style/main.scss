@@ -1,219 +1,242 @@
-@import url('https://fonts.googleapis.com/css2?family=Coda&family=Orbitron&family=Pixelify+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Coda&family=Orbitron&family=Pixelify+Sans&display=swap");
 @import "../node_modules/nord/src/sass/nord.scss";
 
 body {
   // background-color: $nord4;
   color: $nord5;
   display: grid;
-  background:  url('./noize.svg');
+  background: url("./noize.svg");
   // background-blend-mode: darken;
 }
 .header {
   background: color-mix(in srgb, $nord5 70%, transparent);
 }
 .paper {
-    background: color-mix(in srgb, $nord5 70%, transparent);
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-right: 100px;
-    padding-left: 100px;
-    min-height: calc(100vh - 80px);
+  background: color-mix(in srgb, $nord5 70%, transparent);
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 100px;
+  padding-left: 100px;
+  min-height: calc(100vh - 80px);
 }
 
 @media only screen and (max-width: 600px) {
-    .paper {
-        padding-right: 10px;
-        padding-left: 10px;
-    }
+  .paper {
+    padding-right: 10px;
+    padding-left: 10px;
   }
-
-.p-card-title {
-    font-family: 'Coda', sans-serif;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Coda', sans-serif;
+.p-card-title {
+  font-family: "Coda", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Coda", sans-serif;
 }
 
 h3 {
   border: 1px solid $nord0;
   border-radius: 6px;
   text-align: center;
-  padding: 3px;;
+  padding: 3px;
   background-color: color-mix(in srgb, $nord9 10%, transparent);
   text-transform: lowercase;
   // font-family: "Pixelify Sans", serif;
 }
 
-
-p, a, .p-button-label {
-    font-family: 'Coda', cursive;
+p,
+a,
+.p-button-label {
+  font-family: "Coda", cursive;
 }
 
-a, button {
-    color: $nord3 !important;
-    transition: all 1s ease-out;
+a,
+button {
+  color: $nord3 !important;
+  transition: all 1s ease-out;
 }
 
 a:hover {
-    color: $nord6;
+  color: $nord6;
 }
 
 .card {
-    margin-top: 10px;
-    border: 1px solid $nord6;
-    background-color: color-mix(in srgb, $nord6 70%, transparent);
-    border-radius: 0 !important;
-    color: $nord3 !important;
-    box-shadow: none !important;
-    clip-path: polygon(0 0,calc(100% - 40.00px) 0,100% 40.00px,100% 100%,0 100%);
-    width: unset !important;
+  margin-top: 10px;
+  border: 1px solid $nord6;
+  background-color: color-mix(in srgb, $nord6 70%, transparent);
+  border-radius: 0 !important;
+  color: $nord3 !important;
+  box-shadow: none !important;
+  clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%);
+  width: unset !important;
 }
 
 .card-l2 {
-    background: linear-gradient(180deg, color-mix(in srgb, $nord6 70%, transparent), $nord4);
-    // $nord4 !important;
-    min-height: 200px;
-    max-width: 300px;
-    min-width: 300px;
-    padding-right: 20px !important;
-    padding-left: 20px !important;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, $nord6 70%, transparent),
+    $nord4
+  );
+  // $nord4 !important;
+  min-height: 200px;
+  max-width: 300px;
+  min-width: 300px;
+  padding-right: 20px !important;
+  padding-left: 20px !important;
 }
 
 @media only screen and (min-width: 600px) {
-    .card {
-        padding-right: 50px;
-        padding-left: 50px;
-    }
+  .card {
+    padding-right: 50px;
+    padding-left: 50px;
   }
+}
 
 .top-button {
-    border: 1px solid $nord6;
-    border-top: none;
-    padding: 10px;
-    font-family: 'Coda', sans-serif;
-    color: $nord6;
-    background: $nord3;
-    cursor: pointer;
-    transition: all 1s ease-out;
-    margin-left: 10px;
+  border: 1px solid $nord6;
+  border-top: none;
+  padding: 10px;
+  font-family: "Coda", sans-serif;
+  color: $nord6;
+  background: $nord3;
+  cursor: pointer;
+  transition: all 1s ease-out;
+  margin-left: 10px;
 }
 
 .top-button:hover {
-    background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 [popover]:popover-open {
-    opacity: 1;
-    transform: scaleX(1);
-  }
-  
-  [popover] {
-    /* Финальное состояние анимации исчезновения */
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+[popover] {
+  /* Финальное состояние анимации исчезновения */
+  opacity: 0;
+  transform: scaleX(0);
+
+  transition: opacity 0.3s, transform 0.3s, overlay 0.3s allow-discrete,
+    display 0.3s allow-discrete;
+}
+
+@starting-style {
+  [popover]:popover-open {
     opacity: 0;
     transform: scaleX(0);
-  
-    transition:
-      opacity 0.3s,
-      transform 0.3s,
-      overlay 0.3s allow-discrete,
-      display 0.3s allow-discrete;
   }
-  
-  @starting-style {
-    [popover]:popover-open {
-      opacity: 0;
-      transform: scaleX(0);
-    }
-  }
-  
-  /* Анимация для фона поповера */
-  [popover]::backdrop {
-    background-color: rgb(0 0 0 / 0%);
-    transition:
-      display 0.3s allow-discrete,
-      overlay 0.3s allow-discrete,
-      background-color 0.3s;
-    /* Equivalent to
+}
+
+/* Анимация для фона поповера */
+[popover]::backdrop {
+  background-color: rgb(0 0 0 / 0%);
+  transition: display 0.3s allow-discrete, overlay 0.3s allow-discrete,
+    background-color 0.3s;
+  /* Equivalent to
     transition: all 0.7s allow-discrete; */
-  }
-  
+}
+
+[popover]:popover-open::backdrop {
+  background-color: rgb(0 0 0 / 25%);
+}
+
+@starting-style {
   [popover]:popover-open::backdrop {
-    background-color: rgb(0 0 0 / 25%);
+    background-color: rgb(0 0 0 / 0%);
   }
-  
-  @starting-style {
-    [popover]:popover-open::backdrop {
-      background-color: rgb(0 0 0 / 0%);
-    }
-  }
+}
 
-  @media only screen and (min-width: 600px) {
-    .card {
-        padding-right: 50px;
-        padding-left: 50px;
-    }
-
-    .img-dialog {
-        height: 90vh;
-        min-width: 80vw;
-      }
+@media only screen and (min-width: 600px) {
+  .card {
+    padding-right: 50px;
+    padding-left: 50px;
   }
 
   .img-dialog {
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    background: #4C566A;
+    height: 90vh;
+    min-width: 80vw;
   }
+}
 
+.img-dialog {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: #4c566a;
+}
 
-  .img-container {
-    text-align: center;
-    width: 100%;
-    height: 100%;
-  }
+.img-container {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
 
+.close-btn {
+  border: none;
+  background-color: $nord5;
+  font-family: "Coda", monospace;
+  cursor: pointer;
+}
 
-  .close-btn {
-    border: none;
-    background-color: $nord5;
-    font-family: 'Coda', monospace;
-    cursor: pointer;
-  }
+.dlg-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1rem;
+}
 
-  .dlg-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 1rem;
-  }
+code {
+  white-space: pre-wrap !important;
+}
 
-  code {
-    white-space: pre-wrap !important;
-  }
+.button {
+  border-left: 1px solid $nord5;
+  border-right: 1px solid $nord0;
+  border-bottom: 1px solid $nord0;
+  background: $nord6;
+  color: $nord0;
+  font-family: "Coda", sans-serif;
+  box-shadow: 3px 3px 5px 0px $nord3, -3px -1px 7px 0px $nord6;
+  border-radius: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  outline-offset: -3px;
+  outline: 1px solid $nord4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: all 0.5s ease-in-out;
+}
+.button:hover {
+  cursor: pointer;
+  background: $nord12;
+}
 
-  .button {
-    border-left: 1px solid $nord5;
-    border-right: 1px solid $nord0;
-    border-bottom: 1px solid $nord0;
-    background: $nord6;
-    color: $nord0;
-    font-family: 'Coda', sans-serif;
-    box-shadow: 3px 3px 5px 0px $nord3, -3px -1px 7px 0px $nord6;
-    border-radius: 4px;
-    padding-left: 10px;
-    padding-right: 10px;
-    outline-offset:-3px;   
-    outline: 1px solid $nord4;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    transition: all 0.5s ease-in-out;
-  }
-  .button:hover {
-    cursor: pointer;
-    background: $nord12;
-  }
+.crt {
+  /* scanlines */
+  background: linear-gradient(
+    to top,
+    $nord3,
+    $nord4,
+    $nord5,
+    $nord5
+  ) !important;
+  background-size: cover !important;
+  background-size: 100% 1px !important;
+
+  padding-left: 50px !important;
+}
+
+.crt .token,
+.crt code {
+  text-shadow: 0 0 10px #ffffff !important;
+  background: none !important;
+}

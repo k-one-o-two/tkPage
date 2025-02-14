@@ -1,9 +1,9 @@
-import { Article } from '../components/article';
-import { NoteImage } from '../components/noteImage';
+import { Article } from "../components/article";
+import { NoteImage } from "../components/noteImage";
 
 function Notes() {
   const note = {
-    title: 'On speed for paginated queries',
+    title: "On speed for paginated queries",
     html: (
       <div>
         <h3>The problem</h3>
@@ -17,10 +17,10 @@ function Notes() {
           pagination.
         </p>
         <p>
-          Looks pretty simple: we have{' '}
+          Looks pretty simple: we have{" "}
           <a href="https://www.postgresql.org/docs/current/queries-limit.html">
             LIMIT and OFFSET
-          </a>{' '}
+          </a>{" "}
           specifically for that task. But I would not have written this article,
           if it was that easy.
         </p>
@@ -30,12 +30,12 @@ function Notes() {
         </p>
         <h3>More details</h3>
         <p>
-          I'm using <a href="https://www.postgresql.org/">Postgresql</a> with{' '}
-          <a href="https://www.prisma.io/">Prisma</a> in{' '}
+          I'm using <a href="https://www.postgresql.org/">Postgresql</a> with{" "}
+          <a href="https://www.prisma.io/">Prisma</a> in{" "}
           <a href="https://nodejs.org/en">Node.js</a> so code snippets would be
           with those tools. So, consider this query:
         </p>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">{`
 const data = await prisma.someTable
 .findMany({
@@ -66,7 +66,7 @@ const data = await prisma.someTable
         </p>
         <h3>Why is that?</h3>
         <p>
-          I have found a great article on this topic,{' '}
+          I have found a great article on this topic,{" "}
           <a href="https://use-the-index-luke.com/blog/2013-07/pagination-done-the-postgresql-way">
             here it is
           </a>
@@ -85,10 +85,10 @@ const data = await prisma.someTable
         <p>
           Another issue is that for pagination to work I have to send the total
           number of rows along with the paginated data. Therefore, I have to run
-          another query to get that count (since the long-awaited{' '}
+          another query to get that count (since the long-awaited{" "}
           <a href="https://github.com/prisma/prisma/issues/7550">
             findManyAndCount
-          </a>{' '}
+          </a>{" "}
           had not been implemented yet)
         </p>
         <h3>My solution</h3>
@@ -117,7 +117,7 @@ const data = await prisma.someTable
           need for this exact page of pagination and then use it in the big one.
         </p>
         <p>Now, let's have 2 queries:</p>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">{`
 const ids = await prisma.someTable
 .findMany({
@@ -169,7 +169,7 @@ const data = await prisma.someTable
           in the 1st one (the one that gets ids) and moved pagination task to
           js:
         </p>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">{`
 const paginatedIds = ids.slice(skip, skip + take));
           `}</code>

@@ -1,20 +1,20 @@
-import { NoteImage } from '../components/noteImage';
-import { Article } from '../components/article';
+import { NoteImage } from "../components/noteImage";
+import { Article } from "../components/article";
 
 function Notes() {
   const note = {
-    title: 'Image editing in node.js',
+    title: "Image editing in node.js",
     html: (
       <div>
         <h3>Why</h3>
         <p>
-          This is also related to the bot, I have described{' '}
+          This is also related to the bot, I have described{" "}
           <a href="/bot">here</a>. Since then, I have found another api that
           allows reading message history and counting likes on each.
         </p>
         <p>So, I've had an idea to select the best one for each month.</p>
         <p>
-          It is not that interesting: you just have to use the{' '}
+          It is not that interesting: you just have to use the{" "}
           <a href="https://gram.js.org/">telegram</a> npm package and follow the
           docs.
         </p>
@@ -34,7 +34,7 @@ function Notes() {
           possible.
         </p>
         <p>
-          So, I came across The JavaScript Image Manipulation Program,{' '}
+          So, I came across The JavaScript Image Manipulation Program,{" "}
           <a href="http://jimp-dev.github.io/jimp/">Jimp</a>. Just check out
           their logo!
         </p>
@@ -49,7 +49,7 @@ function Notes() {
         </p>
         <h4>Loading an image</h4>
         <p>First, we'll load an image and get it's dimensions:</p>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">{`
 const image = await Jimp.read('output.jpg');
 const { width, height } = image.bitmap;
@@ -60,7 +60,7 @@ const { width, height } = image.bitmap;
           doing it, so I'm gonna create white rectangles and slap them onto the
           image:
         </p>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">{`
 const border = 20;
 
@@ -81,7 +81,7 @@ image.composite(borderB, 0, height - border * 4);
         <p>
           Next, I'll add a black overlay, to make the image look more printed.
         </p>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">{`
 const overlay = new Jimp({
       width,
@@ -110,7 +110,7 @@ image.composite(overlay, 0, 0);
           separately.
         </p>
         <p>The next issue was this:</p>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">{`
 const font = await loadFont('.my_font.ttf');
           `}</code>
@@ -126,7 +126,7 @@ const font = await loadFont('.my_font.ttf');
         </p>
         <p>
           It did not. After making several efforts, I've realized I'm not the
-          only one who has a problem and there's an{' '}
+          only one who has a problem and there's an{" "}
           <a href="https://github.com/Automattic/node-canvas/issues/2255">
             open GitHub issue
           </a>
@@ -148,7 +148,7 @@ const font = await loadFont('.my_font.ttf');
         </p>
         <NoteImage src="/6/3.png"></NoteImage>
         <p>Now, we're one step closer!</p>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">{`
 const font = await loadFont('.my_font.fnt');
           `}</code>
@@ -164,7 +164,7 @@ const font = await loadFont('.my_font.fnt');
           But than I've had an idea both dumb and brilliant: rotate an image,
           print text, rotate back.
         </p>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">{`
     image.rotate(90);
 
@@ -180,7 +180,7 @@ const font = await loadFont('.my_font.fnt');
         </pre>
         <h3>Done</h3>
         <p>
-          That's it, the code is{' '}
+          That's it, the code is{" "}
           <a href="https://github.com/k-one-o-two/img-bot">on Github.</a>
         </p>
         <p>

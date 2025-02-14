@@ -1,8 +1,8 @@
-import { Article } from '../components/article';
+import { Article } from "../components/article";
 
 function Notes() {
   const note = {
-    title: 'On Telegram bot development',
+    title: "On Telegram bot development",
     html: (
       <div>
         <h3>Why</h3>
@@ -27,7 +27,7 @@ function Notes() {
           user to that group and then to the channel.
         </p>
         <p>
-          To create a bot, you have to interact with the{' '}
+          To create a bot, you have to interact with the{" "}
           <a href="https://t.me/BotFather">bot father</a> - this is pretty
           straight-forward and I'm gonna skip it here.
         </p>
@@ -35,12 +35,12 @@ function Notes() {
           We'll be using node.js, let's start with adding a couple of packages
           we'll need.
         </p>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">
             npm install node-telegram-bot-api
           </code>
         </pre>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">npm install locallydb</code>
         </pre>
         <p>
@@ -52,7 +52,7 @@ function Notes() {
           lets you to subscribe to some events. First of all, we need a "photo"
           event.
         </p>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">{`
 const bot = new TelegramBot(token, { polling: true });
 
@@ -64,7 +64,7 @@ bot.on('photo', (msg) => {});
           need to download it - only memorize it's "file_unique_id". Let's save
           it to the collection:
         </p>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">
             {`
 chatsArray.insert({
@@ -82,7 +82,7 @@ chatsArray.insert({
           Now we need to forward this message to the admin group, this is pretty
           straightforward as well.
         </p>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">
             bot.forwardMessage(groupID, msg.chat.id, msg.message_id);
           </code>
@@ -97,7 +97,7 @@ chatsArray.insert({
           a user can hide their username on forwarded messages - the only way to
           trace the user back is by the file uniq id .
         </p>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">{`
 bot.onText(/ok\\s?(.*)/, (msg, match) => {
   const comment = match[1]; // the captured "comment"
@@ -132,7 +132,7 @@ const getUserByFile = (fileId) => {
         </p>
         <h3>That's it</h3>
         <p>
-          You may see this code here:{' '}
+          You may see this code here:{" "}
           <a href="https://github.com/k-one-o-two/img-bot">on Github.</a>
         </p>
         <h3>Wait, how do I run it?</h3>
@@ -142,18 +142,18 @@ const getUserByFile = (fileId) => {
           your machine, there's a great option.
         </p>
         <p>
-          You can obtain an{' '}
-          <a href="https://www.oracle.com/cloud/free/">Oracle free tier</a>{' '}
+          You can obtain an{" "}
+          <a href="https://www.oracle.com/cloud/free/">Oracle free tier</a>{" "}
           virtual machine. On which you can install any OS you like.
         </p>
         <p>
           After trying several options to run my little node script and detach
-          it from the ssh terminal, I've found out that{' '}
+          it from the ssh terminal, I've found out that{" "}
           <a href="https://www.npmjs.com/package/forever">forever</a> works nest
           for me.
         </p>
         <p>So, install it and run your script:</p>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">
             npm install -g forever && forever start ./app.js
           </code>

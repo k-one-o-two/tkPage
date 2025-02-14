@@ -1,9 +1,9 @@
-import { NoteImage } from '../components/noteImage';
-import { Article } from '../components/article';
+import { NoteImage } from "../components/noteImage";
+import { Article } from "../components/article";
 
 function Notes() {
   const note = {
-    title: 'Own rides map',
+    title: "Own rides map",
     html: (
       <div>
         <h3>Why</h3>
@@ -57,7 +57,7 @@ function Notes() {
           Actually, you only need to send the Cooke one. After a couple of
           minutes I came up with the following:
         </p>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">{`
 fs = require('fs');
 
@@ -84,7 +84,7 @@ const res = await fetch(
           completely useless, yay!
         </p>
         <p>So just put them into an array and call like that</p>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">{`
 names.forEach((name) => save(name));
             `}</code>
@@ -171,7 +171,7 @@ names.forEach((name) => save(name));
           Unfortunately, gpx track point does not contain speed, it looks like
           this:
         </p>
-        <pre>
+        <pre className="crt">
           <code className="language-xml">
             {`
 <trkpt lat="60.1824680" lon="24.7411490">
@@ -187,7 +187,7 @@ names.forEach((name) => save(name));
           </code>
         </pre>
         <p>
-          There is a useful QGIS plugin, called{' '}
+          There is a useful QGIS plugin, called{" "}
           <a href="https://anitagraser.com/2019/02/02/movement-data-in-gis-20-trajectools-v1-released/">
             Trajectools
           </a>
@@ -209,7 +209,7 @@ names.forEach((name) => save(name));
           Here we may create an expression which will be used to calculate the
           color. It can look like this:
         </p>
-        <pre>
+        <pre className="crt">
           <code className="language-javascript">
             {`ramp_color(
  'blue2red',
