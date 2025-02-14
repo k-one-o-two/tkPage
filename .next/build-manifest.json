@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/speed": [
+    "/bot": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/speed.js"
+      "static/chunks/pages/bot.js"
     ]
   },
   "ampFirstPages": []
