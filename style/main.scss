@@ -220,23 +220,26 @@ code {
   background: $nord12;
 }
 
-.crt {
-  /* scanlines */
-  background: linear-gradient(
-    to top,
-    $nord3,
-    $nord4,
-    $nord5,
-    $nord5
-  ) !important;
-  background-size: cover !important;
-  background-size: 100% 2px !important;
-
-  padding-left: 50px !important;
+@media (min-width: 800px) {
+  .crt {
+    /* scanlines */
+    background: linear-gradient(
+      to top,
+      $nord3,
+      $nord4,
+      $nord5,
+      $nord5
+    ) !important;
+    background-size: cover !important;
+    background-size: 100% 2px !important;
+  
+    padding-left: 50px !important;
+  }
+  
+  .crt .token,
+  .crt code {
+    text-shadow: 0 0 10px #ffffff !important;
+    background: none !important;
+  }
 }
 
-.crt .token,
-.crt code {
-  text-shadow: 0 0 10px #ffffff !important;
-  background: none !important;
-}
