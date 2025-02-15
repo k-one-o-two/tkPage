@@ -233,13 +233,28 @@ code {
     background-size: cover !important;
     background-size: 100% 2px !important;
   
-    padding-left: 50px !important;
+    padding-left: 30px !important;
+
+    position: relative;
+  }
+
+  .crt::after {
+    animation: blinker 1s cubic-bezier(1,0,0,1) infinite;
+    position: absolute;
+    left: 30px;
+    content: "_";
   }
   
   .crt .token,
   .crt code {
     text-shadow: 0 0 10px #ffffff !important;
     background: none !important;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
   }
 }
 
