@@ -1,14 +1,14 @@
-import { NoteImage } from '../components/noteImage';
-import { Article } from '../components/article';
+import { NoteImage } from "../components/noteImage";
+import { Article } from "../components/article";
 
 function Notes() {
   const note = {
-    title: 'How to shoot not crap',
+    title: "How to shoot not crap",
     html: (
       <div>
         <h3>Why</h3>
         <p>
-          Ok, so I've <a href="/carp">tried my best</a> do discuss how to not
+          Ok, so I've <a href="/crap">tried my best</a> do discuss how to not
           make a crappy image. But then it has been pointed out that these
           advices only work if you know what is that you're going to shoot.
           Which is not always the case. So now I'll try to share some ideas on
@@ -30,7 +30,7 @@ function Notes() {
           aesthetic point of view. Apart from being able to find images with
           traffic lights, we, humans have other things in common and visual
           taste is one of them. Of course, there are some overly unique
-          snowflakes, who will claim to like something completely different, but{' '}
+          snowflakes, who will claim to like something completely different, but{" "}
           <s>who cares</s>
           I'm talking about the majority here. So, what are those things?
         </p>
@@ -38,7 +38,7 @@ function Notes() {
         <p>
           <a href="https://www.youtube.com/watch?v=3YTd2eoW5ys">
             We are animals
-          </a>{' '}
+          </a>{" "}
           and nature is our habitat: it makes us happy when the sun is shining,
           flowers are blooming, bunnies are... well, just are, and so on.
         </p>
@@ -62,7 +62,7 @@ function Notes() {
           pictures. But it is actually a problem.
         </p>
         <p>
-          {' '}
+          {" "}
           <a href="https://www.flickr.com/photos/k102/20063048778/in/album-72157656308523978/">
             Consider this one
           </a>
@@ -107,7 +107,7 @@ function Notes() {
         <h3>Lighting</h3>
         <p>
           Technically, we're not taking pictures of objects. We capture some
-          light that has been reflected by them, sometimes we capture{' '}
+          light that has been reflected by them, sometimes we capture{" "}
           <i>just</i> the light itself - think of shooting stars or auroras or a
           rainbow.
         </p>
