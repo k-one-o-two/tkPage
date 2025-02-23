@@ -7,7 +7,7 @@ export function Card({ title, children, link, art }) {
         className="card card-l2"
         style={{display: 'flex', flexWrap: 'wrap'}}
       >
-        <div><pre style={{paddingRight: '30px', paddingBottom: '10px'}}><code>{art}</code></pre></div>
+        <div><pre><code>{art}</code></pre></div>
         <div><h2 className="title">{title}</h2>
         <div className="content">{children}</div></div>
       </div>
