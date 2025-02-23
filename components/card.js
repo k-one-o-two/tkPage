@@ -4,7 +4,7 @@ export function Card({ title, children, link, art }) {
   return (
     <div className="card card-l2" style={{display: 'flex', flexWrap: 'wrap', gap: 10}}>
       <div>
-        <pre style={{fontFamily: 'Consolas,monospace'}}>{art}</pre>
+        <pre>{art}</pre>
         </div>
       <a href={link}>
         <div><h2 className="title">{title}</h2>
