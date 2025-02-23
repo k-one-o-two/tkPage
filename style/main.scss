@@ -76,15 +76,9 @@ a:hover {
 }
 
 .card-l2 {
-  background: linear-gradient(
-    180deg,
-    color-mix(in srgb, $nord6 70%, transparent),
-    $nord4
-  );
-  // $nord4 !important;
+  background-color: $nord4;
   min-height: 200px;
-  max-width: 300px;
-  min-width: 300px;
+  width: 100%;
   padding-right: 20px !important;
   padding-left: 20px !important;
 }
@@ -249,6 +243,12 @@ code {
   .crt code {
     text-shadow: 0 0 10px #ffffff !important;
     background: none !important;
+  }
+}
+
+@media (min-resolution: 1.2x) {
+  .crt {
+    background-size: 100% 4px !important;
   }
 }
 
