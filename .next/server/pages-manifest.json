@@ -2,8 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/speed": "pages/speed.js",
+  "/": "pages/index.js",
+  "/crap": "pages/crap.js",
   "/bot": "pages/bot.js",
-  "/aurora": "pages/aurora.js",
-  "/": "pages/index.js"
+  "/speed": "pages/speed.js"
 }

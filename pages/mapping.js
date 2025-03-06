@@ -21,8 +21,7 @@ export const note = {
       <p>
         So, I have realized that I <i>need</i> to draw a map of my rides, and
         do it myself. Yeah, I know that there are a lot of tools out there,
-        but this is not fun. I mean, doing what others have already done way
-        better, suffering meanwhile is fun, right?
+        but this is not fun. I mean, doing what others have already done way better while suffering is fun, right?
       </p>
       <h3>How</h3>
       <p>
@@ -42,8 +41,7 @@ export const note = {
       <p>
         The thing is, I use Suunto 5 watches to record my activities. It's
         good, but its output is not a gpx, but a fit file, even an archived
-        one. So, along with some gpx files (I used Garmin Edge before), I have
-        received a bunch if "fit.gz" ones
+        one. So, along with some gpx files (I used Garmin Edge before), I have received a bunch of 'fit.gz' ones
       </p>
       <p>
         First, I thought to try to use them as they are, but have failed to
@@ -57,13 +55,12 @@ export const note = {
       </p>
       <NoteImage src="/1/export.png"></NoteImage>
       <p>
-        Shortly, I've realized that I have to press this damn button quite a
-        lot (yeah, I didn't bother to count) of times. So, let's automate! It
+      Shortly, I've realized that I have to press this damn button quite a lot (yeah, I didn't bother to count) times. So, let's automate! It
         was supposed to be fun, right?
       </p>
       <h4>A bit of code</h4>
       <p>
-        So, I have downloaded one gpx and recorder my request using Fiddler.
+        So, I have downloaded one gpx and recorded my request using Fiddler.
         This gave me useful headers, that I could use to get other files.
         Actually, you only need to send the Cooke one. After a couple of
         minutes I came up with the following:
@@ -90,19 +87,18 @@ const res = await fetch(
 `}</code>
       </pre>
       <p>
-        The only thing - where do I get those ids? Luckily, there is an
+        The only thing is, where do I get those IDs? Luckily, there is an
         "activities" file in the export I've done before. So it was not
         completely useless, yay!
       </p>
-      <p>So just put them into an array and call like that</p>
+      <p>So just put them into an array and call it like that</p>
       <pre className="crt">
         <code className="language-javascript">{`
 names.forEach((name) => save(name));
           `}</code>
       </pre>
       <p>
-        Surprisingly, there seems to be no limit on such requests, so after a
-        short while, I've got all my desired files.
+      Surprisingly, there seems to be no limit on such requests, so after a short while, I got all my desired files.
       </p>
       <h4>Now what?</h4>
       <p>
