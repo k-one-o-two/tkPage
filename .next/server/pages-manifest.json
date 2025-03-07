@@ -2,8 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/crap": "pages/crap.js",
-  "/bot": "pages/bot.js",
-  "/speed": "pages/speed.js"
+  "/photo": "pages/photo.js"
 }

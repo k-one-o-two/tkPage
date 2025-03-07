@@ -19,39 +19,51 @@ export function ImageTile({
       totalWidth += excess[rowNumber] / numberOfHorizontalImages;
     }
     return (
-      <a href={`${url.replace('/sizes/m/', '')}`}>
-        <div
-          className="cursor-pointer hover:shadow-8"
-          style={{
-            backgroundSize: 'cover',
-            backgroundPositionY: 'center',
-            backgroundPositionX: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundImage: `url(${source})`,
-            width: oneColumn ? '' : totalWidth * difference,
-            height: desiredHeight,
-          }}
-        ></div>
-      </a>
+      <div
+        className="flickeImageTileContainer"
+        style={{
+          width: oneColumn ? "" : totalWidth * difference,
+          height: desiredHeight,
+        }}
+      >
+        <a href={`${url.replace("/sizes/m/", "")}`}>
+          <div
+            className="cursor-pointer hover:shadow-8 flickeImageTile"
+            style={{
+              backgroundSize: "cover",
+              backgroundPositionY: "center",
+              backgroundPositionX: "center",
+              backgroundRepeat: "no-repeat",
+              backgroundImage: `url(${source})`,
+              height: "100%",
+            }}
+          ></div>
+        </a>
+      </div>
     );
   } else {
     return (
-      <a href={`${url.replace('/sizes/m/', '')}`}>
-        <div
-          className="cursor-pointer hover:shadow-8"
-          style={{
-            backgroundSize: 'cover',
-            backgroundPositionY: 'center',
-            backgroundPositionX: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundImage: `url(${source})`,
-            width: oneColumn
-              ? ''
-              : width * (desiredHeight / height) * difference,
-            height: desiredHeight,
-          }}
-        ></div>
-      </a>
+      <div
+        className="flickeImageTileContainer"
+        style={{
+          width: oneColumn ? "" : width * (desiredHeight / height) * difference,
+          height: desiredHeight,
+        }}
+      >
+        <a href={`${url.replace("/sizes/m/", "")}`}>
+          <div
+            className="cursor-pointer hover:shadow-8 flickeImageTile"
+            style={{
+              backgroundSize: "cover",
+              backgroundPositionY: "center",
+              backgroundPositionX: "center",
+              backgroundRepeat: "no-repeat",
+              backgroundImage: `url(${source})`,
+              height: "100%",
+            }}
+          ></div>
+        </a>
+      </div>
     );
   }
 }
