@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Coda&family=Orbitron&family=Pixelify+Sans&display=swap");
-@import url('https://adobe-fonts.github.io/source-code-pro/source-code-pro.css');
+@import url("https://adobe-fonts.github.io/source-code-pro/source-code-pro.css");
 @import "../node_modules/nord/src/sass/nord.scss";
 
 body {
@@ -189,7 +189,7 @@ a:hover {
 }
 
 pre {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
 }
 
 code {
@@ -231,19 +231,19 @@ code {
     ) !important;
     background-size: cover !important;
     background-size: 100% 2px !important;
-  
+
     padding-left: 30px !important;
 
     position: relative;
   }
 
   .crt::after {
-    animation: blinker 1s cubic-bezier(1,0,0,1) infinite;
+    animation: blinker 1s cubic-bezier(1, 0, 0, 1) infinite;
     position: absolute;
     left: 30px;
     content: "_";
   }
-  
+
   .crt .token,
   .crt code {
     text-shadow: 0 0 10px #ffffff !important;
@@ -262,4 +262,14 @@ code {
     opacity: 0;
   }
 }
+.flickeImageTileContainer {
+  overflow: clip;
+}
 
+.flickeImageTile {
+  transition: all 0.5s ease;
+}
+
+.flickeImageTile:hover {
+  transform: scale(1.1);
+}
