@@ -1,10 +1,10 @@
 import { NoteImage } from "../components/noteImage";
 import { Article } from "../components/article";
+import { A } from "../components/a";
 
-export   const note = {
+export const note = {
   title: "Image editing in node.js",
-  art: 
-  `
+  art: `
 ████████████████████
 █▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█
 █▓▓▓▓..           ▓█
@@ -20,7 +20,7 @@ export   const note = {
       <h3>Why</h3>
       <p>
         This is also related to the bot, I have described{" "}
-        <a href="/bot">here</a>. Since then, I have found another api that
+        <A href="/bot">here</A>. Since then, I have found another api that
         allows reading message history and counting likes on each.
       </p>
       <p>So, I've had an idea to select the best one for each month.</p>
@@ -31,8 +31,7 @@ export   const note = {
       </p>
       <p>
         The channel I'm talking about is called "Postcards from Finland",
-        therefore I wanted to make those best-liked images look like
-        postcards.
+        therefore I wanted to make those best-liked images look like postcards.
       </p>
       <p>Programmatically, of course.</p>
       <p>This is my type of fun.</p>
@@ -40,14 +39,13 @@ export   const note = {
       <p>
         There are several npm packages that provide image manipulation
         possibilities, but the majority of them require 3rd party stuff like
-        Imagemagick, which I didn't want to use - my code should be running on
-        a free tier Oracle VM, so I wanted to keep things as simple as
-        possible.
+        Imagemagick, which I didn't want to use - my code should be running on a
+        free tier Oracle VM, so I wanted to keep things as simple as possible.
       </p>
       <p>
         So, I came across The JavaScript Image Manipulation Program,{" "}
-        <a href="http://jimp-dev.github.io/jimp/">Jimp</a>. Just check out
-        their logo!
+        <a href="http://jimp-dev.github.io/jimp/">Jimp</a>. Just check out their
+        logo!
       </p>
       <p>
         I wanted to achieve a Polaroid-like look, put a postal stamp on and do
@@ -105,8 +103,8 @@ image.composite(overlay, 0, 0);
         `}</code>
       </pre>
       <p>
-        Adding a stamp is pretty much the same - you load another image and
-        then place it using the "image.composite" method.
+        Adding a stamp is pretty much the same - you load another image and then
+        place it using the "image.composite" method.
       </p>
       <h4>Text</h4>
       <p>
@@ -117,8 +115,7 @@ image.composite(overlay, 0, 0);
       <p>
         So, I've found some ".ttf" font which I liked and downloaded it. First
         issue I've encountered is that Jimp docs are outdated and
-        "Jimp.loadFont" doesn't seem to exist, it should be imported
-        separately.
+        "Jimp.loadFont" doesn't seem to exist, it should be imported separately.
       </p>
       <p>The next issue was this:</p>
       <pre className="crt">
@@ -136,8 +133,8 @@ const font = await loadFont('.my_font.ttf');
         which, according to the documentation, should be able to use my font.
       </p>
       <p>
-        It did not. After making several efforts, I've realized I'm not the
-        only one who has a problem and there's an{" "}
+        It did not. After making several efforts, I've realized I'm not the only
+        one who has a problem and there's an{" "}
         <a href="https://github.com/Automattic/node-canvas/issues/2255">
           open GitHub issue
         </a>
@@ -149,13 +146,12 @@ const font = await loadFont('.my_font.ttf');
         don't work. <a href="https://ttf2fnt.com/">This one</a> does.
       </p>
       <p>
-        A ".fnt" is actually just a bitmap, so this tool has generated an
-        image
+        A ".fnt" is actually just a bitmap, so this tool has generated an image
       </p>
       <NoteImage src="/6/2.png"></NoteImage>
       <p>
-        and a file that describes which part of this image corresponds to
-        which letter
+        and a file that describes which part of this image corresponds to which
+        letter
       </p>
       <NoteImage src="/6/3.png"></NoteImage>
       <p>Now, we're one step closer!</p>
@@ -166,10 +162,10 @@ const font = await loadFont('.my_font.fnt');
       </pre>
       <p>This works as expected.</p>
       <p>
-        There's one more thing though: some (well, most of them actually)
-        images are landscape, so the text should go vertical. I have spent
-        more time than I'm willing to admit looking for a way to do that. I
-        have even decided to ask wise people on StackOverflow.
+        There's one more thing though: some (well, most of them actually) images
+        are landscape, so the text should go vertical. I have spent more time
+        than I'm willing to admit looking for a way to do that. I have even
+        decided to ask wise people on StackOverflow.
       </p>
       <p>
         But than I've had an idea both dumb and brilliant: rotate an image,

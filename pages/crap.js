@@ -1,11 +1,11 @@
-import { NoteImage } from '../components/noteImage';
+import { useRouter } from "next/router";
+import { NoteImage } from "../components/noteImage";
+import { Article } from "../components/article";
+import { A } from "../components/a";
 
-import { Article } from '../components/article';
-
-export   const note = {
-  title: 'How to not shoot crap',
-  art: 
-  `
+export const note = {
+  title: "How to not shoot crap",
+  art: `
 ████████████████████
 █    ░░ ░  ░░░     █
 █   ░░ ░ ▒▒ ░ ░░   █
@@ -20,11 +20,11 @@ export   const note = {
     <div>
       <h3>Why</h3>
       <p>
-        There are plenty of online resources that teach how to make good
-        photos, and this is not a one of them. The thing is - I have no idea (
-        <b>update:</b> well, <a href="/uncrap">I have some now</a>) what it
-        takes for a photo to be good. But I think I know what makes it a
-        crappy one, and here I'll try to explain it.
+        There are plenty of online resources that teach how to make good photos,
+        and this is not a one of them. The thing is - I have no idea (
+        <b>update:</b> well, <A href="/uncrap">I have some now</A>) what it
+        takes for a photo to be good. But I think I know what makes it a crappy
+        one, and here I'll try to explain it.
       </p>
       <h3>The definition of crap</h3>
       <p>
@@ -34,16 +34,16 @@ export   const note = {
       <NoteImage src="/3/cr1.JPG"></NoteImage>
       <p>
         What is depicted here? Quite a lot of things actually and in order to
-        check if the image is a crappy one we have to name them all. So,
-        there's a seagull sitting on some fence with a ferry terminal in the
-        background. And there is a line of trucks there. And some out-of-focus
-        thing in the bottom-right corner.
+        check if the image is a crappy one we have to name them all. So, there's
+        a seagull sitting on some fence with a ferry terminal in the background.
+        And there is a line of trucks there. And some out-of-focus thing in the
+        bottom-right corner.
       </p>
       <p>
-        The main question is - is that what had been intended to be depicted?
-        In this case I'd say that it is quite clearly not. I mean, I know it
-        for sure since it is my picture, but I'll try to explain why it should
-        be as clear for everyone else.
+        The main question is - is that what had been intended to be depicted? In
+        this case I'd say that it is quite clearly not. I mean, I know it for
+        sure since it is my picture, but I'll try to explain why it should be as
+        clear for everyone else.
       </p>
       <p>
         This picture lacks an object, the reason why it was taken in the 1st
@@ -53,23 +53,22 @@ export   const note = {
       <ul>
         <li>
           <p>
-            the terminal: it occupies even less space on the image than parts
-            of the ferry from which the picture is taken, and one corner is
-            even behind the fence. Therefore it can't be the object of this
-            picture.
+            the terminal: it occupies even less space on the image than parts of
+            the ferry from which the picture is taken, and one corner is even
+            behind the fence. Therefore it can't be the object of this picture.
           </p>
         </li>
         <li>
           <p>
-            the fence and the blue floor: is is not even clear if this is just
-            a part of some bridge or a ship, the background makes this fence
-            have too low contrast. The verdict is the same.
+            the fence and the blue floor: is is not even clear if this is just a
+            part of some bridge or a ship, the background makes this fence have
+            too low contrast. The verdict is the same.
           </p>
         </li>
         <li>
           <p>
-            the seagull: apart from it being out of focus (I've failed, yeah)
-            it is barely visible due to the terminal on the background
+            the seagull: apart from it being out of focus (I've failed, yeah) it
+            is barely visible due to the terminal on the background
           </p>
         </li>
         <li>
@@ -80,11 +79,11 @@ export   const note = {
         </li>
       </ul>
       <p>
-        As you can see, this image lacks an object, it's pointless and there
-        was no good reason to even take this picture.
+        As you can see, this image lacks an object, it's pointless and there was
+        no good reason to even take this picture.
       </p>
       <p>
-        Consider{' '}
+        Consider{" "}
         <a href="https://www.flickr.com/photos/k102/53719245076">
           this picture
         </a>
@@ -96,7 +95,7 @@ export   const note = {
         What do we see here? Right, just that.
       </p>
       <p>
-        One can argue:{' '}
+        One can argue:{" "}
         <i>
           this method only works for minimalistic pictures, like that stupid
           bird above
@@ -133,10 +132,10 @@ export   const note = {
         contrast between the big white thing (which is a ferry, but it doesn't
         even matter right now) with the way the blue thing aligned almost
         perfectly parallel to them. Let's try to bring more focus to these
-        lines. To do this, I've{' '}
+        lines. To do this, I've{" "}
         <a href="https://www.flickr.com/photos/k102/53719582599/">
           made the picture
-        </a>{' '}
+        </a>{" "}
         b&w while increasing it's contrast. So, while this picture is not
         minimalistic, now it has more accent on why it has been taken - the
         geometry of those lines.
@@ -144,26 +143,25 @@ export   const note = {
       <NoteImage src="/3/nc3.jpg"></NoteImage>
       <p>
         So, the amount of details is now even higher (for example, the mobile
-        fence next to the van is now more visible). Now, my intentions are
-        more aligned with the end result, making a picture (I hope) less
-        crappy.
+        fence next to the van is now more visible). Now, my intentions are more
+        aligned with the end result, making a picture (I hope) less crappy.
       </p>
       <h3>More examples</h3>
       <NoteImage src="/3/cr4.JPG"></NoteImage>
       <p>
         I was trying to take a picture of that bird (as you may have already
-        noticed, I often shoot birds) and I have not even failed with
-        focusing, but the image is still bad. If only this sparrow was sitting
-        a bit to the left, so that it would not blend into the background,
-        it'd be way more clear what is the main object of the picture, which
-        is sadly not. And no matter how you crop this one, it won't be much
-        better for this very reason.
+        noticed, I often shoot birds) and I have not even failed with focusing,
+        but the image is still bad. If only this sparrow was sitting a bit to
+        the left, so that it would not blend into the background, it'd be way
+        more clear what is the main object of the picture, which is sadly not.
+        And no matter how you crop this one, it won't be much better for this
+        very reason.
       </p>
       <NoteImage src="/3/nc4.jpg"></NoteImage>
       <p>
-        And this bird is much better. It has a nice contrast with the
-        background sky and the branches behind this crow are far enough to be
-        out of focus. The subject is clear - a crow on a tree branch.
+        And this bird is much better. It has a nice contrast with the background
+        sky and the branches behind this crow are far enough to be out of focus.
+        The subject is clear - a crow on a tree branch.
       </p>
       <NoteImage src="/3/cr5.JPG"></NoteImage>
       <p>
@@ -171,8 +169,8 @@ export   const note = {
         describe it honestly. We see a tram and this is the only thing that is
         kinda fine. The reflection of it's lights is obscured by the pile of
         show, the building behind it is not fully in the frame, there's some
-        radom white car, some part of another building hovering in the left
-        part of the frame... We can continue.
+        radom white car, some part of another building hovering in the left part
+        of the frame... We can continue.
       </p>
       <NoteImage src="/3/nc5.jpg"></NoteImage>
       <p>
@@ -184,15 +182,16 @@ export   const note = {
       <h3>Conclusion</h3>
       <p>
         Ask yourself: "what do I see on the picture?" and try to answer as
-        honest as possible. If the list of things in the answer is
-        significantly longer than you'd think it should be - the picture is
-        most likely a crap.
+        honest as possible. If the list of things in the answer is significantly
+        longer than you'd think it should be - the picture is most likely a
+        crap.
       </p>
     </div>
   ),
 };
 
 function Notes() {
+  const router = useRouter();
   return <Article art={note.art} title={note.title} html={note.html}></Article>;
 }
 

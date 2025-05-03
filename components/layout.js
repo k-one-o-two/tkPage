@@ -1,11 +1,14 @@
 // import 'primereact/resources/primereact.css'; // core css
-import 'primeicons/primeicons.css'; // icons
-import 'primeflex/primeflex.css';
+import "primeicons/primeicons.css"; // icons
+import "primeflex/primeflex.css";
 
-import { Image } from 'primereact/image';
+import { TransitionProvider } from "../context/transition";
+import TransitionComponent from "./transition";
 
-import { useState } from 'react';
-import { useRouter } from 'next/router';
+import { Image } from "primereact/image";
+
+import { useState } from "react";
+import { useRouter } from "next/router";
 
 export function Layout({ children, active }) {
   const [activeIndex, setActiveIndex] = useState(active);
@@ -13,14 +16,14 @@ export function Layout({ children, active }) {
 
   const model = [
     {
-      label: '_about',
-      icon: 'pi-user',
-      url: '/',
+      label: "_about",
+      icon: "pi-user",
+      url: "/",
     },
     {
-      label: '_photos',
-      icon: 'pi-camera',
-      url: '/photo',
+      label: "_photos",
+      icon: "pi-camera",
+      url: "/photo",
     },
   ];
 
@@ -28,7 +31,7 @@ export function Layout({ children, active }) {
     <div>
       <div
         className="flex justify-content-center flex-wrap header"
-        style={{ display: 'flex', gap: '10px' }}
+        style={{ display: "flex", gap: "10px" }}
       >
         <Image src="k102.svg" height="40"></Image>
         {model.map((item) => {
@@ -46,7 +49,11 @@ export function Layout({ children, active }) {
           );
         })}
       </div>
-      <div className="paper">{children}</div>
+      <TransitionProvider>
+        <TransitionComponent>
+          <div className="paper">{children}</div>
+        </TransitionComponent>
+      </TransitionProvider>
     </div>
   );
 }
