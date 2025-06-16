@@ -1,10 +1,9 @@
-import { NoteImage } from '../components/noteImage';
-import { Article } from '../components/article';
+import { NoteImage } from "../components/noteImage";
+import { Article } from "../components/article";
 
-export   const note = {
-  title: 'Video with telemetry',
-  art: 
-  `
+export const note = {
+  title: "Video with telemetry",
+  art: `
 ████████████████████
 █      º    º      █
 █     º      º     █
@@ -19,10 +18,10 @@ export   const note = {
     <div>
       <h3>Why</h3>
       <p>
-        Imagine, you went for a ride and recorded a video of it. You have
-        tried so hard, but in the end it doesn't even look fast. They call it
-        a GoPro effect, and there is not much we can do about it. The obvious
-        way to overcome it is to ride even faster or on more harsh terrain.
+        Imagine, you went for a ride and recorded a video of it. You have tried
+        so hard, but in the end it doesn't even look fast. They call it a GoPro
+        effect, and there is not much we can do about it. The obvious way to
+        overcome it is to ride even faster or on more harsh terrain.
       </p>
       <p>
         But there's one more way - we can add some data on top of the video to
@@ -44,16 +43,13 @@ export   const note = {
         </li>
       </ul>
       <p>
-        So, we're gonna be using{' '}
-        <a href="http://www.dashware.net/">DashWare</a> - it's a bit outdated
-        piece of software which purpose is exactly what we need: adding data
-        overlay.
+        So, we're gonna be using <a href="http://www.dashware.net/">DashWare</a>{" "}
+        - it's a bit outdated piece of software which purpose is exactly what we
+        need: adding data overlay.
       </p>
       <p>After installing it, create a new project:</p>
       <NoteImage src="/2/create.png"></NoteImage>
-      <p>
-        Here I have added a video from my camera, gpx is to be added later:
-      </p>
+      <p>Here I have added a video from my camera, gpx is to be added later:</p>
       <NoteImage src="/2/data.png"></NoteImage>
       <p>
         Now we have to synchronize the video with the data, which might be
@@ -63,18 +59,18 @@ export   const note = {
       <p>
         I've found out that the easiest way to do that is to add a digital
         speedometer to the video from the Gauge toolbox (any one will do) and
-        find a place where you make a tight turn so your speed is minimal.
-        Once you're happy with the position, check the "Synchronize with
-        video" checkbox and take a look at other video parts.
+        find a place where you make a tight turn so your speed is minimal. Once
+        you're happy with the position, check the "Synchronize with video"
+        checkbox and take a look at other video parts.
       </p>
       <h3>Map data</h3>
       <p>
         There are quite a lot of different gauges to add, GPS map being one of
         them. The problem is that the map is not really a map, but just your
         track. Doesn't look too informative. Thankfully, there's a workaround:
-        you may take a screenshot of the actual map (I've used my favorite{' '}
-        <a href="http://maps.stamen.com/toner/">Stamen toner</a>) and use it
-        as a background image in the map settings.
+        you may take a screenshot of the actual map (I've used my favorite{" "}
+        <a href="http://maps.stamen.com/toner/">Stamen toner</a>) and use it as
+        a background image in the map settings.
       </p>
       <NoteImage src="/2/align.png"></NoteImage>
       <p>
@@ -84,8 +80,8 @@ export   const note = {
       <p>Here's how the end result looks like:</p>
       <iframe
         style={{
-          width: '100%',
-          aspectRatio: '16 / 9',
+          width: "100%",
+          aspectRatio: "16 / 9",
         }}
         src="https://www.youtube.com/embed/DvfDAEua6VI"
         title="the end result"
