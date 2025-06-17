@@ -8,7 +8,7 @@ import TransitionComponent from "./transition";
 import { Image } from "primereact/image";
 
 import { useState } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export function Layout({ children, active }) {
   const [activeIndex, setActiveIndex] = useState(active);

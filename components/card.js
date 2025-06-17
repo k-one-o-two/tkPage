@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export function Card({ title, children, link, art }) {
   const router = useRouter();
