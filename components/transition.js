@@ -10,7 +10,7 @@ const TransitionComponent = ({ children }) => {
   const { toggleCompleted, completed } = useContext(TransitionContext);
   return (
     <SwitchTransition>
-      {/* <Transition
+      <Transition
         key={router.pathname}
         timeout={1000}
         onEnter={(node) => {
@@ -48,9 +48,9 @@ const TransitionComponent = ({ children }) => {
             .to(node, { yPercent: 100, autoAlpha: 0, duration: 0.25 })
             .play();
         }}
-      > */}
-      {children}
-      {/* </Transition> */}
+      >
+        {children}
+      </Transition>
     </SwitchTransition>
   );
 };

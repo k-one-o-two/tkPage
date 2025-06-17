@@ -49,11 +49,7 @@ export function Layout({ children, active }) {
           );
         })}
       </div>
-      <TransitionProvider>
-        <TransitionComponent>
-          <div className="paper">{children}</div>
-        </TransitionComponent>
-      </TransitionProvider>
+      <div className="paper">{children}</div>
     </div>
   );
 }
