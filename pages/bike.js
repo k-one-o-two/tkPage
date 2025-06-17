@@ -18,7 +18,7 @@ export const note = {
   html: (
     <div>
       <h3>Welcome.</h3>
-      <p>So you have decided to become cyclist.</p>
+      <p>So you have decided to become a cyclist.</p>
       <p>
         Welcome to the world of pain, soreness, expensive parts and repairs!
       </p>
