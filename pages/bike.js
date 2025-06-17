@@ -72,6 +72,11 @@ export const note = {
         both. At the same time, DH and even enduro races are focused on the
         descending speed.
       </p>
+      <p>
+        But if you're going to ride in a some really pleasant place with a nice
+        bike infrastructure, you might get a gravel bike as well: it's faster on
+        roads, though it would be less comfortable and les forgiving.
+      </p>
       <h3>Ok, what now?</h3>
       <p>So, now you will need 3 things:</p>
       <p>Gear: like clothing, helmet, lights etc.</p>
@@ -96,7 +101,17 @@ export const note = {
         Initially, you'll be fine with whatever sportswear you have, just make
         sure your pats are not too wide.
       </p>
-      <p>With your skills progressing, you'll </p>
+      <p>
+        With your skills progressing, you'll notice the limitations. There are,
+        pretty much, two options: baggy mtb clothing or lycra. I'm sticking with
+        the 1st option, which looks like that:
+      </p>
+      <NoteImage src="/8/mud.png"></NoteImage>
+      <p>
+        It is less aerodynamic, which it an actual problem on speeds above 25
+        kmph, but this way I'm avoiding being a{" "}
+        <a href="https://en.wikipedia.org/wiki/Mamil">MAMIL</a>
+      </p>
     </div>
   ),
 };
