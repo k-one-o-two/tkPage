@@ -1,57 +1,24 @@
 {
-  "name": "tkpage",
-  "version": "1.0.0",
-  "description": "personal page",
-  "main": "index.html",
+  "name": "k102.me",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "minify:js": "minify docs/bundle.js > docs/bundle.min.js && rm docs/bundle.js",
-    "minify:css": "minify style.css > docs/style.min.css",
-    "copy:index": "cp index.html docs/index.html && sed -i 's/bundle.js/bundle.min.js/' docs/index.html && sed -i 's/style.css/style.min.css/' docs/index.html",
-    "copy:cv": "cp cv.html docs/cv.html && sed -i 's/bundle.js/bundle.min.js/' docs/cv.html && sed -i 's/style.css/style.min.css/' docs/cv.html",
-    "copy:flickr": "cp flickr.html docs/flickr.html && sed -i 's/bundle.js/bundle.min.js/' docs/flickr.html && sed -i 's/style.css/style.min.css/' docs/flickr.html",
-    "copy:contact": "cp contact.html docs/contact.html && sed -i 's/bundle.js/bundle.min.js/' docs/contact.html && sed -i 's/style.css/style.min.css/' docs/contact.html",
-    "copy:html": "npm run copy:index && npm run copy:cv && npm run copy:flickr && npm run copy:contact",
-    "copy:cname": "cp CNAME docs/CNAME",
-    "copy:images": "cp -r img docs/img",
-    "bundle:js": "browserify flickr.js -o docs/bundle.js",
-    "bundle:local": "browserify flickr.js -o bundle.js",
-    "clean": "rm -rf docs",
-    "build:old": "npm run clean && npm run bundle:js && npm run minify:js && npm run minify:css && npm run copy:html && npm run copy:images && npm run copy:cname",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/k-one-o-two/tkPage.git"
-  },
-  "author": "k102",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/k-one-o-two/tkPage/issues"
-  },
-  "homepage": "https://github.com/k-one-o-two/tkPage#readme",
   "dependencies": {
-    "@gsap/react": "^2.1.2",
-    "@next/font": "^13.1.6",
-    "browserify": "^17.0.0",
-    "flickr-sdk": "^4.0.0",
-    "gsap": "^3.13.0",
-    "lodash.debounce": "^4.0.8",
-    "minify": "^8.0.3",
-    "next": "^13.1.6",
     "nord": "^0.2.1",
-    "primeflex": "^3.3.0",
-    "primeicons": "^6.0.1",
-    "primereact": "^9.6.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-transition-group": "^4.4.5",
-    "sass": "^1.58.0"
+    "vue": "^3.5.21",
+    "vue-router": "^4.5.1"
   },
-  "directories": {
-    "doc": "docs"
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.8.1",
+    "sass-embedded": "^1.93.2",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.7",
+    "vue-tsc": "^3.0.7"
   }
 }
