@@ -1,7 +1,3 @@
-<!-- <script setup lang="ts">
-// import Home from "./components/Home.vue";
-</script> -->
-
 <template>
     <div class="flex justify-content-center flex-wrap header">
         <img height="40" src="./assets/k102.svg" alt="Logo" />
