@@ -49,6 +49,21 @@ export const note = {
         them. I could have said that I've learned to stay calm, ignore them and
         meditate while cycling, but it will be untrue and I will be a liar.
       </p>
+      <p>
+        4. Some people say stuff like "there's no bad weather, there's just bad
+        gear". And they are only half right - there is bad gear. Like, if you're
+        riding in jeans and a cotton t-shirt, expect problems. But bad weather
+        exists for sure - imagine riding in the strong wind with wet snow in
+        -1C. Don't pretend that it's fine, it's not.
+      </p>
+      <p>
+        5. Something positive for a change: good bits don't get old. Really, I
+        have cycled the same route (that you can see <a>here</a>) but there are
+        parts of it that I still enjoy like the first time or maybe even more.
+        The same goes for mountain biking - I know local trails pretty well, but
+        keep enjoying them.
+      </p>
+      <p>6. </p>
     </div>
   ),
 };
