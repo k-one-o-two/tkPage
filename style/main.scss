@@ -7,6 +7,7 @@ body {
     color: $nord5;
     display: grid;
     background: url("./noize.svg");
+    font-size: 1rem;
     // background-blend-mode: darken;
 }
 .header {
@@ -68,6 +69,21 @@ button {
 
 a:hover {
     color: $nord6;
+}
+@media only screen and (min-width: 600px) {
+    .article {
+        max-width: 60vw;
+    }
+}
+
+.bold-list-item:first-letter {
+    /* -webkit-initial-letter: 4;
+    initial-letter: 4; */
+    /* color: orange; */
+    font-weight: bold;
+    font-size: 3rem;
+    margin-right: 0.75em;
+    font-family: monospace;
 }
 
 .card {

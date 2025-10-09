@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 
 export function Article({ title, html, art }) {
   return (
@@ -10,7 +10,7 @@ export function Article({ title, html, art }) {
         <title>{title}</title>
       </Head>
       <h1>{title}</h1>
-      {html}
+      <div className="article">{html}</div>
     </div>
   );
 }
