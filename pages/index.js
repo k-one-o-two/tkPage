@@ -1,14 +1,15 @@
-import Head from 'next/head';
-import { Card } from '../components/card';
+import Head from "next/head";
+import { Card } from "../components/card";
 
-import {note as auroraNote} from './aurora'
-import {note as botNote} from './bot'
-import {note as crapNote} from './crap'
-import {note as dashNote} from './dashware'
-import {note as imgNote} from './img'
-import {note as mapNote} from './mapping'
-import {note as speedNote} from './speed'
-import {note as uncrapNote} from './uncrap'
+import { note as auroraNote } from "./aurora";
+import { note as botNote } from "./bot";
+import { note as crapNote } from "./crap";
+import { note as dashNote } from "./dashware";
+import { note as imgNote } from "./img";
+import { note as mapNote } from "./mapping";
+import { note as speedNote } from "./speed";
+import { note as uncrapNote } from "./uncrap";
+import { note as bikeNote } from "./bike";
 
 function HomePage() {
   return (
@@ -27,9 +28,9 @@ function HomePage() {
           <h1>Texts</h1>
           <div
             style={{
-              display: 'flex',
-              flexDirection: 'column',
-              flexWrap: 'wrap',
+              display: "flex",
+              flexDirection: "column",
+              flexWrap: "wrap",
               gap: 30,
               marginBottom: 40,
             }}
@@ -48,7 +49,11 @@ function HomePage() {
                 photos
               </p>
             </Card>
-            <Card title="On not-so-crappy photo" link="/uncrap" art={uncrapNote.art}>
+            <Card
+              title="On not-so-crappy photo"
+              link="/uncrap"
+              art={uncrapNote.art}
+            >
               <p>
                 That is my attempt to explain how to <b>shoot not</b> so crappy
                 photos - highly opinionated
@@ -63,11 +68,22 @@ function HomePage() {
             <Card title="Jimp image editor" link="/img" art={imgNote.art}>
               <p>In case you want to edit images in your Node.js app</p>
             </Card>
-            <Card title="Paginated queries speedup" link="/speed" art={speedNote.art}>
+            <Card
+              title="Paginated queries speedup"
+              link="/speed"
+              art={speedNote.art}
+            >
               <p>
                 Notes on improving speed of paginated database queries in
                 Postgresql and Node.js
               </p>
+            </Card>
+            <Card
+              title="Reflections on cycling"
+              link="/bike"
+              art={bikeNote.art}
+            >
+              <p>WhatI've learned from cycling non-stop for several years</p>
             </Card>
           </div>
         </div>
@@ -81,7 +97,7 @@ function HomePage() {
 
           <div>
             <p>
-              Matrix:{' '}
+              Matrix:{" "}
               <a href="https://matrix.to/#/@k.one.o.two:matrix.org">
                 @k.one.o.two
               </a>
@@ -90,7 +106,7 @@ function HomePage() {
 
           <div>
             <p>
-              Mail:{' '}
+              Mail:{" "}
               <a href="mailto:k.one.o.two@gmail.com">k.one.o.two@gmail.com</a>
             </p>
           </div>

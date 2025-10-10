@@ -3,7 +3,7 @@ import Head from "next/head";
 export function Article({ title, html, art }) {
   return (
     <div className="card">
-      <div>
+      <div className="art">
         <pre>{art}</pre>
       </div>
       <Head>

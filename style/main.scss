@@ -70,11 +70,6 @@ button {
 a:hover {
     color: $nord6;
 }
-@media only screen and (min-width: 600px) {
-    .article {
-        max-width: 60vw;
-    }
-}
 
 .bold-list-item:first-letter {
     /* -webkit-initial-letter: 4;
@@ -300,4 +295,96 @@ code {
 
 .flickeImageTile:hover {
     transform: scale(1.1);
+}
+
+:root {
+    --padding-xs: 16px;
+    --padding-sm: 16px;
+    --padding-md: 32px;
+    --padding-xl: 64px;
+    --padding-2xl: 80px;
+    --max-2xl-width: 1100px;
+    --max-3xl-width: 1440px;
+}
+
+/* 2xs */
+.article {
+    width: 100vw;
+    padding-left: var(--padding-xs);
+    padding-right: var(--padding-xs);
+}
+
+/* xs */
+@media screen and (min-width: 400px) {
+    .article {
+        width: 100vw;
+        padding-left: var(--padding-xs);
+        padding-right: var(--padding-xs);
+    }
+}
+
+/* sm */
+@media screen and (min-width: 640px) {
+    .article {
+        width: 100vw;
+        padding-left: var(--padding-sm);
+        padding-right: var(--padding-sm);
+    }
+}
+
+/* md */
+@media screen and (min-width: 768px) {
+    .article {
+        width: 100vw;
+        padding-left: var(--padding-md);
+        padding-right: var(--padding-md);
+    }
+}
+
+/* lg */
+@media screen and (min-width: 1024px) {
+    .article {
+        width: 100vw;
+        padding-left: var(--padding-md);
+        padding-right: var(--padding-md);
+    }
+}
+
+/* xl */
+@media screen and (min-width: 1280px) {
+    .article {
+        width: unset;
+        padding-left: var(--padding-xl);
+        padding-right: var(--padding-xl);
+    }
+}
+
+/* 2xl */
+@media screen and (min-width: 1536px) {
+    .article {
+        width: unset;
+        padding-left: calc(
+            (100vw - var(--expanded-lm) - var(--max-2xl-width)) / 2
+        );
+        padding-right: calc(
+            (100vw - var(--expanded-lm) - var(--max-2xl-width)) / 2
+        );
+    }
+}
+
+/* 3xl */
+@media screen and (min-width: 1920px) {
+    .article {
+        width: unset;
+        padding-left: calc(
+            (100vw - var(--expanded-lm) - var(--max-3xl-width)) / 2
+        );
+        padding-right: calc(
+            (100vw - var(--expanded-lm) - var(--max-3xl-width)) / 2
+        );
+    }
+}
+
+.art {
+    text-align: center;
 }

@@ -56,18 +56,18 @@ export const note = {
       </p>
       <p className="bold-list-item">
         4. Some people say stuff like "there's no bad weather, there's just bad
-        gear". And they are only half right - there is bad gear. Like, if you're
-        riding in jeans and a cotton t-shirt, expect problems. But bad weather
-        exists for sure - imagine riding in the strong wind with wet snow in
-        -1C. Don't pretend that it's fine, it's not.
+        gear". And they are only half right - there is some bad gear. Like, if
+        you're riding in jeans and a cotton t-shirt, expect problems. But bad
+        weather exists as well for sure - imagine riding in the strong wind with
+        wet snow in -1C. Don't pretend that it's fine, it's not.
       </p>
       <NoteImage src="/9/3.jpg"></NoteImage>
       <p className="bold-list-item">
         5. Something positive for a change: good bits don't get old. Really, I
-        have cycled the same route (that you can see <a>here</a>) but there are
-        parts of it that I still enjoy like the first time or maybe even more.
-        The same goes for mountain biking - I know local trails pretty well, but
-        keep enjoying them.
+        have cycled the same route (that you can see{" "}
+        <a href="/dashware">here</a>) but there are parts of it that I still
+        enjoy like the first time or maybe even more. The same goes for mountain
+        biking - I know local trails pretty well, but keep enjoying them.
       </p>
       <p className="bold-list-item">
         6. Group rides are more about groups then they are about rides. Meaning
@@ -81,7 +81,20 @@ export const note = {
         way. For instance, I've realized that I hate walking - it's slow, boring
         and you cant coast, need to move your feet constantly. Disgusting.
       </p>
+      <p className="bold-list-item">
+        8. Clipless pedals. You can say what you want, but they are just better.
+        More confidence, more power and as a result more comfort. Yes, you're
+        going to fall a couple of time, but you'll get over as some point. The
+        biggest issue is that you need special shoes - but if you stick with mtb
+        ones, you'll be fine.
+      </p>
       <NoteImage src="/9/6.jpg"></NoteImage>
+      <p className="bold-list-item">
+        9. If you're cycling, you're my friend. With some rare exceptions, I
+        think that cyclists are just good people in general - even if you're not
+        fast, or your bike is cheap no-name one: if you're riding it, you're
+        already better than all those who don't.
+      </p>
     </div>
   ),
 };

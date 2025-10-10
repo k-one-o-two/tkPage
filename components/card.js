@@ -6,7 +6,12 @@ export function Card({ title, children, link, art }) {
   return (
     <div
       className="card card-l2"
-      style={{ display: "flex", flexWrap: "wrap", gap: 10 }}
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: 10,
+        alignItems: "center",
+      }}
     >
       <div>
         <pre>{art}</pre>
