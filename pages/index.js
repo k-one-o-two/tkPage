@@ -83,7 +83,7 @@ function HomePage() {
               link="/bike"
               art={bikeNote.art}
             >
-              <p>WhatI've learned from cycling non-stop for several years</p>
+              <p>What I've learned from cycling non-stop for several years</p>
             </Card>
           </div>
         </div>
