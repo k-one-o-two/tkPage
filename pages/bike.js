@@ -84,7 +84,7 @@ export const note = {
       <p className="bold-list-item">
         8. Clipless pedals. You can say what you want, but they are just better.
         More confidence, more power and as a result more comfort. Yes, you're
-        going to fall a couple of time, but you'll get over as some point. The
+        going to fall a couple of times, but you'll get over as some point. The
         biggest issue is that you need special shoes - but if you stick with mtb
         ones, you'll be fine.
       </p>
