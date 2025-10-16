@@ -2,7 +2,7 @@ import { NoteImage } from "../components/noteImage";
 import { Article } from "../components/article";
 
 export const note = {
-  title: "",
+  title: "What I have learned from cycling",
   art: `
 ████████████████████
 █                  █
