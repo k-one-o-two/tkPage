@@ -1,6 +1,12 @@
 import Head from "next/head";
+import prism from "../style/prism";
+import { useEffect } from "react";
 
 export function Article({ title, html, art }) {
+  useEffect(() => {
+    prism.highlightAll();
+  }, []);
+
   return (
     <div className="card">
       <div className="art">

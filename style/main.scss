@@ -210,11 +210,17 @@ a:hover {
 }
 
 pre {
-    font-family: "Source Code Pro", monospace;
+    font-family: monospace;
+    line-height: 1.3rem;
 }
 
 code {
     white-space: pre-wrap !important;
+}
+
+.imgButton {
+    border: none !important;
+    cursor: pointer;
 }
 
 .button {
@@ -253,7 +259,7 @@ code {
             $nord5
         ) !important;
         background-size: cover !important;
-        background-size: 100% 2px !important;
+        background-size: 100% 1px !important;
 
         padding-left: 30px !important;
 
@@ -276,7 +282,7 @@ code {
 
 @media (min-resolution: 1.2x) {
     .crt {
-        background-size: 100% 4px !important;
+        background-size: 100% 2px !important;
     }
 }
 
