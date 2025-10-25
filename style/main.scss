@@ -1,14 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Coda&family=Orbitron&family=Pixelify+Sans&display=swap");
 @import url("https://adobe-fonts.github.io/source-code-pro/source-code-pro.css");
 @import "../node_modules/nord/src/sass/nord.scss";
+/* @import "../public/fnt/molaser-brush.regular.otf"; */
+
+@font-face {
+    font-family: "brush";
+    src: url("../public/fnt/molaser-brush.regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "polea";
+    font-feature-settings: "liga" on "dlig" on "kern" on;
+    src: url("../public/fnt/polea-extra-bold-demo.regular.otf")
+        format("opentype");
+}
 
 body {
-    // background-color: $nord4;
     color: $nord5;
     display: grid;
     background: url("./noize.svg");
     font-size: 1rem;
-    // background-blend-mode: darken;
+    font-family: "Coda", sans-serif;
+    font-feature-settings: "liga" on "dlig" on "kern" on;
 }
 .header {
     background: color-mix(in srgb, $nord5 70%, transparent);
@@ -38,11 +51,14 @@ body {
     text-decoration: underline;
 }
 
-h1,
+h1 {
+    font-family: "polea", sans-serif;
+    font-size: 3rem;
+}
 h2,
 h3,
 h4 {
-    font-family: "Coda", sans-serif;
+    font-family: "polea", sans-serif;
 }
 
 h3 {
@@ -94,10 +110,23 @@ a:hover {
 
 .card-l2 {
     background-color: $nord4;
-    min-height: 200px;
-    width: 100%;
     padding-right: 20px !important;
     padding-left: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+.card-link {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    flex-wrap: wrap;
+    /* justify-content: space-ar; */
+    background-color: $nord4;
+    transition: background-color ease-in-out 0.3s;
+    &:hover {
+        background-color: $nord14;
+        cursor: pointer;
+    }
 }
 
 @media only screen and (min-width: 600px) {
@@ -111,7 +140,6 @@ a:hover {
     border: 1px solid $nord6;
     border-top: none;
     padding: 10px;
-    font-family: "Coda", sans-serif;
     color: $nord6;
     background: $nord3;
     cursor: pointer;
@@ -198,7 +226,6 @@ a:hover {
 .close-btn {
     border: none;
     background-color: $nord5;
-    font-family: "Coda", monospace;
     cursor: pointer;
 }
 
@@ -230,7 +257,6 @@ code {
     border-bottom: 1px solid $nord0;
     background: $nord6;
     color: $nord0;
-    font-family: "Coda", sans-serif;
     box-shadow:
         3px 3px 5px 0px $nord3,
         -3px -1px 7px 0px $nord6;
