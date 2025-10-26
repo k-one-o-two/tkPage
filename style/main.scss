@@ -119,7 +119,6 @@ a:hover {
     display: flex;
     gap: 4rem;
     align-items: center;
-    flex-wrap: wrap;
     /* justify-content: space-ar; */
     background-color: $nord4;
     transition: background-color ease-in-out 0.3s;
@@ -238,8 +237,17 @@ a:hover {
 
 pre {
     font-family: "Source Code Pro", monospace;
-    line-height: 1.5rem;
+    line-height: 0.8rem;
+    font-size: 0.5rem;
     letter-spacing: 0.08rem;
+}
+
+@media only screen and (min-width: 600px) {
+    pre {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.08rem;
+    }
 }
 
 code {
