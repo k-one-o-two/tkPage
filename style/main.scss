@@ -119,12 +119,23 @@ a:hover {
     display: flex;
     gap: 4rem;
     align-items: center;
-    /* justify-content: space-ar; */
     background-color: $nord4;
     transition: background-color ease-in-out 0.3s;
-    &:hover {
-        background-color: $nord14;
-        cursor: pointer;
+}
+
+.card-small {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    h2 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        margin: 0;
     }
 }
 
@@ -132,6 +143,13 @@ a:hover {
     .card {
         padding-right: 50px;
         padding-left: 50px;
+    }
+    .card-link,
+    .card-small {
+        &:hover {
+            background-color: $nord14;
+            cursor: pointer;
+        }
     }
 }
 

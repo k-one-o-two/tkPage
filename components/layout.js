@@ -5,6 +5,8 @@ import "primeflex/primeflex.css";
 import { TransitionProvider } from "../context/transition";
 import TransitionComponent from "./transition";
 
+import { Card } from "./card";
+
 import { Image } from "primereact/image";
 
 import { useState } from "react";
@@ -34,7 +36,9 @@ export function Layout({ children, active }) {
         style={{ display: "flex", gap: "10px" }}
       >
         <Image src="k102.svg" height="40"></Image>
-        {model.map((item) => {
+        <Card small title="_about" link="/" art={null}></Card>
+        <Card small title="_photos" link="/photo" art={null}></Card>
+        {/* {model.map((item) => {
           return (
             <div
               className="button"
@@ -47,7 +51,7 @@ export function Layout({ children, active }) {
               {item.label}
             </div>
           );
-        })}
+        })}*/}
       </div>
       <div className="paper">{children}</div>
     </div>

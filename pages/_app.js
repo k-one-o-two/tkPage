@@ -14,7 +14,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Script src="https://telegram.org/js/telegram-web-app.js" />
+      {/* <Script src="https://telegram.org/js/telegram-web-app.js" />*/}
       <Layout>
         <Head>
           <link rel="icon" href="/k102.svg" type="image/svg+xml"></link>
