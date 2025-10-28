@@ -21,20 +21,12 @@ function HomePage() {
         <div className="text-center">
           {/* <Image src="k102.svg" height="200"></Image> */}
         </div>
-        <div className="card" title="About me">
+        <div className="card article" title="About me">
           <h1>About me</h1>
           <p>I'm a software dev from Saint-Petersburg, living in Espoo.</p>
           <p>Here are some texts regarding my interests</p>
           <h1>Texts</h1>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              flexWrap: "wrap",
-              gap: 30,
-              marginBottom: 40,
-            }}
-          >
+          <div className="main-list">
             <Card title="QGIS" link="/mapping" art={mapNote.art}>
               <p className="m-0">
                 Notes regarding QGIS usage for creating maps

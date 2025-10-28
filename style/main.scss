@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Coda&family=Orbitron&family=Pixelify+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital@0;1&family=Mozilla+Headline:wght@200..700&family=Mozilla+Text:wght@200..700&display=swap");
 @import url("https://adobe-fonts.github.io/source-code-pro/source-code-pro.css");
 @import "../node_modules/nord/src/sass/nord.scss";
 /* @import "../public/fnt/molaser-brush.regular.otf"; */
 
-@font-face {
+/* @font-face {
     font-family: "brush";
     src: url("../public/fnt/molaser-brush.regular.otf") format("opentype");
 }
@@ -13,14 +14,14 @@
     font-feature-settings: "liga" on "dlig" on "kern" on;
     src: url("../public/fnt/polea-extra-bold-demo.regular.otf")
         format("opentype");
-}
+} */
 
 body {
     color: $nord5;
     display: grid;
     background: url("./noize.svg");
     font-size: 1rem;
-    font-family: "Coda", sans-serif;
+    font-family: "Exo", sans-serif;
     font-feature-settings: "liga" on "dlig" on "kern" on;
 }
 .header {
@@ -43,7 +44,7 @@ body {
 }
 
 .p-card-title {
-    font-family: "Coda", sans-serif;
+    font-family: "Mozilla Headline", sans-serif;
 }
 
 .link {
@@ -52,13 +53,13 @@ body {
 }
 
 h1 {
-    font-family: "polea", sans-serif;
+    font-family: "Mozilla Headline", sans-serif;
     font-size: 3rem;
 }
 h2,
 h3,
 h4 {
-    font-family: "polea", sans-serif;
+    font-family: "Mozilla Headline", sans-serif;
 }
 
 h3 {
@@ -74,7 +75,7 @@ h3 {
 p,
 a,
 .p-button-label {
-    font-family: "Coda", cursive;
+    font-family: "Mozilla Text", cursive;
 }
 
 a,
@@ -106,6 +107,10 @@ a:hover {
     box-shadow: none !important;
     clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%);
     width: unset !important;
+
+    h1 {
+        text-align: center;
+    }
 }
 
 .card-l2 {
@@ -362,9 +367,27 @@ code {
     --padding-md: 32px;
     --padding-xl: 64px;
     --padding-2xl: 80px;
-    --max-2xl-width: 1100px;
-    --max-3xl-width: 1440px;
+    --max-2xl-width: 1500px;
+    --max-3xl-width: 1521px;
 }
+
+.main-list {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+@media screen and (min-width: 1280px) {
+    .main-list {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+    }
+}
+
+/* @media screen and (min-width: 1536px) {
+    .main-list {
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 10px;
+    }
+} */
 
 /* 2xs */
 .article {
@@ -422,12 +445,8 @@ code {
 @media screen and (min-width: 1536px) {
     .article {
         width: unset;
-        padding-left: calc(
-            (100vw - var(--expanded-lm) - var(--max-2xl-width)) / 2
-        );
-        padding-right: calc(
-            (100vw - var(--expanded-lm) - var(--max-2xl-width)) / 2
-        );
+        padding-left: calc((100vw - var(--max-2xl-width)) / 2);
+        padding-right: calc((100vw - var(--max-2xl-width)) / 2);
     }
 }
 
@@ -435,12 +454,8 @@ code {
 @media screen and (min-width: 1920px) {
     .article {
         width: unset;
-        padding-left: calc(
-            (100vw - var(--expanded-lm) - var(--max-3xl-width)) / 2
-        );
-        padding-right: calc(
-            (100vw - var(--expanded-lm) - var(--max-3xl-width)) / 2
-        );
+        padding-left: calc((100vw - var(--max-3xl-width)) / 2);
+        padding-right: calc((100vw - var(--max-3xl-width)) / 2);
     }
 }
 
