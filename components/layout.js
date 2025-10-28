@@ -17,7 +17,7 @@ export function Layout({ children, active }) {
       >
         <Image src="/k102.svg" height="40"></Image>
         <Card small title="_about" link="/" art={null}></Card>
-        <Card small title="_photos" link="/photo" art={null}></Card>
+        <Card small title="_photos" link="/photo/1/" art={null}></Card>
       </div>
       <div className="paper">{children}</div>
     </div>
