@@ -1,62 +1,30 @@
-import Flickr from 'flickr-sdk';
-import { useEffect, useState } from 'react';
-import { Card } from 'primereact/card';
-import { Button } from 'primereact/button';
-import { ProgressSpinner } from 'primereact/progressspinner';
-import debounce from 'lodash.debounce';
+import Flickr from "flickr-sdk";
+import { useEffect, useState } from "react";
+import { Card } from "primereact/card";
+import { Button } from "primereact/button";
+import { ProgressSpinner } from "primereact/progressspinner";
+import debounce from "lodash.debounce";
 
-import { ImageTile } from './image';
+import { ImageTile } from "./image";
 
-export function FlickrFeed() {
-  const Key = '378c2fa49da047fd5a130b41b8ac1705';
-  const Secret = '689f715552152481';
+export function FlickrFeed({ page }) {
+  const Key = "378c2fa49da047fd5a130b41b8ac1705";
+  const Secret = "689f715552152481";
 
   const flickr = new Flickr(Key);
   let sizes = [];
 
   const [images, setImages] = useState([]);
-  const [excess, setExcess] = useState([]);
-  const imagesGrid = [[]];
-  const excessByRow = [];
-
-  const [currentPage, setCurrentPage] = useState(1);
-
   const [isLoading, setIsLoading] = useState(true);
-
-  const [innerWidth, setInnerWidth] = useState(0);
 
   const placeImages = () => {
     setIsLoading(true);
     setImages(null);
     const images = sizes
-      .map((image) => image.filter((img) => img.label === 'Medium'))
+      .map((image) => image.filter((img) => img.label === "Medium"))
       .flat();
 
-    let currentRowWidth = 0;
-    let currentRow = 0;
-    let i = 0;
-
-    images.forEach((image) => {
-      const isVertical = image.height > image.width;
-      const verticalCalculatedWidth = image.width * (300 / image.height);
-
-      if (i <= 2) {
-        imagesGrid[currentRow].push(image);
-        currentRowWidth += isVertical ? verticalCalculatedWidth : image.width;
-      } else {
-        excessByRow[currentRow] = 1500 - currentRowWidth;
-
-        currentRow++;
-        imagesGrid[currentRow] = [image];
-        currentRowWidth = isVertical ? verticalCalculatedWidth : image.width;
-        i = 0;
-      }
-
-      i++;
-    });
-
-    setImages([...imagesGrid]);
-    setExcess(excessByRow);
+    setImages(images);
     setIsLoading(false);
     return;
   };
@@ -65,7 +33,7 @@ export function FlickrFeed() {
     setIsLoading(true);
 
     const res = await flickr.photos.search({
-      user_id: '131481972@N07',
+      user_id: "131481972@N07",
       per_page: 12,
       page,
     });
@@ -82,114 +50,58 @@ export function FlickrFeed() {
   };
 
   useEffect(() => {
-    getLastPhotos(1).then(placeImages);
-    setInnerWidth(window.innerWidth - 200);
-
-    window.addEventListener(
-      'resize',
-      debounce(() => {
-        setInnerWidth(window.innerWidth - 200);
-      }, 300),
-    );
-  }, []);
+    setImages([]);
+    page && getLastPhotos(Number(page)).then(placeImages);
+  }, [page]);
 
   return (
     <div className="card" title="Photos">
-      <h3>Photos</h3>
+      <h1>My photographies</h1>
+      <p>
+        I like taking pictures of life around me, you can see it all on{" "}
+        <a href="https://www.flickr.com/photos/k102">Flickr</a>. These images
+        are free for non-commercial use, but please mention me someewhere.
+      </p>
+      <p>
+        In case you want to use them for commercial purposes: I use{" "}
+        <a href="https://www.istockphoto.com/fi/portfolio/k102?mediatype=photography">
+          istockphoto
+        </a>{" "}
+        - feel free to ask, I'll add an image there!
+      </p>
+      {/* <h3>Photos</h3>*/}
       <div className="flex justify-content-between">
-        <div
-          className="button"
-          disabled={isLoading || currentPage === 1}
-          onClick={() => {
-            setCurrentPage((cp) => {
-              getLastPhotos(cp - 1).then(placeImages);
-              return cp - 1;
-            });
-          }}
-        >
-          &nbsp;&nbsp;&lt;&lt;&lt;&nbsp;&nbsp;
-        </div>
-        <h3>page = {currentPage}</h3>
-        <div
-          className="button"
-          disabled={isLoading}
-          onClick={() => {
-            setCurrentPage((cp) => {
-              getLastPhotos(cp + 1).then(placeImages);
-              return cp + 1;
-            });
-          }}
-        >
-          &nbsp;&nbsp;&gt;&gt;&gt;&nbsp;&nbsp;
-        </div>
+        <a href={Number(page) > 1 ? `/photo/${Number(page) - 1}` : null}>
+          <h4>page--;</h4>
+        </a>
+        <h4>/{page}/</h4>
+        <a href={`/photo/${Number(page) + 1}`}>
+          <h4>page++;</h4>
+        </a>
       </div>
       {isLoading ? (
         <div className="flex justify-content-center">
           <ProgressSpinner />
         </div>
       ) : (
-        <div
-          style={{
-            paddingLeft: '1.5vw',
-            paddingTop: '2rem',
-          }}
-        >
+        <div className="images-container">
           {images &&
-            images.map((row, i) => {
-              return (
-                <div
-                  key={i}
-                  className={`flex ${
-                    window.innerWidth <= 650 ? 'flex-column' : ''
-                  }`}
-                >
-                  {row.map((image, j) => (
-                    <div key={`${i}.${j}`}>
-                      <ImageTile
-                        image={image}
-                        availableWidth={innerWidth}
-                        rowNumber={i}
-                        excess={excess}
-                        numberOfHorizontalImages={
-                          row.filter((img) => img.width > img.height).length
-                        }
-                      />
-                    </div>
-                  ))}
-                </div>
-              );
+            images.map((image, i) => {
+              return <ImageTile key={i} image={image} />;
             })}
         </div>
       )}
       <div
-        style={{ paddingTop: '20px' }}
+        style={{ paddingTop: "20px" }}
         className="flex justify-content-between"
       >
-        <div
-          className="button"
-          disabled={isLoading || currentPage === 1}
-          onClick={() => {
-            setCurrentPage((cp) => {
-              getLastPhotos(cp - 1).then(placeImages);
-              return cp - 1;
-            });
-          }}
-        >
-          &nbsp;&nbsp;&lt;&lt;&lt;&nbsp;&nbsp;
-        </div>
-        <h3>page = {currentPage}</h3>
-        <div
-          className="button"
-          disabled={isLoading}
-          onClick={() => {
-            setCurrentPage((cp) => {
-              getLastPhotos(cp + 1).then(placeImages);
-              return cp + 1;
-            });
-          }}
-        >
-          &nbsp;&nbsp;&gt;&gt;&gt;&nbsp;&nbsp;
-        </div>
+        <a href={Number(page) > 1 ? `/photo/${Number(page) - 1}` : null}>
+          <h4>page--;</h4>
+        </a>
+        <h4>/{page}/</h4>
+        <a href={`/photo/${Number(page) + 1}`}>
+          <h4>page++;</h4>
+        </a>
       </div>
     </div>
   );
