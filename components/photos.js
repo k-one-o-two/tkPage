@@ -1,10 +1,6 @@
 import Flickr from "flickr-sdk";
 import { useEffect, useState } from "react";
-import { Card } from "primereact/card";
-import { Button } from "primereact/button";
 import { ProgressSpinner } from "primereact/progressspinner";
-import debounce from "lodash.debounce";
-
 import { ImageTile } from "./image";
 
 export function FlickrFeed({ page }) {
