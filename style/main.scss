@@ -411,12 +411,11 @@ code {
     }
 }
 
-/* @media screen and (min-width: 1536px) {
-    .main-list {
-        grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 10px;
+@media screen and (min-width: 1920px) {
+    .images-container {
+        grid-template-columns: repeat(6, 1fr);
     }
-} */
+}
 
 /* 2xs */
 .article {
