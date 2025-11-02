@@ -1,16 +1,8 @@
 export function ImageTile({ image }) {
-  const { source, width, height, url } = image;
-
-  console.info({ image });
+  const { source, url } = image;
 
   return (
-    <div
-      className="flickeImageTileContainer"
-      style={{
-        height: Math.min(height, width),
-        width: Math.min(height, width),
-      }}
-    >
+    <div className="flickeImageTileContainer">
       <a href={`${url.replace("/sizes/m/", "")}`}>
         <div
           className="cursor-pointer hover:shadow-8 flickeImageTile"
@@ -21,6 +13,7 @@ export function ImageTile({ image }) {
             backgroundRepeat: "no-repeat",
             backgroundImage: `url(${source})`,
             height: "100%",
+            width: "100%",
           }}
         ></div>
       </a>

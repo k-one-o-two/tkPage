@@ -30,7 +30,7 @@ export function FlickrFeed({ page }) {
 
     const res = await flickr.photos.search({
       user_id: "131481972@N07",
-      per_page: 12,
+      per_page: 24,
       page,
     });
 
