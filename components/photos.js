@@ -3,6 +3,19 @@ import { useEffect, useState } from "react";
 import { ProgressSpinner } from "primereact/progressspinner";
 import { ImageTile } from "./image";
 
+const skeletonAscii = `
+  ░░░░░░░░░░░░░░░░░░░░
+  ░                  ░
+  ░  ▓▓▓▓            ░
+  ░  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ░
+  ░  ▓     ▓▓▓     ▓ ░
+  ░  ▓    ▓   ▓    ▓ ░
+  ░  ▓     ▓▓▓     ▓ ░
+  ░  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ░
+  ░                  ░
+  ░░░░░░░░░░░░░░░░░░░░
+  `;
+
 export function FlickrFeed({ page }) {
   const Key = "378c2fa49da047fd5a130b41b8ac1705";
   const Secret = "689f715552152481";
@@ -77,7 +90,7 @@ export function FlickrFeed({ page }) {
       </div>
       {isLoading ? (
         <div className="flex justify-content-center">
-          <ProgressSpinner />
+          <pre>{skeletonAscii}</pre>
         </div>
       ) : (
         <div className="images-container">
