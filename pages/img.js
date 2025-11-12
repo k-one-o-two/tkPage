@@ -154,6 +154,11 @@ const font = await loadFont('.my_font.ttf');
       <NoteImage src="/6/4.png"></NoteImage>
       <p>but does it's job well.</p>
       <p>
+        Please note: you have to put all the characters you'll want to use and
+        pay attention to the color - the font needs to be rendered to the bitmap
+        of the exact color you're gonna use.
+      </p>
+      <p>
         A ".fnt" is actually just a bitmap, so this tool has generated an image
       </p>
       <NoteImage src="/6/2.png"></NoteImage>
