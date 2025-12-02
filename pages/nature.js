@@ -52,7 +52,7 @@ export const note = {
       </a>
       <NoteImage src="/10/pirttimaki.png"></NoteImage>
       <p>
-        Another access point to the Nuuksio national park is near the Bobom
+        Another access point to the Nuuksio national park is near the Bodom
         lake. It is slightly less popular, so might be more suitable for those
         who want to avoid the crowds. There is also a summer cafe, which I've
         never been to.
