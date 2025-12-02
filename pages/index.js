@@ -10,6 +10,7 @@ import { note as mapNote } from "./mapping";
 import { note as speedNote } from "./speed";
 import { note as uncrapNote } from "./uncrap";
 import { note as bikeNote } from "./bike";
+import { note as natureNote } from "./nature";
 
 function HomePage() {
   return (
@@ -76,6 +77,15 @@ function HomePage() {
               art={bikeNote.art}
             >
               <p>What I've learned from cycling non-stop for several years</p>
+            </Card>
+            <Card
+              title="Day trip suggestions (in progress)"
+              link="/nature"
+              art={natureNote.art}
+            >
+              <p>
+                A list of natural spots worth seeing as a day trip from Espoo
+              </p>
             </Card>
           </div>
         </div>
