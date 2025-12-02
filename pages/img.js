@@ -143,7 +143,20 @@ const font = await loadFont('.my_font.ttf');
       <p>So, I've decided to try and convert the font.</p>
       <p>
         Surprisingly, there are different tools for that and some of them just
-        don't work. <a href="https://ttf2fnt.com/">This one</a> does.
+        don't work.{" "}
+        <s>
+          <a href="https://ttf2fnt.com/">This one</a> does.
+        </s>{" "}
+        (updated) Looks like it's dead, but I've found another thing:{" "}
+        <a href="https://libgdx.com/wiki/tools/hiero">Hiero</a>.
+      </p>
+      <p>This is a desktop app, looks like this:</p>
+      <NoteImage src="/6/4.png"></NoteImage>
+      <p>but does it's job well.</p>
+      <p>
+        Please note: you have to put all the characters you'll want to use and
+        pay attention to the color - the font needs to be rendered to the bitmap
+        of the exact color you're gonna use.
       </p>
       <p>
         A ".fnt" is actually just a bitmap, so this tool has generated an image
