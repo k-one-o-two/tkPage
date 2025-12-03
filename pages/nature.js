@@ -92,7 +92,7 @@ export const note = {
         least mentally).
       </p>
       <h3>Porkkala</h3>
-      <a href="https://www.google.com/maps/place/59%C2%B058'41.3%22N+24%C2%B023'42.8%22E/@59.9678136,24.4010577,5441m/data=!3m1!1e3!4m4!3m3!8m2!3d59.978138!4d24.395219?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D">
+      <a href="https://www.google.com/maps/place/59%C2%B058'41.3%22N+24%C2%B023'42.8%22E">
         <h4>59°58'41.3"N 24°23'42.8"E</h4>
       </a>
       <NoteImage src="/10/porkkala.png"></NoteImage>
@@ -107,6 +107,41 @@ export const note = {
         for the winter, when the weather was just awful). But it is a great
         place for a small hike if you're not into long walks, but want some good
         views.
+      </p>
+      <h3>Liesjärvi</h3>
+      <a href="https://www.google.com/maps/place/60%C2%B039'10.9%22N+23%C2%B052'41.4%22E">
+        <h4>60°39'10.9"N 23°52'41.4"E</h4>
+      </a>
+      <NoteImage src="/10/lies.png"></NoteImage>
+      <p>
+        Also a national park. It is a big one, though not so well-connected as
+        Nuuksio. There are two interesting spots: a narrow path between two
+        lakes and a historical farm that you can visit.
+      </p>
+      <NoteImage src="/10/lies1.jpg"></NoteImage>
+      <NoteImage src="/10/lies2.jpg"></NoteImage>
+      <p>
+        It is quite far away from Espoo, though still a viable day trip option.
+      </p>
+      <p>
+        There are several parking places, they are not far from the main road,
+        but you will have to drive on some gravel roads. May pretend to be on a
+        WRC stage as well.
+      </p>
+      <h3>Ruotsejärvi</h3>
+      <a href="https://www.google.com/maps/place/60%C2%B042'48.5%22N+23%C2%B047'45.9%22E">
+        <h4>60°42'48.5"N 23°47'45.9"E</h4>
+      </a>
+      <NoteImage src="/10/ruots.png"></NoteImage>
+      <p>
+        This is a small area with a manual ferry, that is quite an interesting
+        thing. Another part of it is a long boardwalk across the swamp.
+      </p>
+      <NoteImage src="/10/ruots.jpg"></NoteImage>
+      <p>The ferry will take you to a peninsula with a nice laavu on it.</p>
+      <p>
+        It only worth visiting if you want to use that ferry, otherwise there
+        are way better places that are way closer.
       </p>
     </div>
   ),
