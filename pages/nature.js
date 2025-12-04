@@ -143,6 +143,49 @@ export const note = {
         It only worth visiting if you want to use that ferry, otherwise there
         are way better places that are way closer.
       </p>
+      <h3>Palakoski</h3>
+      <a href="https://www.google.com/maps/place/60%C2%B016'04.3%22N+24%C2%B020'55.1%22E">
+        <h4>60°16'04.3"N 24°20'55.1"E</h4>
+      </a>
+      <NoteImage src="/10/palo.png"></NoteImage>
+      <p>
+        Back to Uusimaa. This area is pretty diverse - there are hills, a river
+        with a rapids (hence the name), a lake and a swamp.
+      </p>
+      <NoteImage src="/10/palo1.jpg"></NoteImage>
+      <p>
+        I have no idea how to get to this place other than by car (or by bike,
+        though I've never tried it). The last stretch of the road is not paved
+        and quite deserted, so, rather fun. I'm not aware of grilling places in
+        the area, but there's a small parking lot.
+      </p>
+      <NoteImage src="/10/palo2.jpg"></NoteImage>
+      <h3>Sipoonkorpi</h3>
+      <a href="https://www.google.com/maps/place/60%C2%B018'54.8%22N+25%C2%B006'46.6%22E">
+        <h4>60°18'54.8"N 25°06'46.6"E</h4>
+      </a>
+      <NoteImage src="/10/sipo.png"></NoteImage>
+      <p>
+        Another national park in the Helsinki region. It also has a lot of
+        entrances, but I've only been to one, marked above. I'd say it is less
+        interesting than Nuuksio, but has more camping facilities.
+      </p>
+      <NoteImage src="/10/sipo.jpg"></NoteImage>
+      <p>
+        For some reason, I can't find any summer picture, so here it the wintery
+        one.
+      </p>
+      <p>Luckily, you can ride there (at least I've tried and it was fine)</p>
+      <p>
+        It is good place if you're living in the eastern part of Helsinki or
+        Vantaa. From Espoo, I'd say there are better places to go.
+      </p>
+      <h3>Kopparnäs-Störsvik</h3>
+      <a href="https://www.google.com/maps/place/60%C2%B003'26.9%22N+24%C2%B016'27.9%22E">
+        <h4>60°03'26.9"N 24°16'27.9"E</h4>
+      </a>
+      <NoteImage src="/10/k-s.png"></NoteImage>
+      <p></p>
     </div>
   ),
 };
