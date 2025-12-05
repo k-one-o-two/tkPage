@@ -20,7 +20,12 @@ export const note = {
       <h2>Where to go</h2>
       <p>
         This is a list of places I recommend visiting as a day trip from Espoo
-        (or Helsinki).
+        (or Helsinki). All the photos are mine, so you can check out my{" "}
+        <a href="https://www.flickr.com/photos/k102/albums">Flickr</a> for more.
+      </p>
+      <p>
+        There are a couple of links at the bottom of the page that might be
+        helpful as well.
       </p>
       <h3>Nuuksio</h3>
       <p>
@@ -35,7 +40,7 @@ export const note = {
         roads, so no XC riding there.
       </p>
       <h4>Haltia</h4>
-      <a href="">
+      <a href="https://www.google.com/maps/place/60%C2%B017'36.0%22N+24%C2%B033'33.2%22E">
         <h4>60°17'36.0"N 24°33'33.2"E</h4>
       </a>
       <NoteImage src="/10/haltia.png"></NoteImage>
@@ -47,7 +52,7 @@ export const note = {
         Finnish standards).
       </p>
       <h4>Pirttimäki</h4>
-      <a href="">
+      <a href="https://www.google.com/maps/place/60%C2%B016'11.2%22N+24%C2%B038'57.7%22E">
         <h4>60°16'11.2"N 24°38'57.7"E</h4>
       </a>
       <NoteImage src="/10/pirttimaki.png"></NoteImage>
@@ -58,7 +63,7 @@ export const note = {
         never been to.
       </p>
       <h4>Salmi</h4>
-      <a href="">
+      <a href="https://www.google.com/maps/place/60%C2%B022'32.1%22N+24%C2%B030'17.7%22E">
         <h4>60°22'32.1"N 24°30'17.7"E</h4>
       </a>
       <NoteImage src="/10/salmi.png"></NoteImage>
@@ -74,7 +79,7 @@ export const note = {
         people, they are mostly free.
       </p>
       <h3>Meiko</h3>
-      <a href="">
+      <a href="https://www.google.com/maps/place/60%C2%B008'56.0%22N+24%C2%B022'27.3%22E">
         <h4>60°08'56.0"N 24°22'27.3"E</h4>
       </a>
       <NoteImage src="/10/meiko.jpg"></NoteImage>
@@ -185,7 +190,29 @@ export const note = {
         <h4>60°03'26.9"N 24°16'27.9"E</h4>
       </a>
       <NoteImage src="/10/k-s.png"></NoteImage>
-      <p></p>
+      <p>
+        A small area to the West from Espoo. To be fair, I was not expecting
+        much, so it was fine. But it's not as good as Porkkala (comparing since
+        it is also located on the coast).
+      </p>
+      <p>
+        So there is a path along the sea shore, some unidentified (by me) ruins.
+      </p>
+      <NoteImage src="/10/k-s.jpg"></NoteImage>
+      <p>
+        The good part - it is totally not popular. There were exactly zero
+        people there.
+      </p>
+      <h2>Resources</h2>
+      <p>There are several online resources that might help you as well.</p>
+      <p>
+        <a href="https://uuvi.fi/en/areas/">UUVI</a> - a great website to find
+        your next destination. Uusimaa only.
+      </p>
+      <p>
+        <a href="https://www.luontoon.fi/en">LUONTOON</a> - this one has way
+        more data, but the UI is not as good as UUVI.
+      </p>
     </div>
   ),
 };

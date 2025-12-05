@@ -19,7 +19,7 @@
 body {
     color: $nord5;
     display: grid;
-    background: url("./noize.svg");
+    /* background: url("./noize.svg"); */
     font-size: 1rem;
     font-family: "Exo", sans-serif;
     font-feature-settings: "liga" on "dlig" on "kern" on;
@@ -27,6 +27,12 @@ body {
 .header {
     background: color-mix(in srgb, $nord5 70%, transparent);
 }
+
+.footer {
+    color: $nord5;
+    border: 1px solid red;
+}
+
 .paper {
     background: color-mix(in srgb, $nord5 70%, transparent);
     padding-bottom: 10px;

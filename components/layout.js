@@ -20,6 +20,7 @@ export function Layout({ children, active }) {
         <Card small title="_photos" link="/photo/1/" art={null}></Card>
       </div>
       <div className="paper">{children}</div>
+      <div className="footer card">&copy; {new Date().getFullYear()} k102</div>
     </div>
   );
 }
