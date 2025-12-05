@@ -79,7 +79,7 @@ function HomePage() {
               <p>What I've learned from cycling non-stop for several years</p>
             </Card>
             <Card
-              title="Day trip suggestions (in progress)"
+              title="Day trip suggestions"
               link="/nature"
               art={natureNote.art}
             >
