@@ -407,7 +407,7 @@ code {
 
 /* 2xs */
 .article {
-    width: 100vw;
+    width: 100%;
     padding-left: var(--padding-xs);
     padding-right: var(--padding-xs);
 }
@@ -415,7 +415,7 @@ code {
 /* xs */
 @media screen and (min-width: 400px) {
     .article {
-        width: 100vw;
+        width: 100%;
         padding-left: var(--padding-xs);
         padding-right: var(--padding-xs);
     }
@@ -424,7 +424,7 @@ code {
 /* sm */
 @media screen and (min-width: 640px) {
     .article {
-        width: 100vw;
+        width: 100%;
         padding-left: var(--padding-sm);
         padding-right: var(--padding-sm);
     }
@@ -433,7 +433,7 @@ code {
 /* md */
 @media screen and (min-width: 768px) {
     .article {
-        width: 100vw;
+        width: 100%;
         padding-left: var(--padding-md);
         padding-right: var(--padding-md);
     }
@@ -442,7 +442,7 @@ code {
 /* lg */
 @media screen and (min-width: 1024px) {
     .article {
-        width: 100vw;
+        width: 100%;
         padding-left: var(--padding-md);
         padding-right: var(--padding-md);
     }
