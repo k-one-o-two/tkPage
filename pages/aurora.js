@@ -201,9 +201,13 @@ export const note = {
       </p>
       <p>
         To spare you from long description of what (imho) should be done to the
-        picture, I have creates a Lightroom preset. Here is how it looks like:
+        picture, I have created a Lightroom preset. Here is how it looks like:
       </p>
-      <NoteImage src="\misc\compare.jpg"></NoteImage>
+      <NoteImage src="/misc/compare.jpg"></NoteImage>
+      <p>
+        The preset itself can be found here:{" "}
+        <a href="/misc/aurora.xmp">aurora.xmp</a>.
+      </p>
       <h3>You're ready now</h3>
       <p>Or at least, there's nothing more that I can tell you.</p>
       <p>
