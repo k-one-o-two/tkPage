@@ -194,11 +194,8 @@ export default function EspooMap() {
             "SRSNAME=EPSG:4326&" +
             `BBOX=${bbox}`;
 
-          // Use the proxy endpoint for caching
-          const proxyUrl = `/api/wms-proxy?url=${encodeURIComponent(targetUrl)}`;
-
           try {
-            const response = await fetch(proxyUrl);
+            const response = await fetch(targetUrl);
             if (!response.ok) {
               console.error(
                 "Proxy response error:",
@@ -392,11 +389,8 @@ export default function EspooMap() {
             "OUTPUTFORMAT=GML2&" +
             "SRSNAME=EPSG:4326";
 
-          // Use the proxy endpoint for caching
-          const proxyUrl = `/api/wms-proxy?url=${encodeURIComponent(targetUrl)}`;
-
           try {
-            const response = await fetch(proxyUrl);
+            const response = await fetch(targetUrl);
             if (!response.ok) {
               console.error(
                 "Proxy response error (counting):",
