@@ -11,6 +11,7 @@ import { note as speedNote } from "./speed";
 import { note as uncrapNote } from "./uncrap";
 import { note as bikeNote } from "./bike";
 import { note as natureNote } from "./nature";
+import { note as espooMapNote } from "./espoo-map";
 
 function HomePage() {
   return (
@@ -85,6 +86,16 @@ function HomePage() {
             >
               <p>
                 A list of natural spots worth seeing as a day trip from Espoo
+              </p>
+            </Card>
+            <Card
+              title="Espoo Bicycle Map"
+              link="/espoo-map"
+              art={espooMapNote.art}
+            >
+              <p>
+                Interactive map showing bicycle infrastructure and traffic data
+                in Espoo
               </p>
             </Card>
           </div>

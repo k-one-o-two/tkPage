@@ -42,6 +42,7 @@
     "lodash.debounce": "^4.0.8",
     "minify": "^8.0.3",
     "next": "^13.1.6",
+    "node-cache": "^5.1.2",
     "nord": "^0.2.1",
     "primeflex": "^3.3.0",
     "primeicons": "^6.0.1",

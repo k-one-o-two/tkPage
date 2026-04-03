@@ -7,3 +7,6 @@ gh-pages.pub
 out/
 
 /.next/
+
+# Environment variables
+.env*.local
