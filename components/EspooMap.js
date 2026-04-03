@@ -199,7 +199,21 @@ export default function EspooMap() {
 
           try {
             const response = await fetch(proxyUrl);
+            if (!response.ok) {
+              console.error(
+                "Proxy response error:",
+                response.status,
+                response.statusText,
+              );
+              const errorText = await response.text();
+              console.error("Error details:", errorText);
+              return { type: "FeatureCollection", features: [] };
+            }
             const gmlText = await response.text();
+            if (!gmlText || !gmlText.includes("<?xml")) {
+              console.error("Invalid GML response:", gmlText.substring(0, 200));
+              return { type: "FeatureCollection", features: [] };
+            }
             return gmlToGeoJSON(gmlText);
           } catch (error) {
             console.error("Error fetching bicycle map:", error);
@@ -383,7 +397,24 @@ export default function EspooMap() {
 
           try {
             const response = await fetch(proxyUrl);
+            if (!response.ok) {
+              console.error(
+                "Proxy response error (counting):",
+                response.status,
+                response.statusText,
+              );
+              const errorText = await response.text();
+              console.error("Error details:", errorText);
+              return { type: "FeatureCollection", features: [] };
+            }
             const gmlText = await response.text();
+            if (!gmlText || !gmlText.includes("<?xml")) {
+              console.error(
+                "Invalid GML response (counting):",
+                gmlText.substring(0, 200),
+              );
+              return { type: "FeatureCollection", features: [] };
+            }
             return countingGmlToGeoJSON(gmlText);
           } catch (error) {
             console.error("Error fetching bicycle counting data:", error);
