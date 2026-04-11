@@ -1,5 +1,6 @@
 import { NoteImage } from "../components/noteImage";
 import { Article } from "../components/article";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
 
 export const note = {
   title: "Video with telemetry",
@@ -78,17 +79,10 @@ export const note = {
         accurate
       </p>
       <p>Here's how the end result looks like:</p>
-      <iframe
-        style={{
-          width: "100%",
-          aspectRatio: "16 / 9",
-        }}
-        src="https://www.youtube.com/embed/DvfDAEua6VI"
-        title="the end result"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
+      <LiteYouTubeEmbed
+        id="DvfDAEua6VI"
+        title="Summer commute (Espoo -> Helsinki) with data"
+      />
     </div>
   ),
 };

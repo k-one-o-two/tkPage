@@ -138,10 +138,11 @@ a:hover {
     padding-left: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-right: 30px;
+    padding-right: 50px !important;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    background-color: $nord7;
 
     h2 {
         font-size: 1.5rem;
@@ -379,6 +380,21 @@ code {
         grid-template-columns: 1fr 1fr;
         column-gap: 10px;
     }
+}
+
+.video-container {
+    padding: 30px;
+    background-color: $nord1;
+    clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-auto-rows: 220px;
+    grid-gap: 15px;
+    justify-content: center;
+}
+
+.video-description {
+    color: $nord5;
 }
 
 .images-container {

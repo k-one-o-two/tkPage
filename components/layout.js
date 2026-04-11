@@ -17,7 +17,8 @@ export function Layout({ children, active }) {
       >
         <Image src="/k102.svg" height="40"></Image>
         <Card small title="_about" link="/" art={null}></Card>
-        <Card small title="_photos" link="/photo/1/" art={null}></Card>
+        <Card small title="_photo" link="/photo/1/" art={null}></Card>
+        <Card small title="_video" link="/video" art={null}></Card>
       </div>
       <div className="paper">{children}</div>
       <div className="footer card">&copy; {new Date().getFullYear()} k102</div>
