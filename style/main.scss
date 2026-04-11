@@ -423,7 +423,6 @@ code {
 
 /* 2xs */
 .article {
-    width: 97%;
     padding-left: var(--padding-xs);
     padding-right: var(--padding-xs);
 }
@@ -431,7 +430,6 @@ code {
 /* xs */
 @media screen and (min-width: 400px) {
     .article {
-        width: 97%;
         padding-left: var(--padding-xs);
         padding-right: var(--padding-xs);
     }
@@ -440,7 +438,6 @@ code {
 /* sm */
 @media screen and (min-width: 640px) {
     .article {
-        width: 97%;
         padding-left: var(--padding-sm);
         padding-right: var(--padding-sm);
     }
@@ -449,7 +446,6 @@ code {
 /* md */
 @media screen and (min-width: 768px) {
     .article {
-        width: 97%;
         padding-left: var(--padding-md);
         padding-right: var(--padding-md);
     }
@@ -458,7 +454,6 @@ code {
 /* lg */
 @media screen and (min-width: 1024px) {
     .article {
-        width: 97%;
         padding-left: var(--padding-md);
         padding-right: var(--padding-md);
     }
@@ -467,7 +462,6 @@ code {
 /* xl */
 @media screen and (min-width: 1280px) {
     .article {
-        width: unset;
         padding-left: var(--padding-xl);
         padding-right: var(--padding-xl);
     }
@@ -476,7 +470,6 @@ code {
 /* 2xl */
 @media screen and (min-width: 1536px) {
     .article {
-        width: unset;
         padding-left: calc((100vw - var(--max-2xl-width)) / 2);
         padding-right: calc((100vw - var(--max-2xl-width)) / 2);
     }
@@ -485,7 +478,6 @@ code {
 /* 3xl */
 @media screen and (min-width: 1920px) {
     .article {
-        width: unset;
         padding-left: calc((100vw - var(--max-3xl-width)) / 2);
         padding-right: calc((100vw - var(--max-3xl-width)) / 2);
     }

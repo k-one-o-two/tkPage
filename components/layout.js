@@ -1,10 +1,3 @@
-// import 'primereact/resources/primereact.css'; // core css
-import "primeicons/primeicons.css"; // icons
-import "primeflex/primeflex.css";
-
-import { TransitionProvider } from "../context/transition";
-import TransitionComponent from "./transition";
-
 import { Card } from "./card";
 import { Image } from "primereact/image";
 
