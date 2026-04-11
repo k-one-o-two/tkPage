@@ -1,3 +1,7 @@
+// import 'primereact/resources/primereact.css'; // core css
+import "primeicons/primeicons.css"; // icons
+import "primeflex/primeflex.css";
+
 import { Card } from "./card";
 import { Image } from "primereact/image";
 
