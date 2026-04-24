@@ -37,6 +37,7 @@
     "@gsap/react": "^2.1.2",
     "@next/font": "^13.1.6",
     "@next/third-parties": "^16.2.3",
+    "@vercel/analytics": "^2.0.1",
     "browserify": "^17.0.0",
     "flickr-sdk": "^4.0.0",
     "gsap": "^3.13.0",
