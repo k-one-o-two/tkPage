@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
+import { Analytics } from "@vercel/analytics/react";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -21,6 +22,7 @@ export default function App({ Component, pageProps }) {
         </Head>
         <Component {...pageProps} />
       </Layout>
+      <Analytics />
     </>
   );
 }
