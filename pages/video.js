@@ -95,6 +95,18 @@ function VideoPage() {
               Random local trails, new camera test.
             </span>
           </div>
+          <div>
+            <LiteYouTubeEmbed id="tShFHQ1cZgk" title="Lohja full circle" />
+            <span className="video-description">
+              Lohja trail, full 8km circle.
+            </span>
+          </div>
+          <div>
+            <LiteYouTubeEmbed id="ekc3dixsG8g" title="Lohja short edit" />
+            <span className="video-description">
+              Lohja trail, shorther edit, riding with friends.
+            </span>
+          </div>
         </div>
         <h3>Other</h3>
         <div className="video-container">

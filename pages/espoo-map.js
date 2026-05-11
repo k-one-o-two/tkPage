@@ -87,8 +87,7 @@ export const note = {
         >
           City of Espoo's WFS service
         </a>
-        . The map uses a caching proxy to improve performance and reduce load on
-        the source server.
+        .
       </p>
     </div>
   ),
