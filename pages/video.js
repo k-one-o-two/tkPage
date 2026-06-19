@@ -66,6 +66,32 @@ function VideoPage() {
         <h3>Cycling :: mtb</h3>
         <div className="video-container">
           <div>
+            <LiteYouTubeEmbed id="dix7_CyR4A4" title="Fiskars" />
+            <span className="video-description">
+              Fiskars trails in the rain. We had no routes downloaded but the
+              navigation is superb there.
+            </span>
+          </div>
+          <div>
+            <LiteYouTubeEmbed id="F8B70JKX12s" title="Helsinki mtb route" />
+            <span className="video-description">
+              A part of Helsinki mtb route in the Central park.
+            </span>
+          </div>
+          <div>
+            <LiteYouTubeEmbed id="uGJM5YjPMS0" title="Espoo randoms" />
+            <span className="video-description">
+              Made from random clips I've had in my camera. Oittaa and EKP.
+            </span>
+          </div>
+          <div>
+            <LiteYouTubeEmbed id="aFGXxvMNt8U" title="Sepänkannas trails" />
+            <span className="video-description">
+              Near Kirkkonummi, lots of rocks and unmarked trails. I've had a
+              gpx, but it's not needed there
+            </span>
+          </div>
+          <div>
             <LiteYouTubeEmbed
               id="9ciASmUJkY0"
               title="Oittaa mtb trail; 04.04.2026"
