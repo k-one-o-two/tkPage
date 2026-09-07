@@ -22,6 +22,12 @@ function VideoPage() {
         <h3>Cycling :: road</h3>
         <div className="video-container">
           <div>
+            <LiteYouTubeEmbed id="HtVp_4T8cok" title="Winter Helsinki" />
+            <span className="video-description">
+              Espoon keskuspuisto from Suurpelto to the end.
+            </span>
+          </div>
+          <div>
             <LiteYouTubeEmbed id="C71qMICjSvQ" title="Winter Helsinki" />
             <span className="video-description">
               A winter ride around Helsinki city center. Dark and cold.
