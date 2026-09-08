@@ -119,7 +119,7 @@ export const note = {
       </p>
       <NoteImage src="/11/q.jpg"></NoteImage>
       <p>
-        The above picture taken when I was discussing growing tomatoes with my
+        The above picture taken while I was discussing growing tomatoes with my
         friend from ParkRun
       </p>
       <h3>conclusion</h3>
