@@ -12,6 +12,8 @@ import { note as uncrapNote } from "./uncrap";
 import { note as bikeNote } from "./bike";
 import { note as natureNote } from "./nature";
 import { note as espooMapNote } from "./espoo-map";
+import { note as gpxNote } from "./gpxEdit";
+import { note as pseNote } from "./exhibition";
 
 function HomePage() {
   return (
@@ -29,55 +31,28 @@ function HomePage() {
           <p>Here are some texts regarding my interests</p>
           <h1>Texts</h1>
           <div className="main-list">
-            <Card title="QGIS" link="/mapping" art={mapNote.art}>
-              <p className="m-0">
-                Notes regarding QGIS usage for creating maps
-              </p>
-            </Card>
-            <Card title="Dashware" link="/dashware" art={dashNote.art}>
-              <p>Notes on using DashWare tool</p>
-            </Card>
-            <Card title="On crappy photo" link="/crap" art={crapNote.art}>
-              <p>
-                This is my attempt to explain how to <b>not shoot</b> crappy
-                photos
-              </p>
-            </Card>
             <Card
-              title="On not-so-crappy photo"
-              link="/uncrap"
-              art={uncrapNote.art}
+              title="Postikortti Suomesta exhibition"
+              link="/exhibition"
+              art={pseNote.art}
             >
               <p>
-                That is my attempt to explain how to <b>shoot not</b> so crappy
-                photos - highly opinionated
+                A text about the Postikortti Suomesta exhibition: from the idea
+                to an actual opening event
               </p>
             </Card>
-            <Card title="Auroras" link="/aurora" art={auroraNote.art}>
-              <p>Yet another guide on how to take pictures of auroras</p>
-            </Card>
-            <Card title="TG bot" link="/bot" art={botNote.art}>
-              <p>Notes on using Node.js for Telegram bot backend</p>
-            </Card>
-            <Card title="Jimp image editor" link="/img" art={imgNote.art}>
-              <p>In case you want to edit images in your Node.js app</p>
+            <Card title="GPX editor" link="/gpxEdit" art={gpxNote.art}>
+              <p>I needed a GPX editor, so I made one</p>
             </Card>
             <Card
-              title="Paginated queries speedup"
-              link="/speed"
-              art={speedNote.art}
+              title="Espoo Bicycle Map"
+              link="/espoo-map"
+              art={espooMapNote.art}
             >
               <p>
-                Notes on improving speed of paginated database queries in
-                Postgresql and Node.js
+                Interactive map showing bicycle infrastructure and traffic data
+                in Espoo
               </p>
-            </Card>
-            <Card
-              title="Reflections on cycling"
-              link="/bike"
-              art={bikeNote.art}
-            >
-              <p>What I've learned from cycling non-stop for several years</p>
             </Card>
             <Card
               title="Day trip suggestions"
@@ -89,13 +64,53 @@ function HomePage() {
               </p>
             </Card>
             <Card
-              title="Espoo Bicycle Map"
-              link="/espoo-map"
-              art={espooMapNote.art}
+              title="Reflections on cycling"
+              link="/bike"
+              art={bikeNote.art}
+            >
+              <p>What I've learned from cycling non-stop for several years</p>
+            </Card>
+            <Card
+              title="Paginated queries speedup"
+              link="/speed"
+              art={speedNote.art}
             >
               <p>
-                Interactive map showing bicycle infrastructure and traffic data
-                in Espoo
+                Notes on improving speed of paginated database queries in
+                Postgresql and Node.js
+              </p>
+            </Card>
+            <Card title="Jimp image editor" link="/img" art={imgNote.art}>
+              <p>In case you want to edit images in your Node.js app</p>
+            </Card>
+            <Card title="TG bot" link="/bot" art={botNote.art}>
+              <p>Notes on using Node.js for Telegram bot backend</p>
+            </Card>
+            <Card title="Auroras" link="/aurora" art={auroraNote.art}>
+              <p>Yet another guide on how to take pictures of auroras</p>
+            </Card>
+            <Card
+              title="On not-so-crappy photo"
+              link="/uncrap"
+              art={uncrapNote.art}
+            >
+              <p>
+                That is my attempt to explain how to <b>shoot not</b> so crappy
+                photos - highly opinionated
+              </p>
+            </Card>
+            <Card title="On crappy photo" link="/crap" art={crapNote.art}>
+              <p>
+                This is my attempt to explain how to <b>not shoot</b> crappy
+                photos
+              </p>
+            </Card>
+            <Card title="Dashware" link="/dashware" art={dashNote.art}>
+              <p>Notes on using DashWare tool</p>
+            </Card>
+            <Card title="QGIS" link="/mapping" art={mapNote.art}>
+              <p className="m-0">
+                Notes regarding QGIS usage for creating maps
               </p>
             </Card>
           </div>
