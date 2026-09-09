@@ -1,5 +1,50 @@
 import { NoteImage } from "../components/noteImage";
 import { Article } from "../components/article";
+import dynamic from "next/dynamic";
+
+// Dynamically import the map component with SSR disabled
+const LocationMap = dynamic(() => import("../components/LocationMap"), {
+  ssr: false,
+  loading: () => (
+    <div
+      style={{
+        height: "400px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      Loading map...
+    </div>
+  ),
+});
+
+// Parses a "60\u00b017'36.0\"N 24\u00b033'33.2\"E" style coordinate (as shown in the
+// h4 elements below) into { lat, lng } decimal degrees for LocationMap.
+function parseDms(dms) {
+  const match = dms.match(/(\d+)\u00b0(\d+)'([\d.]+)"([NSEW])/);
+  if (!match) return null;
+  const [, degrees, minutes, seconds, hemisphere] = match;
+  let value = Number(degrees) + Number(minutes) / 60 + Number(seconds) / 3600;
+  if (hemisphere === "S" || hemisphere === "W") value = -value;
+  return value;
+}
+
+function toLatLng(coordText) {
+  const [latPart, lngPart] = coordText.trim().split(/\s+/);
+  return { lat: parseDms(latPart), lng: parseDms(lngPart) };
+}
+
+const HALTIA_COORDS = `60°17'36.0"N 24°33'33.2"E`;
+const PIRTTIMAKI_COORDS = `60°16'11.2"N 24°38'57.7"E`;
+const SALMI_COORDS = `60°22'32.1"N 24°30'17.7"E`;
+const MEIKO_COORDS = `60°08'56.0"N 24°22'27.3"E`;
+const PORKKALA_COORDS = `59°58'41.3"N 24°23'42.8"E`;
+const LIESJARVI_COORDS = `60°39'10.9"N 23°52'41.4"E`;
+const RUOTSEJARVI_COORDS = `60°42'48.5"N 23°47'45.9"E`;
+const PALAKOSKI_COORDS = `60°16'04.3"N 24°20'55.1"E`;
+const SIPOONKORPI_COORDS = `60°18'54.8"N 25°06'46.6"E`;
+const KOPPARNAS_COORDS = `60°03'26.9"N 24°16'27.9"E`;
 
 export const note = {
   title: "Day trip places",
@@ -41,9 +86,9 @@ export const note = {
       </p>
       <h4>Haltia</h4>
       <a href="https://www.google.com/maps/place/60%C2%B017'36.0%22N+24%C2%B033'33.2%22E">
-        <h4>60°17'36.0"N 24°33'33.2"E</h4>
+        <h4>{HALTIA_COORDS}</h4>
       </a>
-      <NoteImage src="/10/haltia.png"></NoteImage>
+      <LocationMap {...toLatLng(HALTIA_COORDS)} title="Haltia" />
       <p>
         Can be accessed by some buses, there is something called "The Finnish
         Nature Centre" - though I have no idea what it is. Since Nuuksio trails
@@ -53,9 +98,9 @@ export const note = {
       </p>
       <h4>Pirttimäki</h4>
       <a href="https://www.google.com/maps/place/60%C2%B016'11.2%22N+24%C2%B038'57.7%22E">
-        <h4>60°16'11.2"N 24°38'57.7"E</h4>
+        <h4>{PIRTTIMAKI_COORDS}</h4>
       </a>
-      <NoteImage src="/10/pirttimaki.png"></NoteImage>
+      <LocationMap {...toLatLng(PIRTTIMAKI_COORDS)} title="Pirttimäki" />
       <p>
         Another access point to the Nuuksio national park is near the Bodom
         lake. It is slightly less popular, so might be more suitable for those
@@ -64,9 +109,9 @@ export const note = {
       </p>
       <h4>Salmi</h4>
       <a href="https://www.google.com/maps/place/60%C2%B022'32.1%22N+24%C2%B030'17.7%22E">
-        <h4>60°22'32.1"N 24°30'17.7"E</h4>
+        <h4>{SALMI_COORDS}</h4>
       </a>
-      <NoteImage src="/10/salmi.png"></NoteImage>
+      <LocationMap {...toLatLng(SALMI_COORDS)} title="Salmi" />
       <p>
         An access point from the north. Has a big parking lot, which is
         convenient, really not popular and for a reason - it takes quite some
@@ -80,7 +125,7 @@ export const note = {
       </p>
       <h3>Meiko</h3>
       <a href="https://www.google.com/maps/place/60%C2%B008'56.0%22N+24%C2%B022'27.3%22E">
-        <h4>60°08'56.0"N 24°22'27.3"E</h4>
+        <h4>{MEIKO_COORDS}</h4>
       </a>
       <NoteImage src="/10/meiko.jpg"></NoteImage>
       <p>
@@ -89,7 +134,7 @@ export const note = {
         with it. There are several marked routes, the best one imho, goes around
         the lake.
       </p>
-      <NoteImage src="/10/meiko.png"></NoteImage>
+      <LocationMap {...toLatLng(MEIKO_COORDS)} title="Meiko" />
       <p>
         It is not a national park, so there are no restrictions (as far as I
         know) to ride a bike, but I've never tried. There are several streams
@@ -98,9 +143,9 @@ export const note = {
       </p>
       <h3>Porkkala</h3>
       <a href="https://www.google.com/maps/place/59%C2%B058'41.3%22N+24%C2%B023'42.8%22E">
-        <h4>59°58'41.3"N 24°23'42.8"E</h4>
+        <h4>{PORKKALA_COORDS}</h4>
       </a>
-      <NoteImage src="/10/porkkala.png"></NoteImage>
+      <LocationMap {...toLatLng(PORKKALA_COORDS)} title="Porkkala" />
       <p>
         Not that big area for hiking, but has a nice (one of the nicest I'd say)
         view of the sea. Can be accessed by car or by bike, if you're into
@@ -115,9 +160,9 @@ export const note = {
       </p>
       <h3>Liesjärvi</h3>
       <a href="https://www.google.com/maps/place/60%C2%B039'10.9%22N+23%C2%B052'41.4%22E">
-        <h4>60°39'10.9"N 23°52'41.4"E</h4>
+        <h4>{LIESJARVI_COORDS}</h4>
       </a>
-      <NoteImage src="/10/lies.png"></NoteImage>
+      <LocationMap {...toLatLng(LIESJARVI_COORDS)} title="Liesjärvi" />
       <p>
         Also a national park. It is a big one, though not so well-connected as
         Nuuksio. There are two interesting spots: a narrow path between two
@@ -135,9 +180,9 @@ export const note = {
       </p>
       <h3>Ruotsejärvi</h3>
       <a href="https://www.google.com/maps/place/60%C2%B042'48.5%22N+23%C2%B047'45.9%22E">
-        <h4>60°42'48.5"N 23°47'45.9"E</h4>
+        <h4>{RUOTSEJARVI_COORDS}</h4>
       </a>
-      <NoteImage src="/10/ruots.png"></NoteImage>
+      <LocationMap {...toLatLng(RUOTSEJARVI_COORDS)} title="Ruotsejärvi" />
       <p>
         This is a small area with a manual ferry, that is quite an interesting
         thing. Another part of it is a long boardwalk across the swamp.
@@ -150,9 +195,9 @@ export const note = {
       </p>
       <h3>Palakoski</h3>
       <a href="https://www.google.com/maps/place/60%C2%B016'04.3%22N+24%C2%B020'55.1%22E">
-        <h4>60°16'04.3"N 24°20'55.1"E</h4>
+        <h4>{PALAKOSKI_COORDS}</h4>
       </a>
-      <NoteImage src="/10/palo.png"></NoteImage>
+      <LocationMap {...toLatLng(PALAKOSKI_COORDS)} title="Palakoski" />
       <p>
         Back to Uusimaa. This area is pretty diverse - there are hills, a river
         with a rapids (hence the name), a lake and a swamp.
@@ -167,9 +212,9 @@ export const note = {
       <NoteImage src="/10/palo2.jpg"></NoteImage>
       <h3>Sipoonkorpi</h3>
       <a href="https://www.google.com/maps/place/60%C2%B018'54.8%22N+25%C2%B006'46.6%22E">
-        <h4>60°18'54.8"N 25°06'46.6"E</h4>
+        <h4>{SIPOONKORPI_COORDS}</h4>
       </a>
-      <NoteImage src="/10/sipo.png"></NoteImage>
+      <LocationMap {...toLatLng(SIPOONKORPI_COORDS)} title="Sipoonkorpi" />
       <p>
         Another national park in the Helsinki region. It also has a lot of
         entrances, but I've only been to one, marked above. I'd say it is less
@@ -187,9 +232,9 @@ export const note = {
       </p>
       <h3>Kopparnäs-Störsvik</h3>
       <a href="https://www.google.com/maps/place/60%C2%B003'26.9%22N+24%C2%B016'27.9%22E">
-        <h4>60°03'26.9"N 24°16'27.9"E</h4>
+        <h4>{KOPPARNAS_COORDS}</h4>
       </a>
-      <NoteImage src="/10/k-s.png"></NoteImage>
+      <LocationMap {...toLatLng(KOPPARNAS_COORDS)} title="Kopparnäs-Störsvik" />
       <p>
         A small area to the West from Espoo. To be fair, I was not expecting
         much, so it was fine. But it's not as good as Porkkala (comparing since
