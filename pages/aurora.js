@@ -50,7 +50,7 @@ export const note = {
         really dark place. So, the Orodruin might be a good choice. But if you
         don't live close enough to Mordor, it might be somewhat challenging.
       </p>
-      <p>So, lets first try to find a place dark enough.</p>
+      <p>So, let's first try to find a place dark enough.</p>
       <p>
         Here's the map:{" "}
         <a href="https://www.lightpollutionmap.info">lightpollutionmap</a>. I'm
@@ -115,9 +115,9 @@ export const note = {
         1 km long.
       </p>
       <p>
-        In addition, you need to be able to actually stand on it's southern
-        shore - you don't want to mount your tripod in some swamp (ok,{" "}
-        <i>you</i> might want, but I don't find it so amusing).
+        In addition, you need to be able to actually stand on its southern shore
+        - you don't want to mount your tripod in some swamp (ok, <i>you</i>{" "}
+        might want, but I don't find it so amusing).
       </p>
       <p>
         If you're shooting in the middle of the winter it might be less of a
@@ -132,9 +132,9 @@ export const note = {
       <p>
         Finally, bird-watching tower is sometimes a good option. The problem is
         that they are typically not high enough to be above all the trees
-        around. Another issue might be it's location - as noted above, one of
-        the highest towers has a bad location, though it allows to make some
-        nice sunset pics.
+        around. Another issue might be its location - as noted above, one of the
+        highest towers has a bad location, though it allows to make some nice
+        sunset pics.
       </p>
       <NoteImage src="/5/5.jpg"></NoteImage>
       <p>
@@ -145,7 +145,7 @@ export const note = {
       <h3>Gear</h3>
       <p>
         If you're ok with just pointing your phone in the sky and letting it try
-        to make it's best - just skip this part, it's boring.
+        to make its best - just skip this part, it's boring.
       </p>
       <p>Still here?</p>
       <p>
@@ -176,7 +176,7 @@ export const note = {
         clouds, they disappear in one place and appear in some another) and they
         do it fast enough to appear too blurry. Therefore, I've realized that 5s
         time is good enough. Make it longer and you'll get blurry colorful mess,
-        make is shorter and you'll miss some stars in the background.
+        make it shorter and you'll miss some stars in the background.
       </p>
       <p>
         <b>ISO</b>. Should be as low as possible to reduce the noise. For me 800

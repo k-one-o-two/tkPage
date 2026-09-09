@@ -21,23 +21,23 @@ export const note = {
       <p>
         So, I have a Telegram channel, called{" "}
         <a href="https://t.me/nerdsbayPhoto">Postikortti Suomesta</a>, I have
-        made several notes on developing its bot. But now, I ant to tell about
-        my first ever offlin event.
+        made several notes on developing its bot. But now, I want to tell about
+        my first ever offline event.
       </p>
       <p>
-        So, aparently, in Espoo one can request a place to make an exhibition in
-        one of city libraries. Yeah, libraries in Finland are more than just
+        So, apparently, in Espoo one can request a place to make an exhibition
+        in one of city libraries. Yeah, libraries in Finland are more than just
         libraries - you can loan tools there, record your own music etc. And
         make an exhibition too.
       </p>
       <p>The best part - it's free.</p>
       <p>
-        That's why I have decied to do just that, and here I want to describe
+        That's why I have decided to do just that, and here I want to describe
         how it is done, and what I have learned.
       </p>
       <h3>How</h3>
       <p>
-        Forst, you need to contact the library service: luckily, it is described
+        First, you need to contact the library service: luckily, it is described
         on{" "}
         <a href="https://www.espoo.fi/en/library-services">
           Espoo city website
@@ -48,7 +48,7 @@ export const note = {
       <h4>What I did wrong at this point</h4>
       <NoteImage src="/11/libs.png"></NoteImage>
       <p>
-        I should have went and take a look at those places - I ended up picking
+        I should have gone and taken a look at those places - I ended up picking
         not the ideal one
       </p>
       <h3>Meanwhile</h3>
@@ -66,7 +66,7 @@ export const note = {
         .
       </p>
       <p>It is not exactly fast, but it worked well.</p>
-      <p>Next task - print them! And, preferrably, not pay too much for it.</p>
+      <p>Next task - print them! And, preferably, not pay too much for it.</p>
       <p>
         After checking known to me local places and being unpleasantly surprised
         by their prices, I have discovered{" "}
@@ -83,12 +83,12 @@ export const note = {
         some pics they were even negative, which resulted in some author names
         being cut off.
       </p>
-      <h3>time t-0</h3>
+      <h3>Time T-0</h3>
       <p>
         So now I've got a response from the library with the confirmation of my
         exhibition and printed pictures. Actually, I've got two dates: the date
         of the exhibition start and the date of the opening event. Remember,
-        I've said I did not paid enough attention when picking the place? We
+        I've said I did not pay enough attention when picking the place? We
         ended up having an opening in one corner of the library hall and our
         pictures in the opposite.
       </p>
@@ -100,8 +100,8 @@ export const note = {
       </p>
       <NoteImage src="/11/f.jpg"></NoteImage>
       <p>
-        That did not work. Well, I should have thought of that earlier and see
-        how those strings actually look like.
+        That did not work. Well, I should have thought of that earlier and seen
+        how those strings actually looked.
       </p>
       <p>
         Luckily, I was able to put pictures on strings themselves, and with the
@@ -112,17 +112,17 @@ export const note = {
       <NoteImage src="/11/s.jpg"></NoteImage>
       <p>The end result looked like this</p>
       <NoteImage src="/11/result.jpg"></NoteImage>
-      <h3>opening</h3>
+      <h3>Opening</h3>
       <p>
         To say that I was surprised is to say nothing. There were actual living
         people - at one point there had even been a queue!
       </p>
       <NoteImage src="/11/q.jpg"></NoteImage>
       <p>
-        The above picture taken while I was discussing growing tomatoes with my
-        friend from ParkRun
+        The above picture was taken while I was discussing growing tomatoes with
+        my friend from ParkRun
       </p>
-      <h3>conclusion</h3>
+      <h3>Conclusion</h3>
       <p>
         So, there are several things that I should have done differently and
         maybe will, given that this exhibition was not the last one.{" "}

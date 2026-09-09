@@ -69,7 +69,7 @@ export function FlickrFeed({ page }) {
       <p>
         I like taking pictures of life around me, you can see it all on{" "}
         <a href="https://www.flickr.com/photos/k102">Flickr</a>. These images
-        are free for non-commercial use, but please mention me someewhere.
+        are free for non-commercial use, but please mention me somewhere.
       </p>
       <p>
         In case you want to use them for commercial purposes: I use{" "}

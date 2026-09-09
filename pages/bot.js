@@ -1,9 +1,8 @@
 import { Article } from "../components/article";
 
-export   const note = {
+export const note = {
   title: "On Telegram bot development",
-  art: 
-  `
+  art: `
 ████████████████████
 █                  █
 █ ████████████████ █
@@ -18,8 +17,8 @@ export   const note = {
     <div>
       <h3>Why</h3>
       <p>
-        As you may have noticed, I like taking pictures. I also like looking
-        at others pics and encouraging people to make and share them.
+        As you may have noticed, I like taking pictures. I also like looking at
+        others' pics and encouraging people to make and share them.
       </p>
       <p>
         Since I'm somewhat active in the Nerdsbay community, I have decided to
@@ -28,14 +27,14 @@ export   const note = {
       </p>
       <p>
         But immediately, there is a problem - how do I let people send their
-        images to the channel - obviously, I'd like to be able to either
-        approve or reject those pics.
+        images to the channel - obviously, I'd like to be able to either approve
+        or reject those pics.
       </p>
       <h3>Let's start</h3>
       <p>
-        So, we need a public channel, a private group where people will be
-        able to approve images and a bot which will forward messages from the
-        user to that group and then to the channel.
+        So, we need a public channel, a private group where people will be able
+        to approve images and a bot which will forward messages from the user to
+        that group and then to the channel.
       </p>
       <p>
         To create a bot, you have to interact with the{" "}
@@ -55,13 +54,12 @@ export   const note = {
         <code className="language-javascript">npm install locallydb</code>
       </pre>
       <p>
-        The 1st one is the api that we're going to use to interact with the
-        bot, the 2nd - a rather dumb "database".
+        The 1st one is the api that we're going to use to interact with the bot,
+        the 2nd - a rather dumb "database".
       </p>
       <p>
-        The api works pretty much like a web socket - it starts polling and
-        lets you to subscribe to some events. First of all, we need a "photo"
-        event.
+        The api works pretty much like a web socket - it starts polling and lets
+        you to subscribe to some events. First of all, we need a "photo" event.
       </p>
       <pre className="crt">
         <code className="language-javascript">{`
@@ -72,8 +70,8 @@ bot.on('photo', (msg) => {});
       </pre>
       <p>
         All the files are stored by telegram separately, so we don't actually
-        need to download it - only memorize it's "file_unique_id". Let's save
-        it to the collection:
+        need to download it - only memorize its "file_unique_id". Let's save it
+        to the collection:
       </p>
       <pre className="crt">
         <code className="language-javascript">
@@ -104,9 +102,9 @@ msgId: msg.message_id,
         that their picture has been approved (or not).
       </p>
       <p>
-        This is why we have saved the user id into the array - in some cases,
-        a user can hide their username on forwarded messages - the only way to
-        trace the user back is by the file uniq id .
+        This is why we have saved the user id into the array - in some cases, a
+        user can hide their username on forwarded messages - the only way to
+        trace the user back is by the file unique id.
       </p>
       <pre className="crt">
         <code className="language-javascript">{`
@@ -133,9 +131,9 @@ return list.items[0];
       `}</code>
       </pre>
       <p>
-        Here the bot reacts to a message that matches the regexp (i.e.
-        messages like "ok we like it") if this message came as a reply to the
-        photo in the group.
+        Here the bot reacts to a message that matches the regexp (i.e. messages
+        like "ok we like it") if this message came as a reply to the photo in
+        the group.
       </p>
       <p>
         Additionally, you may want to check that this reply is indeed in the
@@ -148,9 +146,9 @@ return list.items[0];
       </p>
       <h3>Wait, how do I run it?</h3>
       <p>
-        The good thing is that you don't need any domain or even a static IP
-        to host this bot backend. But if you're unhappy with running it on
-        your machine, there's a great option.
+        The good thing is that you don't need any domain or even a static IP to
+        host this bot backend. But if you're unhappy with running it on your
+        machine, there's a great option.
       </p>
       <p>
         You can obtain an{" "}
@@ -158,9 +156,9 @@ return list.items[0];
         virtual machine. On which you can install any OS you like.
       </p>
       <p>
-        After trying several options to run my little node script and detach
-        it from the ssh terminal, I've found out that{" "}
-        <a href="https://www.npmjs.com/package/forever">forever</a> works nest
+        After trying several options to run my little node script and detach it
+        from the ssh terminal, I've found out that{" "}
+        <a href="https://www.npmjs.com/package/forever">forever</a> works best
         for me.
       </p>
       <p>So, install it and run your script:</p>

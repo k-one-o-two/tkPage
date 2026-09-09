@@ -19,7 +19,7 @@ export const note = {
     <div>
       <h3>Why</h3>
       <p>
-        Ok, so I've <A href="/crap">tried my best</A> do discuss how to not make
+        Ok, so I've <A href="/crap">tried my best</A> to discuss how to not make
         a crappy image. But then it has been pointed out that these advices only
         work if you know what is that you're going to shoot. Which is not always
         the case. So now I'll try to share some ideas on how I pick the subject
@@ -35,7 +35,7 @@ export const note = {
         image is interesting and how aesthetically pleasing it is.
       </p>
       <p>
-        I also think it is easier to discuss how to make an image good form an
+        I also think it is easier to discuss how to make an image good from an
         aesthetic point of view. Apart from being able to find images with
         traffic lights, we, humans have other things in common and visual taste
         is one of them. Of course, there are some overly unique snowflakes, who
@@ -141,7 +141,7 @@ export const note = {
         Here I've pointed my camera pretty much directly to the low winter sun
         and then made a picture a bit warmer in post-production. As a result -
         this is no longer a picture of the forest, but a picture of light making
-        it's way through the trees.
+        its way through the trees.
       </p>
       <h3>Not only sunset</h3>
       <p>
@@ -200,7 +200,7 @@ export const note = {
       </p>
       <NoteImage src="/4/13.jpg"></NoteImage>
       <p>
-        If you're uncomfortable with the sreetphoto like me, you may try to
+        If you're uncomfortable with the streetphoto like me, you may try to
         shoot silhouettes of people. It doesn't tell a story (which a
         streetphoto is supposed to do), but it depicts people without showing
         their faces.

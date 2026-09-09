@@ -57,7 +57,7 @@ export const note = {
         finger after I've hurt myself a while ago. Anyway.
       </p>
       <h4>Loading an image</h4>
-      <p>First, we'll load an image and get it's dimensions:</p>
+      <p>First, we'll load an image and get its dimensions:</p>
       <pre className="crt">
         <code className="language-javascript">{`
 const image = await Jimp.read('output.jpg');
@@ -126,7 +126,7 @@ const font = await loadFont('.my_font.ttf');
       <p>
         has failed with an error, that I honestly did not even understand. But
         it was clear, that Jimp is unhappy with this font format. I've looked
-        into it's GitHub and realized that it uses ".fnt" fonts.
+        into its GitHub and realized that it uses ".fnt" fonts.
       </p>
       <p>
         At this point I've tried using different libs, like "node-canvas",
@@ -152,7 +152,7 @@ const font = await loadFont('.my_font.ttf');
       </p>
       <p>This is a desktop app, looks like this:</p>
       <NoteImage src="/6/4.png"></NoteImage>
-      <p>but does it's job well.</p>
+      <p>but does its job well.</p>
       <p>
         Please note: you have to put all the characters you'll want to use and
         pay attention to the color - the font needs to be rendered to the bitmap
@@ -181,7 +181,7 @@ const font = await loadFont('.my_font.fnt');
         decided to ask wise people on StackOverflow.
       </p>
       <p>
-        But than I've had an idea both dumb and brilliant: rotate an image,
+        But then I've had an idea both dumb and brilliant: rotate an image,
         print text, rotate back.
       </p>
       <pre className="crt">
@@ -192,7 +192,7 @@ const font = await loadFont('.my_font.fnt');
     font,
     x: border,
     y: width - 50,
-    text: 'tome text goes here',
+    text: 'some text goes here',
   });
 
   image.rotate(-90);

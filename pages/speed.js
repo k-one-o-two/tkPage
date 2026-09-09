@@ -1,10 +1,9 @@
 import { Article } from "../components/article";
 import { NoteImage } from "../components/noteImage";
 
-export const  note = {
+export const note = {
   title: "On speed for paginated queries",
-  art: 
-  `
+  art: `
 ████████████████████
 █                  █
 █                  █
@@ -23,9 +22,8 @@ export const  note = {
         in my free time.
       </p>
       <p>
-        Imagine, you have a huge table, or even a view and you need to query
-        it from the database and present in the UI, with sorting and
-        pagination.
+        Imagine, you have a huge table, or even a view and you need to query it
+        from the database and present in the UI, with sorting and pagination.
       </p>
       <p>
         Looks pretty simple: we have{" "}
@@ -61,7 +59,7 @@ const data = await prisma.someTable
   orderBy: {
       field: 'asc'
   },
-  { 
+  {
       skip: 1000,
       take: 10
   }
@@ -69,8 +67,8 @@ const data = await prisma.someTable
       `}</code>
       </pre>
       <p>
-        And... this takes a while to run, easily requiring several seconds.
-        And the more the "skip", the longer it takes.
+        And... this takes a while to run, easily requiring several seconds. And
+        the more the "skip", the longer it takes.
       </p>
       <p>
         <b>The sample query takes 6.52s</b>
@@ -81,17 +79,17 @@ const data = await prisma.someTable
         <a href="https://use-the-index-luke.com/blog/2013-07/pagination-done-the-postgresql-way">
           here it is
         </a>
-        . The key takeaway is that with the large skip, database requires a
-        lot of memory, and the more it is, the more memory will be needed
-        (image from the article above):
+        . The key takeaway is that with the large skip, database requires a lot
+        of memory, and the more it is, the more memory will be needed (image
+        from the article above):
       </p>
       <NoteImage src="/7/1.png"></NoteImage>
       <p>
         That article suggests using indexes, which is indeed a good solution,
-        but might not be applicable. In my app, there is an ability to sort
-        this table and some fields are really hard to index. Some of them have
-        the same value (which is not ok, but I don't control the data), some
-        are composite.
+        but might not be applicable. In my app, there is an ability to sort this
+        table and some fields are really hard to index. Some of them have the
+        same value (which is not ok, but I don't control the data), some are
+        composite.
       </p>
       <p>
         Another issue is that for pagination to work I have to send the total
@@ -116,8 +114,8 @@ const data = await prisma.someTable
         <b>The sample query takes 55ms</b>
       </p>
       <p>
-        Great! But useless - I still need those included columns, and let's
-        not forget about the count query.
+        Great! But useless - I still need those included columns, and let's not
+        forget about the count query.
       </p>
       <p>
         But now we know, that queries with includes and without an offset run
@@ -141,7 +139,7 @@ const ids = await prisma.someTable
   orderBy: {
       field: 'asc'
   },
-  { 
+  {
       skip: 1000,
       take: 10
   }
@@ -170,15 +168,14 @@ const data = await prisma.someTable
         solution. But I still need the count!
       </p>
       <p>
-        Let's rewrite it a bit more. "ids" is just a simple array, therefore
-        it should be actually easy to get the part we need without using sql
-        at all. As as side effect - the full array of ids has the exact same
-        length I needed to sent to the UI.
+        Let's rewrite it a bit more. "ids" is just a simple array, therefore it
+        should be actually easy to get the part we need without using sql at
+        all. As a side effect - the full array of ids has the exact same length
+        I needed to send to the UI.
       </p>
       <p>
         So, I have removed pagination from the request at all, leaving sorting
-        in the 1st one (the one that gets ids) and moved pagination task to
-        js:
+        in the 1st one (the one that gets ids) and moved pagination task to js:
       </p>
       <pre className="crt">
         <code className="language-javascript">{`
@@ -194,22 +191,20 @@ const paginatedIds = ids.slice(skip, skip + take));
       </p>
       <p>
         So, yeah, I have not beaten the 55ms result, but that one was pretty
-        much useless, and now I've got the count as well - therefore this is
-        all I needed from this function and it won't take any more time than
-        that.
+        much useless, and now I've got the count as well - therefore this is all
+        I needed from this function and it won't take any more time than that.
       </p>
       <h3>done</h3>
       <p>
-        I can't share the whole code because I've wrote it for work - but you
-        don't have to trust me, better try this approach yourself and see if
-        it is any good in your case.
+        I can't share the whole code because I've written it for work - but you
+        don't have to trust me, better try this approach yourself and see if it
+        is any good in your case.
       </p>
     </div>
   ),
 };
 
 function Notes() {
-
   return <Article art={note.art} title={note.title} html={note.html}></Article>;
 }
 

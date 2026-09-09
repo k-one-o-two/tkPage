@@ -70,7 +70,7 @@ export const note = {
         biking - I know local trails pretty well, but keep enjoying them.
       </p>
       <p className="bold-list-item">
-        6. Group rides are more about groups then they are about rides. Meaning
+        6. Group rides are more about groups than they are about rides. Meaning
         that if you don't like people you're going to ride with, you won't like
         the whole thing either. And that's totally fine to go solo - no need to
         plan a route, adjust your pace, just bliss.
@@ -79,14 +79,14 @@ export const note = {
       <p className="bold-list-item">
         7. Cycling will influence the way you think, and not exactly in a good
         way. For instance, I've realized that I hate walking - it's slow, boring
-        and you cant coast, need to move your feet constantly. Disgusting.
+        and you can't coast, need to move your feet constantly. Disgusting.
       </p>
       <p className="bold-list-item">
         8. Clipless pedals. You can say what you want, but they are just better.
         More confidence, more power and as a result more comfort. Yes, you're
-        going to fall a couple of times, but you'll get over as some point. The
-        biggest issue is that you need special shoes - but if you stick with mtb
-        ones, you'll be fine.
+        going to fall a couple of times, but you'll get over it at some point.
+        The biggest issue is that you need special shoes - but if you stick with
+        mtb ones, you'll be fine.
       </p>
       <NoteImage src="/9/6.jpg"></NoteImage>
       <p className="bold-list-item">

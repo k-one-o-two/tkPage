@@ -30,7 +30,7 @@ export const note = {
       <h3>Nuuksio</h3>
       <p>
         The most obvious destination. Can be accessed by car, bicycle or (they
-        say) there are some busses. By car, there are several parking places.
+        say) there are some buses. By car, there are several parking places.
         Nuuksio is a huge forest with nice gravel roads and some trails. There
         are laavus and fire places.
       </p>
@@ -45,7 +45,7 @@ export const note = {
       </a>
       <NoteImage src="/10/haltia.png"></NoteImage>
       <p>
-        Can be accessed by some busses, there is something called "The Finnish
+        Can be accessed by some buses, there is something called "The Finnish
         Nature Centre" - though I have no idea what it is. Since Nuuksio trails
         are all connected, you can go anywhere from this place - and you
         probably will want to since there might be too many people there (by
@@ -145,7 +145,7 @@ export const note = {
       <NoteImage src="/10/ruots.jpg"></NoteImage>
       <p>The ferry will take you to a peninsula with a nice laavu on it.</p>
       <p>
-        It only worth visiting if you want to use that ferry, otherwise there
+        It's only worth visiting if you want to use that ferry, otherwise there
         are way better places that are way closer.
       </p>
       <h3>Palakoski</h3>
@@ -177,12 +177,12 @@ export const note = {
       </p>
       <NoteImage src="/10/sipo.jpg"></NoteImage>
       <p>
-        For some reason, I can't find any summer picture, so here it the wintery
+        For some reason, I can't find any summer picture, so here is the wintery
         one.
       </p>
       <p>Luckily, you can ride there (at least I've tried and it was fine)</p>
       <p>
-        It is good place if you're living in the eastern part of Helsinki or
+        It is a good place if you're living in the eastern part of Helsinki or
         Vantaa. From Espoo, I'd say there are better places to go.
       </p>
       <h3>Kopparnäs-Störsvik</h3>

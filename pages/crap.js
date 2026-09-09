@@ -60,7 +60,7 @@ export const note = {
         </li>
         <li>
           <p>
-            the fence and the blue floor: is is not even clear if this is just a
+            the fence and the blue floor: it is not even clear if this is just a
             part of some bridge or a ship, the background makes this fence have
             too low contrast. The verdict is the same.
           </p>
@@ -105,7 +105,7 @@ export const note = {
       <NoteImage src="/3/cr2.jpg"></NoteImage>
       <p>
         This image I took while cycling to Porvoo with my phone. What I wanted
-        to show here is the river, the bridge with nice reflection of it's
+        to show here is the river, the bridge with nice reflection of its
         pillars and some sort of a farmhouse. What do we see here - all of the
         above plus a part of a metal fence and leafless trees on the right.
         Let's just crop them out and see if the picture would benefit from it:
@@ -136,7 +136,7 @@ export const note = {
         <a href="https://www.flickr.com/photos/k102/53719582599/">
           made the picture
         </a>{" "}
-        b&w while increasing it's contrast. So, while this picture is not
+        b&w while increasing its contrast. So, while this picture is not
         minimalistic, now it has more accent on why it has been taken - the
         geometry of those lines.
       </p>
@@ -167,10 +167,10 @@ export const note = {
       <p>
         There is a lot of things that are bad in this photo, let's try to
         describe it honestly. We see a tram and this is the only thing that is
-        kinda fine. The reflection of it's lights is obscured by the pile of
-        show, the building behind it is not fully in the frame, there's some
-        radom white car, some part of another building hovering in the left part
-        of the frame... We can continue.
+        kinda fine. The reflection of its lights is obscured by the pile of
+        snow, the building behind it is not fully in the frame, there's some
+        random white car, some part of another building hovering in the left
+        part of the frame... We can continue.
       </p>
       <NoteImage src="/3/nc5.jpg"></NoteImage>
       <p>

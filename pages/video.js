@@ -136,7 +136,7 @@ function VideoPage() {
           <div>
             <LiteYouTubeEmbed id="ekc3dixsG8g" title="Lohja short edit" />
             <span className="video-description">
-              Lohja trail, shorther edit, riding with friends.
+              Lohja trail, shorter edit, riding with friends.
             </span>
           </div>
         </div>
