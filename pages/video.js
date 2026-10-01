@@ -72,6 +72,12 @@ function VideoPage() {
         <h3>Cycling :: mtb</h3>
         <div className="video-container">
           <div>
+            <LiteYouTubeEmbed id="-XyneJO_zLs" title="Fiskars" />
+            <span className="video-description">
+              The new Oittaa R2 trail. Amazing stuff.
+            </span>
+          </div>
+          <div>
             <LiteYouTubeEmbed id="dix7_CyR4A4" title="Fiskars" />
             <span className="video-description">
               Fiskars trails in the rain. We had no routes downloaded but the
