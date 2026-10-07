@@ -29,6 +29,11 @@ const Page = () => {
             title="R2"
             style={{ height: "300px", width: "300px" }}
           />,
+          <LiteYouTubeEmbed
+            id="LncSGIbhW4k"
+            title="R2 with friends"
+            style={{ height: "300px", width: "300px" }}
+          />,
           <ImageTile
             image={{
               source: "/r2/1.jpg",

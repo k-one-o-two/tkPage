@@ -78,6 +78,12 @@ function VideoPage() {
             </span>
           </div>
           <div>
+            <LiteYouTubeEmbed id="LncSGIbhW4k" title="R2 with friends" />
+            <span className="video-description">
+              Oittaa R2 trail again, with friends.
+            </span>
+          </div>
+          <div>
             <LiteYouTubeEmbed id="dix7_CyR4A4" title="Fiskars" />
             <span className="video-description">
               Fiskars trails in the rain. We had no routes downloaded but the

@@ -55,6 +55,16 @@ const Page = () => {
                 interesting than R2.
               </p>
             </Card>
+            <Card title="Helsinki" link="/mtb/helsinki">
+              <p>Helsinki central park</p>
+              <p>
+                Starts approximately from the Olympic stadium and goes north.
+              </p>
+            </Card>
+            <Card title="Sepänkannas" link="/mtb/sepankannas">
+              <p>Sepänkannas area</p>
+              <p>In Kirkkonummi. Nice rocks, no marked trails.</p>
+            </Card>
           </div>
           <div>
             <p>More to come.</p>
