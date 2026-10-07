@@ -3,7 +3,7 @@ import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import { MtbPage } from "../../components/mtbPlace";
 
-const r2Page = () => {
+const Page = () => {
   return (
     <>
       <MtbPage
@@ -17,6 +17,7 @@ const r2Page = () => {
         badsArray={[
           "It is short, so gets quite boring after a while.",
           "Not much tech stuff.",
+          "Not maintained in winter.",
         ]}
         gpx={{
           src: "/gpx/oittagpx",
@@ -52,4 +53,4 @@ const r2Page = () => {
   );
 };
 
-export default r2Page;
+export default Page;

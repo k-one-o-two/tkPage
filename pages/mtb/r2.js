@@ -3,7 +3,7 @@ import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import { MtbPage } from "../../components/mtbPlace";
 
-const r2Page = () => {
+const Page = () => {
   return (
     <>
       <MtbPage
@@ -59,4 +59,4 @@ const r2Page = () => {
   );
 };
 
-export default r2Page;
+export default Page;

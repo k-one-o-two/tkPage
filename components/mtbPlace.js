@@ -31,16 +31,16 @@ export const MtbPage = ({ title, goodsArray, badsArray, gpx, gallery }) => {
             <div>
               <h3>Goods</h3>
               <ul>
-                {goodsArray.map((good) => (
-                  <li dangerouslySetInnerHTML={{ __html: good }} />
+                {goodsArray.map((good, index) => (
+                  <li key={index} dangerouslySetInnerHTML={{ __html: good }} />
                 ))}
               </ul>
             </div>
             <div>
               <h3>Bads</h3>
               <ul>
-                {badsArray.map((bad) => (
-                  <li dangerouslySetInnerHTML={{ __html: bad }} />
+                {badsArray.map((bad, index) => (
+                  <li key={index} dangerouslySetInnerHTML={{ __html: bad }} />
                 ))}
               </ul>
             </div>
