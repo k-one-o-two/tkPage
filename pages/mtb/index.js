@@ -40,6 +40,13 @@ const Page = () => {
               To help you adjust ypur expectations: I'm riding a rather old
               hardtail GT Avalanche.
             </p>
+            <p>
+              Regarding the difficulty level. It is based on{" "}
+              <a href="https://www.britishcycling.org.uk/search/article/mtbst20100615-MTB-Trail-Grading-System-0">
+                this
+              </a>
+              guide. Keep in mind, that these marks are subjective.
+            </p>
           </div>
           <NoteImage src="/misc/bike.jpg" />
           <div>

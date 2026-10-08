@@ -8,6 +8,10 @@ const Page = () => {
     <>
       <MtbPage
         title="Helsinki central park MTB"
+        difficulty={{
+          level: "moderate",
+          text: "One hard(ish) climb, many roots in some parts, nothing scary. Smooth in winter.",
+        }}
         goodsArray={[
           "Central location, accessible for lots of people.",
           "Well maintained in winter and it is actually way smoother and faster when snow covered.",

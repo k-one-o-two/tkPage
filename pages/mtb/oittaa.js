@@ -8,6 +8,10 @@ const Page = () => {
     <>
       <MtbPage
         title="Oittaa MTB"
+        difficulty={{
+          level: "moderate",
+          text: "Mostly moderate, one hard climb and a couple of scary (when first time) descents.",
+        }}
         goodsArray={[
           "A nice XC trail with different parts - flow, rocks, forest.",
           "A cuple of rather hard climbs, especially whan not on the first lap.",

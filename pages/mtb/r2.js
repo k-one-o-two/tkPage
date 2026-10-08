@@ -8,6 +8,10 @@ const Page = () => {
     <>
       <MtbPage
         title="Oittaa R2"
+        difficulty={{
+          level: "hard",
+          text: "It depends actually, but there are hard parts. First couple of segments are easier than others.",
+        }}
         goodsArray={[
           "This is a great trail - it is long, it has a lot of diversity in it, has some unique features (like that wooden climb, have never seen that before).",
           "It is in a great location - Nuuksio is a national park for a reason.",

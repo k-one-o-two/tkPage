@@ -8,11 +8,15 @@ const Page = () => {
     <>
       <MtbPage
         title="Fiskars trail center"
+        difficulty={{
+          level: "hard",
+          text: "The trail is marked red, there are some steep hp and downhills, one is even marked black.",
+        }}
         goodsArray={[
           "Actually good trails - there are both fast singletracks and tech sections.",
           "Great navigation, nearly impossible to get lost.",
           "Amazing views from the hill at the end of the red route.",
-          "Easy to find a prking place (and you're gonna need it).",
+          "Easy to find a parking place (and you're gonna need it).",
           "Fiskars itself is a lovely town",
         ]}
         badsArray={[

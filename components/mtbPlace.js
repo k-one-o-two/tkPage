@@ -17,7 +17,14 @@ const GpxTrackMap = dynamic(() => import("./GpxTrackMap"), {
   ),
 });
 
-export const MtbPage = ({ title, goodsArray, badsArray, gpx, gallery }) => {
+export const MtbPage = ({
+  title,
+  goodsArray,
+  badsArray,
+  gpx,
+  gallery,
+  difficulty,
+}) => {
   return (
     <>
       <Head>
@@ -28,6 +35,15 @@ export const MtbPage = ({ title, goodsArray, badsArray, gpx, gallery }) => {
           <h1>{title}</h1>
 
           <div>
+            <div>
+              <h3>difficulty</h3>
+              <div className="difficulty">
+                <div className={`difficulty-${difficulty.level}`}>
+                  <div className="difficulty-name">{difficulty.level}</div>
+                </div>
+                <div>{difficulty.text}</div>
+              </div>
+            </div>
             <div>
               <h3>Goods</h3>
               <ul>

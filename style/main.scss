@@ -491,3 +491,44 @@ code {
 .art {
     text-align: center;
 }
+
+.difficulty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.difficulty-name {
+    // color: $nord5;
+    font-family:
+        Mozilla Headline,
+        sans-serif;
+}
+
+.difficulty-easy,
+.difficulty-moderate,
+.difficulty-hard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    overflow: clip;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+}
+
+.difficulty-easy {
+    background-color: $nord14;
+    color: contrast-color($nord14);
+}
+
+.difficulty-moderate {
+    background-color: $nord13;
+    color: contrast-color($nord13);
+}
+
+.difficulty-hard {
+    background-color: $nord11;
+    color: contrast-color($nord11);
+}

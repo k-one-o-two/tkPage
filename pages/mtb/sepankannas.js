@@ -8,6 +8,10 @@ const Page = () => {
     <>
       <MtbPage
         title="Sepänkannas area"
+        difficulty={{
+          level: "moderate",
+          text: "Since not a trail, you can pick whatever you want, but I have not seen anything too hard there.",
+        }}
         goodsArray={[
           "Idk if that's good or not, but this is not exactly a trail, but rather an area. So no marks whatsover.",
           "Lots of rocks, they are quite different from the usual trails.",
