@@ -46,6 +46,7 @@ export const MtbPage = ({ title, goodsArray, badsArray, gpx, gallery }) => {
             </div>
           </div>
           <div>
+            <h3>map</h3>
             <GpxTrackMap src={gpx.src} title={gpx.title} />
           </div>
           <div>
