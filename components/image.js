@@ -6,31 +6,15 @@ export function ImageTile({ image }) {
       {url && (
         <a href={`${url.replace("/sizes/m/", "")}`}>
           <div
-            className="cursor-pointer hover:shadow-8 flickeImageTile"
-            style={{
-              backgroundSize: "cover",
-              backgroundPositionY: "center",
-              backgroundPositionX: "center",
-              backgroundRepeat: "no-repeat",
-              backgroundImage: `url(${source})`,
-              height: "100%",
-              width: "100%",
-            }}
+            className="flickeImageTile"
+            style={{ backgroundImage: `url(${source})` }}
           ></div>
         </a>
       )}
       {!url && (
         <div
-          className="cursor-pointer hover:shadow-8 flickeImageTile"
-          style={{
-            backgroundSize: "cover",
-            backgroundPositionY: "center",
-            backgroundPositionX: "center",
-            backgroundRepeat: "no-repeat",
-            backgroundImage: `url(${source})`,
-            height: "100%",
-            width: "100%",
-          }}
+          className="flickeImageTile"
+          style={{ backgroundImage: `url(${source})` }}
         ></div>
       )}
     </div>

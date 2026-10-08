@@ -1,6 +1,6 @@
 import { useRouter } from "next/navigation";
 
-export function Card({ title, children, link, art, small }) {
+export function Card({ title, children, link, art, small, accent }) {
   const router = useRouter();
 
   return (
@@ -19,6 +19,7 @@ export function Card({ title, children, link, art, small }) {
           {children && <div className="content">{children}</div>}
         </div>
       </div>
+      {accent && <div className={`accent-${accent}`}></div>}
     </div>
   );
 }

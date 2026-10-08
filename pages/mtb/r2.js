@@ -31,12 +31,12 @@ const Page = () => {
           <LiteYouTubeEmbed
             id="-XyneJO_zLs"
             title="R2"
-            style={{ height: "300px", width: "300px" }}
+            wrapperClass="yt-lite gallery-video"
           />,
           <LiteYouTubeEmbed
             id="LncSGIbhW4k"
             title="R2 with friends"
-            style={{ height: "300px", width: "300px" }}
+            wrapperClass="yt-lite gallery-video"
           />,
           <ImageTile
             image={{

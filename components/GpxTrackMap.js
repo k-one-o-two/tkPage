@@ -253,10 +253,7 @@ function ElevationChart({ profile, onHover }) {
   const hovered = hoverIndex != null ? profile[hoverIndex] : null;
 
   return (
-    <div
-      ref={containerRef}
-      style={{ position: "relative", width: "100%", marginBottom: 20 }}
-    >
+    <div ref={containerRef} className="elevation-chart">
       {width > 0 && (
         <svg
           width={width}
@@ -265,7 +262,6 @@ function ElevationChart({ profile, onHover }) {
           aria-label={`Elevation profile, ${Math.round(minEle)} to ${Math.round(maxEle)} m over ${(maxDist / 1000).toFixed(1)} km`}
           onPointerMove={handlePointerMove}
           onPointerLeave={() => setHover(null)}
-          style={{ display: "block", touchAction: "pan-y", fontSize: 11 }}
         >
           <g transform={`translate(${CHART_MARGIN.left},${CHART_MARGIN.top})`}>
             {yTicks.map((t) => (
@@ -335,18 +331,10 @@ function ElevationChart({ profile, onHover }) {
       )}
       {hovered && (
         <div
+          className="elevation-tooltip"
           style={{
-            position: "absolute",
-            top: 0,
             left: CHART_MARGIN.left + x(hovered.dist),
             transform: `translateX(${x(hovered.dist) > plotWidth / 2 ? "calc(-100% - 8px)" : "8px"})`,
-            padding: "2px 6px",
-            background: "#fff",
-            border: "1px solid rgba(0, 0, 0, 0.15)",
-            borderRadius: 4,
-            fontSize: 12,
-            whiteSpace: "nowrap",
-            pointerEvents: "none",
           }}
         >
           {(hovered.dist / 1000).toFixed(2)} km · {Math.round(hovered.ele)} m
@@ -489,7 +477,7 @@ export default function GpxTrackMap({ src, title }) {
   };
 
   if (error) {
-    return <div style={{ height: "400px", width: "100%" }}>{error}</div>;
+    return <div className="map">{error}</div>;
   }
 
   return (
@@ -498,7 +486,7 @@ export default function GpxTrackMap({ src, title }) {
         ref={mapContainerRef}
         role="img"
         aria-label={title ? `Map showing ${title}` : "Map"}
-        style={{ height: "400px", width: "100%", marginBottom: 20 }}
+        className="map gpx-track-map"
       />
       {stats?.profile && (
         <ElevationChart profile={stats.profile} onHover={handleChartHover} />

@@ -5,16 +5,7 @@ import dynamic from "next/dynamic";
 const GpxEditor = dynamic(() => import("../components/GpxEditor"), {
   ssr: false,
   loading: () => (
-    <div
-      style={{
-        height: "600px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      Loading map...
-    </div>
+    <div className="map map-tall map-placeholder">Loading map...</div>
   ),
 });
 

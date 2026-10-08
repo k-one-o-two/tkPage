@@ -334,54 +334,27 @@ export default function GpxEditor() {
 
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "1rem",
-          marginBottom: "10px",
-        }}
-      >
-        <label
-          style={{
-            cursor: "pointer",
-            padding: "6px 12px",
-            border: "1px solid currentColor",
-            borderRadius: "4px",
-          }}
-        >
+      <div className="gpx-editor-toolbar">
+        <label className="gpx-editor-button">
           {fileName || "Choose a GPX file"}
           <input
             type="file"
             accept=".gpx,application/gpx+xml"
             onChange={handleFileChange}
-            style={{ display: "none" }}
+            hidden
           />
         </label>
-        {error && <span style={{ color: "#e5484d" }}>{error}</span>}
+        {error && <span className="gpx-editor-error">{error}</span>}
       </div>
-      <div ref={mapContainerRef} style={{ height: "600px", width: "100%" }} />
+      <div ref={mapContainerRef} className="map map-tall" />
       {hasTrack && (
-        <div style={{ marginTop: "16px", userSelect: "none" }}>
-          <div
-            ref={rulerRef}
-            style={{
-              position: "relative",
-              height: "6px",
-              borderRadius: "3px",
-              background: "#d8dee9",
-              margin: "20px 8px",
-            }}
-          >
+        <div className="gpx-editor-trim">
+          <div ref={rulerRef} className="gpx-editor-ruler">
             <div
+              className="gpx-editor-range"
               style={{
-                position: "absolute",
-                top: 0,
-                bottom: 0,
                 left: `${startPos * 100}%`,
                 right: `${(1 - endPos) * 100}%`,
-                background: "#e5484d",
-                borderRadius: "3px",
               }}
             />
             <div
@@ -389,66 +362,26 @@ export default function GpxEditor() {
               onPointerDown={handleStartPointerDown}
               onPointerMove={handleStartPointerMove}
               title="Start"
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: `${startPos * 100}%`,
-                transform: "translate(-50%, -50%)",
-                width: "18px",
-                height: "18px",
-                borderRadius: "50%",
-                background: "#2f9e44",
-                border: "2px solid white",
-                boxShadow: "0 1px 3px rgba(0, 0, 0, 0.4)",
-                cursor: "ew-resize",
-                touchAction: "none",
-              }}
+              className="gpx-editor-handle gpx-editor-handle-start"
+              style={{ left: `${startPos * 100}%` }}
             />
             <div
               id="end"
               onPointerDown={handleEndPointerDown}
               onPointerMove={handleEndPointerMove}
               title="End"
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: `${endPos * 100}%`,
-                transform: "translate(-50%, -50%)",
-                width: "18px",
-                height: "18px",
-                borderRadius: "50%",
-                background: "#e5484d",
-                border: "2px solid white",
-                boxShadow: "0 1px 3px rgba(0, 0, 0, 0.4)",
-                cursor: "ew-resize",
-                touchAction: "none",
-              }}
+              className="gpx-editor-handle gpx-editor-handle-end"
+              style={{ left: `${endPos * 100}%` }}
             />
           </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              fontSize: "0.8rem",
-              padding: "0 8px",
-              marginBottom: "10px",
-            }}
-          >
+          <div className="gpx-editor-percents">
             <span>{Math.round(startPos * 100)}%</span>
             <span>{Math.round(endPos * 100)}%</span>
           </div>
           <button
             type="button"
             onClick={handleDownload}
-            style={{
-              cursor: "pointer",
-              padding: "6px 12px",
-              border: "1px solid currentColor",
-              borderRadius: "4px",
-              background: "transparent",
-              color: "inherit",
-              font: "inherit",
-            }}
+            className="gpx-editor-button"
           >
             Download trimmed GPX
           </button>

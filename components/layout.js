@@ -1,18 +1,22 @@
-// import 'primereact/resources/primereact.css'; // core css
-import "primeicons/primeicons.css"; // icons
-import "primeflex/primeflex.css";
-
+import { useEffect } from "react";
 import { Card } from "./card";
-import { Image } from "primereact/image";
 
 export function Layout({ children, active }) {
+  // Mirrors the scroll position into <html data-scroll="...">, so CSS can
+  // style the header differently once the page is scrolled.
+  useEffect(() => {
+    const updateScroll = () => {
+      document.documentElement.dataset.scroll = window.scrollY;
+    };
+    updateScroll();
+    window.addEventListener("scroll", updateScroll, { passive: true });
+    return () => window.removeEventListener("scroll", updateScroll);
+  }, []);
+
   return (
     <div>
-      <div
-        className="flex justify-content-center flex-wrap header"
-        style={{ display: "flex", gap: "10px" }}
-      >
-        <Image src="/k102.svg" height="40"></Image>
+      <div className="header">
+        <img src="/k102.svg" height="40" alt="k102" />
         <Card small title="_about" link="/" art={null}></Card>
         <Card small title="_photo" link="/photo/1/" art={null}></Card>
         <Card small title="_video" link="/video" art={null}></Card>

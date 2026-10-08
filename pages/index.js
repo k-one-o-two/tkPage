@@ -21,10 +21,7 @@ function HomePage() {
       <Head>
         <title>k102 home page</title>
       </Head>
-      <div className="flex flex-column">
-        <div className="text-center">
-          {/* <Image src="k102.svg" height="200"></Image> */}
-        </div>
+      <div className="home">
         <div className="card article" title="About me">
           <h1>About me</h1>
           <p>I'm a software dev from Saint-Petersburg, living in Espoo.</p>
@@ -109,9 +106,7 @@ function HomePage() {
               <p>Notes on using DashWare tool</p>
             </Card>
             <Card title="QGIS" link="/mapping" art={mapNote.art}>
-              <p className="m-0">
-                Notes regarding QGIS usage for creating maps
-              </p>
+              <p>Notes regarding QGIS usage for creating maps</p>
             </Card>
           </div>
         </div>

@@ -5,16 +5,7 @@ import dynamic from "next/dynamic";
 const EspooMap = dynamic(() => import("../components/EspooMap"), {
   ssr: false,
   loading: () => (
-    <div
-      style={{
-        height: "600px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      Loading map...
-    </div>
+    <div className="map map-tall map-placeholder">Loading map...</div>
   ),
 });
 
@@ -43,7 +34,7 @@ export const note = {
 
       <EspooMap />
 
-      <h4 style={{ marginTop: "20px" }}>Features</h4>
+      <h4 className="espoo-map-features">Features</h4>
       <ul>
         <li>
           <strong>Bicycle Infrastructure:</strong> View different types of

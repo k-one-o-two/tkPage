@@ -77,7 +77,7 @@ export default function LocationMap({ lat, lng, zoom = 14, title }) {
       ref={mapContainerRef}
       role="img"
       aria-label={title ? `Map showing ${title}` : "Map"}
-      style={{ height: "400px", width: "100%" }}
+      className="map"
     />
   );
 }

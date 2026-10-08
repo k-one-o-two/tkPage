@@ -492,7 +492,7 @@ export default function EspooMap() {
                     Method: ${props.menetelmä || "N/A"}<br>
                     ID: ${props.tunnusluku || "N/A"}<br>
                     Total: ${props.total_count.toLocaleString()}<br>
-                    <hr style="margin: 5px 0;">
+                    <hr class="espoo-popup-divider">
                     ${yearCounts.join("<br>") || "No data"}
                 `,
             )
@@ -630,11 +630,9 @@ export default function EspooMap() {
 
   const legendContents = (
     <>
-      <h4 style={{ margin: "0 0 10px" }}>Espoo Bicycle Map</h4>
-      <p style={{ margin: "5px 0", fontSize: "11px" }}>
-        Zoom in to level 13+ to see routes
-      </p>
-      <hr style={{ margin: "8px 0" }} />
+      <h4>Espoo Bicycle Map</h4>
+      <p className="espoo-legend-note">Zoom in to level 13+ to see routes</p>
+      <hr />
       <strong>Road Types:</strong>
       <LegendItem
         roadType="Pyörätie"
@@ -684,172 +682,60 @@ export default function EspooMap() {
         label="Residential street"
         defaultChecked={true}
       />
-      <hr style={{ margin: "8px 0" }} />
-      <div
-        style={{ display: "flex", alignItems: "center", marginBottom: "5px" }}
-      >
+      <hr />
+      <div className="espoo-legend-counts">
         <input
           type="checkbox"
           id="bicycle-counts-toggle"
           defaultChecked={true}
-          style={{ marginRight: "8px" }}
         />
-        <label htmlFor="bicycle-counts-toggle" style={{ cursor: "pointer" }}>
+        <label htmlFor="bicycle-counts-toggle">
           <strong>Bicycle Counts (Red-Yellow)</strong>
         </label>
       </div>
-      <div style={{ marginTop: "5px", fontSize: "11px" }}>
-        Click routes to see details
-      </div>
+      <div className="espoo-legend-hint">Click routes to see details</div>
     </>
   );
 
   if (!isClient) {
-    return <div style={{ height: "600px" }}>Loading map...</div>;
+    return <div className="map-tall">Loading map...</div>;
   }
 
   return (
     <>
       {" "}
-      <div style={{ position: "relative" }}>
-        <style jsx>{`
-          .map-loader {
-            display: inline-grid;
-            width: 60px;
-            aspect-ratio: 1;
-            clip-path: polygon(
-              100% 50%,
-              85.36% 85.36%,
-              50% 100%,
-              14.64% 85.36%,
-              0% 50%,
-              14.64% 14.64%,
-              50% 0%,
-              85.36% 14.64%
-            );
-            background: #4c566a;
-            animation: l2 6s infinite linear;
-          }
-          .map-loader:before,
-          .map-loader:after {
-            content: "";
-            grid-area: 1/1;
-            background: #5e81ac;
-            clip-path: polygon(
-              100% 50%,
-              81.17% 89.09%,
-              38.87% 98.75%,
-              4.95% 71.69%,
-              4.95% 28.31%,
-              38.87% 1.25%,
-              81.17% 10.91%
-            );
-            margin: 10%;
-            animation: inherit;
-            animation-duration: 10s;
-          }
-          .map-loader:after {
-            background: #88c0d0;
-            clip-path: polygon(
-              100% 50%,
-              75% 93.3%,
-              25% 93.3%,
-              0% 50%,
-              25% 6.7%,
-              75% 6.7%
-            );
-            margin: 20%;
-            animation-duration: 3s;
-            animation-direction: reverse;
-          }
-          @keyframes l2 {
-            to {
-              rotate: 1turn;
-            }
-          }
-        `}</style>
-
+      <div className="espoo-map">
         {isLoading && (
-          <div
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              zIndex: 1000,
-              backgroundColor: "rgba(236, 239, 244, 0.9)",
-              padding: "20px",
-              borderRadius: "8px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: "10px",
-            }}
-          >
+          <div className="espoo-map-loading">
             <div className="map-loader"></div>
-            <div style={{ fontSize: "14px", color: "#4C566A" }}>
-              Loading routes...
-            </div>
+            <div className="espoo-map-loading-text">Loading routes...</div>
           </div>
         )}
 
-        <div
-          ref={mapContainerRef}
-          style={{
-            height: "600px",
-            width: "100%",
-          }}
-        />
+        <div ref={mapContainerRef} className="map map-tall" />
         {isDesktop && (
-          <div
-            style={{
-              backgroundColor: "#fff",
-              borderRadius: "3px",
-              top: "10px",
-              boxShadow: "0 1px 2px rgba(0, 0, 0, 0.1)",
-              font: '12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif',
-              padding: "10px",
-              position: "absolute",
-              right: "10px",
-              zIndex: 1,
-              maxHeight: "90vh",
-              overflowY: "auto",
-            }}
-          >
+          <div className="espoo-legend espoo-legend-overlay">
             {legendContents}
           </div>
         )}
       </div>
-      {!isDesktop && <div>{legendContents}</div>}
+      {!isDesktop && <div className="espoo-legend">{legendContents}</div>}
     </>
   );
 }
 
 function LegendItem({ roadType, color, label, defaultChecked }) {
   return (
-    <div style={{ margin: "3px 0", display: "flex", alignItems: "center" }}>
-      <label
-        style={{
-          cursor: "pointer",
-          display: "flex",
-          alignItems: "center",
-          userSelect: "none",
-        }}
-      >
+    <div className="espoo-legend-item">
+      <label>
         <input
           type="checkbox"
           data-road-type={roadType}
           defaultChecked={defaultChecked}
-          style={{ marginRight: "5px" }}
         />
         <span
-          style={{
-            display: "inline-block",
-            width: "20px",
-            height: "3px",
-            marginRight: "8px",
-            backgroundColor: color,
-          }}
+          className="espoo-legend-swatch"
+          style={{ backgroundColor: color }}
         ></span>
         {label}
       </label>

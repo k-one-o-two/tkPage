@@ -31,7 +31,7 @@ const Page = () => {
           <LiteYouTubeEmbed
             id="dix7_CyR4A4"
             title="Fiskars"
-            style={{ height: "300px", width: "300px" }}
+            wrapperClass="yt-lite gallery-video"
           />,
           <ImageTile
             image={{

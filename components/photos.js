@@ -1,6 +1,5 @@
 import Flickr from "flickr-sdk";
 import { useEffect, useState } from "react";
-import { ProgressSpinner } from "primereact/progressspinner";
 import { ImageTile } from "./image";
 
 const skeletonAscii = `
@@ -79,7 +78,7 @@ export function FlickrFeed({ page }) {
         - feel free to ask, I'll add an image there!
       </p>
       {/* <h3>Photos</h3>*/}
-      <div className="flex justify-content-between">
+      <div className="pager">
         <a href={Number(page) > 1 ? `/photo/${Number(page) - 1}` : null}>
           <h4>page--;</h4>
         </a>
@@ -89,7 +88,7 @@ export function FlickrFeed({ page }) {
         </a>
       </div>
       {isLoading ? (
-        <div className="flex justify-content-center">
+        <div className="photos-skeleton">
           <pre>{skeletonAscii}</pre>
         </div>
       ) : (
@@ -100,10 +99,7 @@ export function FlickrFeed({ page }) {
             })}
         </div>
       )}
-      <div
-        style={{ paddingTop: "20px" }}
-        className="flex justify-content-between"
-      >
+      <div className="pager pager-bottom">
         <a href={Number(page) > 1 ? `/photo/${Number(page) - 1}` : null}>
           <h4>page--;</h4>
         </a>

@@ -53,38 +53,38 @@ const Page = () => {
             <h2>Let's go riding!</h2>
           </div>
           <div className="main-list">
-            <Card title="Oittaa MTB" link="/mtb/oittaa">
+            <Card title="Oittaa MTB" link="/mtb/oittaa" accent="moderate">
               <p>Oittaa MTB</p>
               <p>Near the Bodominjärvi, Espoo. Short XC loop.</p>
             </Card>
-            <Card title="Oittaa R2" link="/mtb/r2">
+            <Card title="Oittaa R2" link="/mtb/r2" accent="hard">
               <p>Oittaa R2</p>
               <p>
                 On the other side of the road from the MTB route. Longer,
                 consists of several segments.
               </p>
             </Card>
-            <Card title="Lohja" link="/mtb/lohja">
+            <Card title="Lohja" link="/mtb/lohja" accent="moderate">
               <p>Lohja</p>
               <p>
                 60 km westward from Helsinki. Fast loop, longer than the Oittaa
                 MTB route.
               </p>
             </Card>
-            <Card title="Fiskars" link="/mtb/fiskars">
+            <Card title="Fiskars" link="/mtb/fiskars" accent="hard">
               <p>Fiskars</p>
               <p>
                 90 km westward from Helsinki. Long and scenic, though less
                 interesting than R2.
               </p>
             </Card>
-            <Card title="Helsinki" link="/mtb/helsinki">
+            <Card title="Helsinki" link="/mtb/helsinki" accent="moderate">
               <p>Helsinki central park</p>
               <p>
                 Starts approximately from the Olympic stadium and goes north.
               </p>
             </Card>
-            <Card title="Sepänkannas" link="/mtb/sepankannas">
+            <Card title="Sepänkannas" link="/mtb/sepankannas" accent="moderate">
               <p>Sepänkannas area</p>
               <p>In Kirkkonummi. Nice rocks, no marked trails.</p>
             </Card>

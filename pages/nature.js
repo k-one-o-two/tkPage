@@ -5,18 +5,7 @@ import dynamic from "next/dynamic";
 // Dynamically import the map component with SSR disabled
 const LocationMap = dynamic(() => import("../components/LocationMap"), {
   ssr: false,
-  loading: () => (
-    <div
-      style={{
-        height: "400px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      Loading map...
-    </div>
-  ),
+  loading: () => <div className="map map-placeholder">Loading map...</div>,
 });
 
 // Parses a "60\u00b017'36.0\"N 24\u00b033'33.2\"E" style coordinate (as shown in the

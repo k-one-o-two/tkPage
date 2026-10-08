@@ -3,18 +3,7 @@ import dynamic from "next/dynamic";
 // Dynamically import the map component with SSR disabled
 const GpxTrackMap = dynamic(() => import("./GpxTrackMap"), {
   ssr: false,
-  loading: () => (
-    <div
-      style={{
-        height: "400px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      Loading map...
-    </div>
-  ),
+  loading: () => <div className="map map-placeholder">Loading map...</div>,
 });
 
 export const MtbPage = ({
