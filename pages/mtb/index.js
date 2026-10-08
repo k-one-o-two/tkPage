@@ -9,6 +9,22 @@ const Page = () => {
         <title>MTB places</title>
       </Head>
       <div className="card">
+        <div className="art">
+          <pre>
+            {`
+████████████████████
+█                  █
+█      ██   █      █
+█   ██████████     █
+█▒▒ ████     █     █
+█▒▒▒▒▒▒    ████    █
+█▒▒▒▒▒▒▒▒  ████    █
+█▒▒▒▒▒▒▒▒▒▒▒▒      █
+█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
+████████████████████
+            `}
+          </pre>
+        </div>
         <div className="article">
           <h1>MTB places</h1>
           <div>
@@ -26,9 +42,9 @@ const Page = () => {
             </p>
           </div>
           <NoteImage src="/misc/bike.jpg" />
-          <p>
+          <div>
             <h2>Let's go riding!</h2>
-          </p>
+          </div>
           <div className="main-list">
             <Card title="Oittaa MTB" link="/mtb/oittaa">
               <p>Oittaa MTB</p>
