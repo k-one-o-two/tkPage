@@ -44,7 +44,7 @@ const Page = () => {
               Regarding the difficulty level. It is based on{" "}
               <a href="https://www.britishcycling.org.uk/search/article/mtbst20100615-MTB-Trail-Grading-System-0">
                 this
-              </a>
+              </a>{" "}
               guide. Keep in mind, that these marks are subjective.
             </p>
           </div>
