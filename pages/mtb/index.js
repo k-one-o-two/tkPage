@@ -54,39 +54,79 @@ const Page = () => {
           </div>
           <div className="main-list">
             <Card title="Oittaa MTB" link="/mtb/oittaa" accent="moderate">
-              <p>Oittaa MTB</p>
+              <p>
+                Oittaa MTB{" "}
+                <span className="sketch-highlight">
+                  Length: 2.8 km; Elevation gain: 68 m
+                </span>
+              </p>
+
               <p>Near the Bodominjärvi, Espoo. Short XC loop.</p>
             </Card>
             <Card title="Oittaa R2" link="/mtb/r2" accent="hard">
-              <p>Oittaa R2</p>
+              <p>
+                Oittaa R2{" "}
+                <span className="sketch-highlight">
+                  Length: 14.8 km; Elevation gain: 119 m
+                </span>
+              </p>
               <p>
                 On the other side of the road from the MTB route. Longer,
                 consists of several segments.
               </p>
             </Card>
             <Card title="Lohja" link="/mtb/lohja" accent="moderate">
-              <p>Lohja</p>
+              <p>
+                Lohja{" "}
+                <span className="sketch-highlight">
+                  Length: 8.3 km; Elevation gain: 80 m
+                </span>
+              </p>
               <p>
                 60 km westward from Helsinki. Fast loop, longer than the Oittaa
                 MTB route.
               </p>
             </Card>
             <Card title="Fiskars" link="/mtb/fiskars" accent="hard">
-              <p>Fiskars</p>
+              <p>
+                Fiskars{" "}
+                <span className="sketch-highlight">
+                  Length: 11.6 km; Elevation gain: 218 m
+                </span>
+              </p>
               <p>
                 90 km westward from Helsinki. Long and scenic, though less
                 interesting than R2.
               </p>
             </Card>
             <Card title="Helsinki" link="/mtb/helsinki" accent="moderate">
-              <p>Helsinki central park</p>
+              <p>
+                Helsinki central park{" "}
+                <span className="sketch-highlight">
+                  Length: 20.4 km; Elevation gain: 193 m
+                </span>
+              </p>
               <p>
                 Starts approximately from the Olympic stadium and goes north.
               </p>
             </Card>
             <Card title="Sepänkannas" link="/mtb/sepankannas" accent="moderate">
-              <p>Sepänkannas area</p>
+              <p>
+                Sepänkannas area{" "}
+                <span className="sketch-highlight">
+                  Length: 12.2 km Elevation gain: 188 m
+                </span>
+              </p>
               <p>In Kirkkonummi. Nice rocks, no marked trails.</p>
+            </Card>
+            <Card title="EKP" link="/mtb/ekp" accent="hard">
+              <p>
+                Espoo centrak park{" "}
+                <span className="sketch-highlight">
+                  Length: 4.5 km; Elevation gain: 48 m
+                </span>
+              </p>
+              <p>A great all year trail in the Espoo centrak park</p>
             </Card>
           </div>
           <div>

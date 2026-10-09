@@ -807,3 +807,76 @@ code {
 .espoo-popup-divider {
     margin: 5px 0;
 }
+
+.mtb-data {
+    // background-color: $nord13;
+}
+
+.sketch-highlight {
+    position: relative;
+    padding: 5px 5px;
+    //color: $nord13;
+}
+
+.sketch-highlight:before {
+    content: "";
+    z-index: -1;
+    left: 0em;
+    top: 0em;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $nord15;
+    position: absolute;
+    border-right-color: transparent;
+    width: 100%;
+    height: 1.5em;
+    transform: rotate(2deg);
+    opacity: 0.5;
+    border-radius: 0.25em;
+}
+
+.sketch-highlight:after {
+    content: "";
+    z-index: -1;
+    left: 0em;
+    top: 0em;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $nord15;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 1.5em;
+    transform: rotate(-1deg);
+    opacity: 0.5;
+    border-radius: 0.25em;
+}
+
+// Emits the CSS random() function. Sass has its own built-in random() (which
+// takes a single argument), so calling random() directly fails to compile.
+@function css-random($min, $max) {
+    @return unquote("random(#{$min}, #{$max})");
+}
+
+// Where supported, every highlight gets its own slightly different wobble, so
+// they look hand-drawn instead of identical. Other browsers keep the fixed
+// values above.
+@supports (rotate: css-random(0deg, 1deg)) {
+    .sketch-highlight:before,
+    .sketch-highlight:after {
+        left: css-random(-0.15em, 0.15em);
+        top: css-random(-0.15em, 0.1em);
+        width: calc(100% + css-random(-0.2em, 0.3em));
+        height: css-random(1.35em, 1.65em);
+        border-radius: css-random(0.15em, 0.5em);
+    }
+
+    .sketch-highlight:before {
+        transform: rotate(css-random(0.5deg, 3deg));
+    }
+
+    .sketch-highlight:after {
+        transform: rotate(css-random(-2.5deg, -0.5deg));
+    }
+}

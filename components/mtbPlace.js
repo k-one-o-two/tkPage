@@ -57,7 +57,9 @@ export const MtbPage = ({
           <div>
             <h3>gallery</h3>
             <div className="images-container">
-              {gallery.map((item) => item)}
+              {gallery.map((item, index) => (
+                <div key={index}>{item}</div>
+              ))}
             </div>
           </div>
         </div>

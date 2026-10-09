@@ -35,7 +35,6 @@
   "homepage": "https://github.com/k-one-o-two/tkPage#readme",
   "dependencies": {
     "@gsap/react": "^2.1.2",
-    "@next/font": "^13.1.6",
     "@next/third-parties": "^16.2.3",
     "@vercel/analytics": "^2.0.1",
     "browserify": "^17.0.0",
