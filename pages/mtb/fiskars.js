@@ -10,7 +10,7 @@ const Page = () => {
         title="Fiskars trail center"
         difficulty={{
           level: "hard",
-          text: "The trail is marked red, there are some steep hp and downhills, one is even marked black.",
+          text: "The trail is marked red, there are some steep uphills and downhills, one is even marked black.",
         }}
         goodsArray={[
           "Actually good trails - there are both fast singletracks and tech sections.",

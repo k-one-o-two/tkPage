@@ -14,9 +14,9 @@ const Page = () => {
         }}
         goodsArray={[
           "A nice XC trail with different parts - flow, rocks, forest.",
-          "A cuple of rather hard climbs, especially whan not on the first lap.",
+          "A couple of rather hard climbs, especially when not on the first lap.",
           "It is one way - you can concentrate on your riding.",
-          "Great location - a huge parking lot, places to refill water and clean the bike. And the spot, after which Children of Bodom band has been called.",
+          "Great location - a huge parking lot, places to refill water and clean the bike. And the spot, after which the band Children of Bodom was named.",
         ]}
         badsArray={[
           "It is short, so gets quite boring after a while.",

@@ -13,7 +13,7 @@ const Page = () => {
           text: "Since not a trail, you can pick whatever you want, but I have not seen anything too hard there.",
         }}
         goodsArray={[
-          "Idk if that's good or not, but this is not exactly a trail, but rather an area. So no marks whatsover.",
+          "Idk if that's good or not, but this is not exactly a trail, but rather an area. So no marks whatsoever.",
           "Lots of rocks, they are quite different from the usual trails.",
           "Convenient parking near the daycare.",
           "Amazing view from the top.",
@@ -24,7 +24,7 @@ const Page = () => {
         ]}
         gpx={{
           src: "/gpx/sepa.gpx",
-          title: "Helsinki",
+          title: "Sepänkannas",
         }}
         gallery={[
           <LiteYouTubeEmbed

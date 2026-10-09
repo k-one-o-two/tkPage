@@ -15,7 +15,7 @@ const Page = () => {
         goodsArray={[
           "Central location, accessible for lots of people.",
           "Well maintained in winter and it is actually way smoother and faster when snow covered.",
-          "Has nice places, though nothing really technical - not exaclty suitable for a gravel bike (in summer), but don't expect much.",
+          "Has nice places, though nothing really technical - not exactly suitable for a gravel bike (in summer), but don't expect much.",
         ]}
         badsArray={[
           "Navigation between segments is just bad. Sometimes I had to guess and guessed wrong - hence the gpx is not exactly good, sorry.",

@@ -13,8 +13,8 @@ const Page = () => {
           text: "Some parts are even easy, though the trail overall is moderate: forest section has rocks and roots, there are (avoidable) drops on the trail.",
         }}
         goodsArray={[
-          "Nearly perfect XC loop - longer then Oittaa Mtb, has several different parts, is one uninterrupted lap.",
-          "Has some artifical drops, they are fun.",
+          "Nearly perfect XC loop - longer than Oittaa MTB, has several different parts, is one uninterrupted lap.",
+          "Has some artificial drops, they are fun.",
           "Is fast and mostly beginner friendly, except for a couple of rocks.",
           "Somewhat accessible in winter - not really maintained, but ridable.",
           "There's a water source at the beginning of the lap (it is off during winter though).",

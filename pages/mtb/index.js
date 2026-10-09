@@ -29,7 +29,7 @@ const Page = () => {
           <h1>MTB places</h1>
           <div>
             <p>
-              Here's a (incomplete, in progress) list of places for MTB riding
+              Here's an (incomplete, in progress) list of places for MTB riding
               that I'm aware of.
             </p>
             <p>
@@ -37,7 +37,7 @@ const Page = () => {
               on their pages.
             </p>
             <p>
-              To help you adjust ypur expectations: I'm riding a rather old
+              To help you adjust your expectations: I'm riding a rather old
               hardtail GT Avalanche.
             </p>
             <p>
@@ -45,7 +45,7 @@ const Page = () => {
               <a href="https://www.britishcycling.org.uk/search/article/mtbst20100615-MTB-Trail-Grading-System-0">
                 this
               </a>{" "}
-              guide. Keep in mind, that these marks are subjective.
+              guide. Keep in mind that these marks are subjective.
             </p>
           </div>
           <NoteImage src="/misc/bike.jpg" />
@@ -114,19 +114,19 @@ const Page = () => {
               <p>
                 Sepänkannas area{" "}
                 <span className="sketch-highlight">
-                  Length: 12.2 km Elevation gain: 188 m
+                  Length: 12.2 km; Elevation gain: 188 m
                 </span>
               </p>
               <p>In Kirkkonummi. Nice rocks, no marked trails.</p>
             </Card>
             <Card title="EKP" link="/mtb/ekp" accent="hard">
               <p>
-                Espoo centrak park{" "}
+                Espoo central park{" "}
                 <span className="sketch-highlight">
                   Length: 4.5 km; Elevation gain: 48 m
                 </span>
               </p>
-              <p>A great all year trail in the Espoo centrak park</p>
+              <p>A great all year trail in the Espoo central park</p>
             </Card>
           </div>
           <div>
