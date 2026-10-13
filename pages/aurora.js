@@ -3,6 +3,8 @@ import { Article } from "../components/article";
 
 export const note = {
   title: "Aurora shooting tips",
+  description:
+    "Yet another guide on how to take pictures of auroras: finding the right time and place, and shooting the northern lights.",
   art: `
 ████████████████████
 █                  █
@@ -222,7 +224,12 @@ export const note = {
 };
 
 function Notes() {
-  return <Article art={note.art} title={note.title} html={note.html}></Article>;
+  return <Article
+      art={note.art}
+      title={note.title}
+      description={note.description}
+      html={note.html}
+    ></Article>;
 }
 
 export default Notes;

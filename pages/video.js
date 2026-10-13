@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { Seo } from "../components/seo";
 import { useRouter } from "next/router";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
@@ -7,9 +7,10 @@ function VideoPage() {
   const router = useRouter();
   return (
     <>
-      <Head>
-        <title>My videos</title>
-      </Head>
+      <Seo
+        title="My videos"
+        description="Cycling and MTB videos from Espoo, Helsinki and around: road rides, trail runs and winter riding."
+      />
       <div className="card">
         <span>
           Some videos from{" "}

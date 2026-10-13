@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { Seo } from "../components/seo";
 import { Card } from "../components/card";
 
 import { note as auroraNote } from "./aurora";
@@ -18,9 +18,7 @@ import { note as pseNote } from "./exhibition";
 function HomePage() {
   return (
     <>
-      <Head>
-        <title>k102 home page</title>
-      </Head>
+      <Seo title="home page" />
       <div className="home">
         <div className="card article" title="About me">
           <h1>About me</h1>

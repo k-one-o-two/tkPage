@@ -5,6 +5,8 @@ import { A } from "../components/a";
 
 export const note = {
   title: "How to not shoot crap",
+  description:
+    "A highly opinionated attempt to explain how to not shoot crappy photos.",
   art: `
 ████████████████████
 █    ░░ ░  ░░░     █
@@ -192,7 +194,12 @@ export const note = {
 
 function Notes() {
   const router = useRouter();
-  return <Article art={note.art} title={note.title} html={note.html}></Article>;
+  return <Article
+      art={note.art}
+      title={note.title}
+      description={note.description}
+      html={note.html}
+    ></Article>;
 }
 
 export default Notes;

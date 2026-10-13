@@ -3,6 +3,8 @@ import { Article } from "../components/article";
 
 export const note = {
   title: "What I have learned from cycling",
+  description:
+    "Things I've learned from cycling to work all year round in Finland, 4000+ km per year.",
   art: `
 ████████████████████
 █                  █
@@ -100,7 +102,12 @@ export const note = {
 };
 
 function Notes() {
-  return <Article art={note.art} title={note.title} html={note.html}></Article>;
+  return <Article
+      art={note.art}
+      title={note.title}
+      description={note.description}
+      html={note.html}
+    ></Article>;
 }
 
 export default Notes;

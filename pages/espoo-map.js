@@ -11,6 +11,8 @@ const EspooMap = dynamic(() => import("../components/EspooMap"), {
 
 export const note = {
   title: "Espoo Bicycle Map",
+  description:
+    "Interactive map showing bicycle infrastructure and traffic data in Espoo.",
   art: `
 ████████████████████
 █      ∙∙  ▒    ∙  █
@@ -85,7 +87,12 @@ export const note = {
 };
 
 function EspooMapPage() {
-  return <Article art={note.art} title={note.title} html={note.html}></Article>;
+  return <Article
+      art={note.art}
+      title={note.title}
+      description={note.description}
+      html={note.html}
+    ></Article>;
 }
 
 export default EspooMapPage;

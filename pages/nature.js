@@ -37,6 +37,8 @@ const KOPPARNAS_COORDS = `60°03'26.9"N 24°16'27.9"E`;
 
 export const note = {
   title: "Day trip places",
+  description:
+    "A list of natural spots worth seeing as a day trip from Espoo.",
   art: `
 ████████████████████
 █   ▓              █
@@ -252,7 +254,12 @@ export const note = {
 };
 
 function Notes() {
-  return <Article art={note.art} title={note.title} html={note.html}></Article>;
+  return <Article
+      art={note.art}
+      title={note.title}
+      description={note.description}
+      html={note.html}
+    ></Article>;
 }
 
 export default Notes;

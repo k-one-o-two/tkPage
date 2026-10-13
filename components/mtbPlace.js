@@ -1,5 +1,7 @@
-import Head from "next/head";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
+import { BreadcrumbJsonLd } from "next-seo";
+import { Seo, absoluteUrl } from "./seo";
 // Dynamically import the map component with SSR disabled
 const GpxTrackMap = dynamic(() => import("./GpxTrackMap"), {
   ssr: false,
@@ -14,11 +16,33 @@ export const MtbPage = ({
   gallery,
   difficulty,
 }) => {
+  const router = useRouter();
+  const description = `${title}: a ${difficulty.level} MTB trail in the Helsinki region. ${difficulty.text} GPX track, map, photos and videos.`;
+  // Use the gallery photos (ImageTiles) as share previews.
+  const images = gallery
+    .map((item) => item.props.image?.source)
+    .filter(Boolean)
+    .map((source) => ({ url: absoluteUrl(source), alt: title }));
+
   return (
     <>
-      <Head>
-        <title>{title}</title>
-      </Head>
+      <Seo
+        title={`${title} - MTB trail`}
+        description={description}
+        openGraph={{
+          type: "article",
+          title,
+          description,
+          images,
+        }}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", item: absoluteUrl("/") },
+          { name: "MTB places", item: absoluteUrl("/mtb") },
+          { name: title, item: absoluteUrl(router.pathname) },
+        ]}
+      />
       <div className="card">
         <div className="article">
           <h1>{title}</h1>

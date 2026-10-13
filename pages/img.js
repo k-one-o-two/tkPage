@@ -4,6 +4,8 @@ import { A } from "../components/a";
 
 export const note = {
   title: "Image editing in node.js",
+  description:
+    "Image editing in a Node.js app with Jimp.",
   art: `
 ████████████████████
 █▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█
@@ -212,7 +214,12 @@ const font = await loadFont('.my_font.fnt');
 };
 
 function Notes() {
-  return <Article art={note.art} title={note.title} html={note.html}></Article>;
+  return <Article
+      art={note.art}
+      title={note.title}
+      description={note.description}
+      html={note.html}
+    ></Article>;
 }
 
 export default Notes;

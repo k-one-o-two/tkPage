@@ -11,6 +11,8 @@ const GpxEditor = dynamic(() => import("../components/GpxEditor"), {
 
 export const note = {
   title: "GPX editor",
+  description:
+    "I needed a GPX editor, so I made one: a GPX track viewer and cutter.",
   art: `
 ████████████████████
 █                ∙ █
@@ -32,7 +34,12 @@ export const note = {
 };
 
 function GpxEditPage() {
-  return <Article art={note.art} title={note.title} html={note.html}></Article>;
+  return <Article
+      art={note.art}
+      title={note.title}
+      description={note.description}
+      html={note.html}
+    ></Article>;
 }
 
 export default GpxEditPage;

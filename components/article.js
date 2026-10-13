@@ -1,8 +1,8 @@
-import Head from "next/head";
+import { Seo } from "./seo";
 import prism from "../style/prism";
 import { useEffect } from "react";
 
-export function Article({ title, html, art }) {
+export function Article({ title, description, html, art }) {
   useEffect(() => {
     prism.highlightAll();
   }, []);
@@ -12,9 +12,11 @@ export function Article({ title, html, art }) {
       <div className="art">
         <pre>{art}</pre>
       </div>
-      <Head>
-        <title>{title}</title>
-      </Head>
+      <Seo
+        title={title}
+        description={description}
+        openGraph={{ type: "article", title, description }}
+      />
       <h1>{title}</h1>
       <div className="article">{html}</div>
     </div>

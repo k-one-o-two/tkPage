@@ -3,6 +3,8 @@ import { Article } from "../components/article";
 
 export const note = {
   title: "Own rides map",
+  description:
+    "Notes on using QGIS to draw a map of your own rides from exported Strava and GPX data.",
   art: `
 ████████████████████
 █    ° °   ███     █
@@ -264,7 +266,12 @@ meters_per_sec * 3600 / 1000,
 };
 
 function Notes() {
-  return <Article art={note.art} title={note.title} html={note.html}></Article>;
+  return <Article
+      art={note.art}
+      title={note.title}
+      description={note.description}
+      html={note.html}
+    ></Article>;
 }
 
 export default Notes;

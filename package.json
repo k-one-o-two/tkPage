@@ -43,6 +43,7 @@
     "lodash.debounce": "^4.0.8",
     "minify": "^8.0.3",
     "next": "^16.2.6",
+    "next-seo": "^7.3.0",
     "node-cache": "^5.1.2",
     "nord": "^0.2.1",
     "react": "^18.2.0",

@@ -3,6 +3,8 @@ import { NoteImage } from "../components/noteImage";
 
 export const note = {
   title: "Postikortti exhibition",
+  description:
+    "The Postikortti Suomesta photo exhibition: from the idea to the actual opening event.",
   art: `
 ████████████████████
 █  |   |   |   |   █
@@ -133,7 +135,12 @@ export const note = {
 };
 
 function Notes() {
-  return <Article art={note.art} title={note.title} html={note.html}></Article>;
+  return <Article
+      art={note.art}
+      title={note.title}
+      description={note.description}
+      html={note.html}
+    ></Article>;
 }
 
 export default Notes;

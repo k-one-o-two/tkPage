@@ -115,6 +115,12 @@ button {
     padding-bottom: 20px !important;
 }
 
+.card-link,
+.card-small {
+    // Cards are <a> elements; undo the default link styling.
+    text-decoration: none;
+}
+
 .card-link {
     display: flex;
     gap: 4rem;
@@ -132,6 +138,7 @@ button {
     flex-direction: column;
     justify-content: space-around;
     background-color: $nord9;
+    transition: none;
 
     h2 {
         font-size: 1.5rem;

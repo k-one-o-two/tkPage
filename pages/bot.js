@@ -2,6 +2,8 @@ import { Article } from "../components/article";
 
 export const note = {
   title: "On Telegram bot development",
+  description:
+    "Notes on using Node.js as a backend for a Telegram bot.",
   art: `
 ████████████████████
 █                  █
@@ -177,7 +179,12 @@ return list.items[0];
 };
 
 function Notes() {
-  return <Article art={note.art} title={note.title} html={note.html}></Article>;
+  return <Article
+      art={note.art}
+      title={note.title}
+      description={note.description}
+      html={note.html}
+    ></Article>;
 }
 
 export default Notes;

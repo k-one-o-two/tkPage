@@ -3,6 +3,8 @@ import { NoteImage } from "../components/noteImage";
 
 export const note = {
   title: "On speed for paginated queries",
+  description:
+    "Notes on improving the speed of paginated database queries in PostgreSQL and Node.js.",
   art: `
 ████████████████████
 █                  █
@@ -205,7 +207,12 @@ const paginatedIds = ids.slice(skip, skip + take));
 };
 
 function Notes() {
-  return <Article art={note.art} title={note.title} html={note.html}></Article>;
+  return <Article
+      art={note.art}
+      title={note.title}
+      description={note.description}
+      html={note.html}
+    ></Article>;
 }
 
 export default Notes;

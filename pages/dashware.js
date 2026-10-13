@@ -4,6 +4,8 @@ import LiteYouTubeEmbed from "react-lite-youtube-embed";
 
 export const note = {
   title: "Video with telemetry",
+  description:
+    "Notes on making cycling videos with telemetry overlays using DashWare.",
   art: `
 ████████████████████
 █      º    º      █
@@ -88,7 +90,12 @@ export const note = {
 };
 
 function Notes() {
-  return <Article art={note.art} title={note.title} html={note.html}></Article>;
+  return <Article
+      art={note.art}
+      title={note.title}
+      description={note.description}
+      html={note.html}
+    ></Article>;
 }
 
 export default Notes;

@@ -1,11 +1,11 @@
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export function Card({ title, children, link, art, small, accent }) {
-  const router = useRouter();
-
+  // A real <a href> (rather than an onClick handler) so that search engines
+  // can discover and follow the linked pages.
   return (
-    <div
-      onClick={() => router.push(link)}
+    <Link
+      href={link}
       className={`card ${small ? "card-small" : "card-link card-l2"}`}
     >
       {art && (
@@ -20,6 +20,6 @@ export function Card({ title, children, link, art, small, accent }) {
         </div>
       </div>
       {accent && <div className={`accent-${accent}`}></div>}
-    </div>
+    </Link>
   );
 }

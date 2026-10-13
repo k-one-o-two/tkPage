@@ -1,13 +1,25 @@
-import Head from "next/head";
+import { BreadcrumbJsonLd } from "next-seo";
+import { Seo, absoluteUrl } from "../../components/seo";
 import { Card } from "../../components/card";
 import { NoteImage } from "../../components/noteImage";
 
 const Page = () => {
   return (
     <>
-      <Head>
-        <title>MTB places</title>
-      </Head>
+      <Seo
+        title="MTB places near Helsinki and Espoo"
+        description="MTB trails around Helsinki, Espoo and Uusimaa: Oittaa, R2, Espoo central park, Helsinki central park, Lohja, Fiskars and Sepänkannas, with GPX tracks, maps, photos, videos and difficulty ratings."
+        openGraph={{
+          title: "MTB places near Helsinki and Espoo",
+          images: [{ url: absoluteUrl("/misc/bike.jpg"), alt: "MTB places" }],
+        }}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", item: absoluteUrl("/") },
+          { name: "MTB places", item: absoluteUrl("/mtb") },
+        ]}
+      />
       <div className="card">
         <div className="art">
           <pre>
