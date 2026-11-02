@@ -2,11 +2,21 @@
 @import url("https://adobe-fonts.github.io/source-code-pro/source-code-pro.css");
 @import "../node_modules/nord/src/sass/nord.scss";
 
+// Nerd Font icons (https://www.nerdfonts.com/cheat-sheet), used as a fallback
+// in the font stacks below. unicode-range limits it to the Private Use Area,
+// so the font is only downloaded on pages that actually use an icon.
+@font-face {
+    font-family: "Symbols Nerd Font";
+    src: url("/fnt/SymbolsNerdFont-Regular.woff2") format("woff2");
+    font-display: swap;
+    unicode-range: U+E000-F8FF, U+F0000-FFFFD;
+}
+
 body {
     color: $nord5;
     display: grid;
     font-size: 1rem;
-    font-family: "Exo", sans-serif;
+    font-family: "Exo", "Symbols Nerd Font", sans-serif;
     font-feature-settings: "liga" on "dlig" on "kern" on;
 }
 
@@ -54,13 +64,13 @@ html[data-scroll]:not([data-scroll="0"]) {
 }
 
 h1 {
-    font-family: "Mozilla Headline", sans-serif;
+    font-family: "Mozilla Headline", "Symbols Nerd Font", sans-serif;
     font-size: 3rem;
 }
 h2,
 h3,
 h4 {
-    font-family: "Mozilla Headline", sans-serif;
+    font-family: "Mozilla Headline", "Symbols Nerd Font", sans-serif;
 }
 
 h3 {
@@ -74,7 +84,7 @@ h3 {
 
 p,
 a {
-    font-family: "Mozilla Text", cursive;
+    font-family: "Mozilla Text", "Symbols Nerd Font", cursive;
 }
 
 a,
