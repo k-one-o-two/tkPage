@@ -29,6 +29,12 @@ function VideoPage() {
             </span>
           </div>
           <div>
+            <LiteYouTubeEmbed id="6CrdNJdBT88" title="No stop challenge" />
+            <span className="video-description">
+              How far can I go without stopping at all? Can you beat this route?
+            </span>
+          </div>
+          <div>
             <LiteYouTubeEmbed id="C71qMICjSvQ" title="Winter Helsinki" />
             <span className="video-description">
               A winter ride around Helsinki city center. Dark and cold.

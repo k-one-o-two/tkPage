@@ -44,6 +44,24 @@ const Page = () => {
               url: "",
             }}
           />,
+          <ImageTile
+            image={{
+              source: "/sepa/3.jpg",
+              url: "",
+            }}
+          />,
+          <ImageTile
+            image={{
+              source: "/sepa/4.jpg",
+              url: "",
+            }}
+          />,
+          <ImageTile
+            image={{
+              source: "/sepa/5.jpg",
+              url: "",
+            }}
+          />,
         ]}
       />
     </>
