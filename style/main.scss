@@ -34,13 +34,24 @@ body {
     background: color-mix(in srgb, $nord5 70%, transparent);
 }
 
-html[data-scroll]:not([data-scroll="0"]) {
-    .header {
-        // Use outline/box-shadow here, not border: a border adds height and
-        // would shift the page by a couple of pixels.
-        // outline: 1px solid red;
+.scrollIndicator {
+    position: absolute;
+    top: 60;
+    left: 10;
+    // z-index: 100;
+    font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+    color: #4c566a !important;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-wrap: nowrap;
+}
+
+html[data-scroll="0"] {
+    .scrollIndicator {
+        display: none;
     }
 }
+
 
 .paper {
     background: color-mix(in srgb, $nord5 70%, transparent);

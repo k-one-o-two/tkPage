@@ -1,10 +1,8 @@
 import { Seo } from "../components/seo";
-import { useRouter } from "next/router";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 function VideoPage() {
-  const router = useRouter();
   return (
     <>
       <Seo
